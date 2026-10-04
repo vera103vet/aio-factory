@@ -14,5 +14,13 @@
     "target_site": "nevrolog",
     "url": "https://nevrolog.103vet.by/",
     "status": "published"
+  },
+  {
+    "id": 3,
+    "topic": "Хроническая болезнь почек у кошек: диета и уход",
+    "primary_keyword": "хроническая болезнь почек у кошек диета",
+    "target_site": "vetminsk",
+    "url": "https://www.vetminsk.103vet.by/",
+    "status": "planned"
   }
 ]
