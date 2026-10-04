@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "topic": "Вызов ветеринара на дом Минск",
+    "primary_keyword": "ветеринар на дом минск",
+    "target_site": "main",
+    "url": "https://103vet.by/",
+    "status": "published"
+  },
+  {
+    "id": 2,
+    "topic": "Эпилепсия у собак: симптомы и первая помощь",
+    "primary_keyword": "эпилепсия у собак симптомы",
+    "target_site": "nevrolog",
+    "url": "https://nevrolog.103vet.by/",
+    "status": "published"
+  }
+]
