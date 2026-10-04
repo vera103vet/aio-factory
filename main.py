@@ -1,0 +1,1 @@
+print("AIO Factory запущен!")
