@@ -1,0 +1,92 @@
+{
+  "audit_date": "2026-10-05 15:12",
+  "version": "Network Audit v1.0",
+  "summary": {
+    "total_sites": 4,
+    "total_topics": 3,
+    "cannibalization_issues": 0,
+    "uniqueness_issues": 0,
+    "hierarchy_issues": 1
+  },
+  "cannibalization": [],
+  "cross_linking": {
+    "main": {
+      "links_to_network": 0,
+      "targets": []
+    },
+    "nevrolog": {
+      "links_to_network": 7,
+      "targets": [
+        {
+          "target_site": "main",
+          "url": "https://103vet.by/",
+          "text": "Записаться — 103vet.by"
+        },
+        {
+          "target_site": "main",
+          "url": "https://103vet.by/",
+          "text": "Записаться на приём — 103vet.by"
+        },
+        {
+          "target_site": "main",
+          "url": "https://103vet.by/",
+          "text": "Записаться к неврологу — 103vet.by"
+        },
+        {
+          "target_site": "main",
+          "url": "https://103vet.by/",
+          "text": "Отправить материалы на проверку"
+        },
+        {
+          "target_site": "main",
+          "url": "https://103vet.by/",
+          "text": "Записаться на приём"
+        },
+        {
+          "target_site": "main",
+          "url": "https://103vet.by/",
+          "text": "Задать вопрос неврологу"
+        },
+        {
+          "target_site": "main",
+          "url": "https://103vet.by/",
+          "text": "Записаться"
+        }
+      ]
+    },
+    "usyplenie": {
+      "links_to_network": 0,
+      "targets": []
+    },
+    "vetminsk": {
+      "links_to_network": 3,
+      "targets": [
+        {
+          "target_site": "main",
+          "url": "https://103vet.by/",
+          "text": "Записаться на приём"
+        },
+        {
+          "target_site": "main",
+          "url": "https://103vet.by/",
+          "text": "Задать вопрос терапевту"
+        },
+        {
+          "target_site": "main",
+          "url": "https://103vet.by/",
+          "text": "Получить телемедицинскую консультацию"
+        }
+      ]
+    }
+  },
+  "uniqueness": [],
+  "hierarchy": [
+    {
+      "type": "weak_satellite",
+      "site": "nevrolog",
+      "description": "Сайт nevrolog не содержит экспертных тем",
+      "severity": "warning",
+      "fix": "Добавить экспертные темы на nevrolog"
+    }
+  ]
+}
