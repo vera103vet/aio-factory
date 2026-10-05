@@ -1,0 +1,146 @@
+{
+  "date": "2026-10-05 19:17",
+  "version": "Competitive AI Gap Analysis v9.0",
+  "competitors": {
+    "general": {
+      "name": "Ветлайн (General)",
+      "error": "Сайт недоступен"
+    },
+    "specialized": {
+      "name": "AnimalHelp (Specialized)",
+      "error": "Сайт недоступен"
+    },
+    "clinic": {
+      "name": "Вет.by (Clinic)",
+      "error": "Сайт недоступен"
+    }
+  },
+  "our_sites": {
+    "main": {
+      "url": "https://103vet.by/",
+      "score": 40,
+      "word_count": 898,
+      "features": [
+        "Есть Schema.org разметка",
+        "Глубокий контент (898 слов)"
+      ],
+      "missing": [
+        "Нет дат публикации/обновления",
+        "Нет ссылок на ветеринарные авторитеты",
+        "Нет таблиц (низкий Information Gain)"
+      ]
+    },
+    "nevrolog": {
+      "url": "https://nevrolog.103vet.by/",
+      "score": 50,
+      "word_count": 637,
+      "features": [
+        "Есть маркеры свежести/дат",
+        "Есть ссылки на авторитеты (WSAVA/IRIS)",
+        "Средний контент (637 слов)"
+      ],
+      "missing": [
+        "Отсутствует Schema.org",
+        "Нет таблиц (низкий Information Gain)"
+      ]
+    },
+    "usyplenie": {
+      "url": "https://usyplenie.103vet.by/index.html",
+      "score": 70,
+      "word_count": 606,
+      "features": [
+        "Есть маркеры свежести/дат",
+        "Есть Schema.org разметка",
+        "Есть ссылки на авторитеты (WSAVA/IRIS)",
+        "Средний контент (606 слов)"
+      ],
+      "missing": [
+        "Нет таблиц (низкий Information Gain)"
+      ]
+    },
+    "vetminsk": {
+      "url": "https://www.vetminsk.103vet.by/",
+      "score": 70,
+      "word_count": 594,
+      "features": [
+        "Есть маркеры свежести/дат",
+        "Есть Schema.org разметка",
+        "Есть ссылки на авторитеты (WSAVA/IRIS)",
+        "Средний контент (594 слов)"
+      ],
+      "missing": [
+        "Нет таблиц (низкий Information Gain)"
+      ]
+    }
+  },
+  "comparisons": [
+    {
+      "our_site": "main",
+      "our_score": 40,
+      "best_competitor": null,
+      "best_competitor_score": 0,
+      "gap": -40,
+      "gaps": []
+    },
+    {
+      "our_site": "nevrolog",
+      "our_score": 50,
+      "best_competitor": null,
+      "best_competitor_score": 0,
+      "gap": -50,
+      "gaps": []
+    },
+    {
+      "our_site": "usyplenie",
+      "our_score": 70,
+      "best_competitor": null,
+      "best_competitor_score": 0,
+      "gap": -70,
+      "gaps": []
+    },
+    {
+      "our_site": "vetminsk",
+      "our_score": 70,
+      "best_competitor": null,
+      "best_competitor_score": 0,
+      "gap": -70,
+      "gaps": []
+    }
+  ],
+  "predictions": [
+    {
+      "site": "main",
+      "current_gap": -40,
+      "status": "Мы лидируем",
+      "potential_traffic_gain_percent": 0,
+      "actions_needed": 0
+    },
+    {
+      "site": "nevrolog",
+      "current_gap": -50,
+      "status": "Мы лидируем",
+      "potential_traffic_gain_percent": 0,
+      "actions_needed": 0
+    },
+    {
+      "site": "usyplenie",
+      "current_gap": -70,
+      "status": "Мы лидируем",
+      "potential_traffic_gain_percent": 0,
+      "actions_needed": 0
+    },
+    {
+      "site": "vetminsk",
+      "current_gap": -70,
+      "status": "Мы лидируем",
+      "potential_traffic_gain_percent": 0,
+      "actions_needed": 0
+    }
+  ],
+  "summary": {
+    "avg_our_score": 57.5,
+    "avg_competitor_score": 0.0,
+    "total_gaps": 0,
+    "sites_leading": 4
+  }
+}
