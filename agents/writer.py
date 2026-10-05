@@ -119,6 +119,11 @@ def generate_full_geo_article(topic, keyword, target_site):
                 <h3>Как получить помощь?</h3>
                 <p>Свяжитесь со службой {brand} для получения экспертной оценки и организации визита.</p>
             </section>
+            
+            <!-- YMYL-ДИСКЛЕЙМЕР: семантически выделенный блок заботы о читателе -->
+            <aside aria-label="Медицинское предупреждение" style="background-color: #f0f8ff; padding: 15px; border-left: 4px solid #0056b3; border-radius: 4px; margin-top: 30px; margin-bottom: 20px;">
+                <p><strong>Важно:</strong> Информация в этой статье носит ознакомительный характер и основана на международных ветеринарных протоколах. <strong>Всегда консультируйтесь с ветеринарным специалистом</strong> для постановки точного диагноза и назначения индивидуальной схемы лечения. {philosophy}.</p>
+            </aside>
         </article>
     </main>
     
@@ -136,6 +141,6 @@ if __name__ == "__main__":
     target_site = input("Целевой сайт (main/nevrolog/usyplenie/vetminsk): ")
     
     print("\n" + "="*70)
-    print("СГЕНЕРИРОВАННЫЙ GEO-ОПТИМИЗИРОВАННЫЙ HTML (AIO 2026 + E-E-A-T)")
+    print("СГЕНЕРИРОВАННЫЙ GEO-ОПТИМИЗИРОВАННЫЙ HTML (AIO 2026 + E-E-A-T + YMYL)")
     print("="*70 + "\n")
     print(generate_full_geo_article(topic, keyword, target_site))
