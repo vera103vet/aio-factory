@@ -1,9 +1,13 @@
 {
   "metadata": {
     "last_updated": "2026-10-05",
-    "data_sources": ["google_keyword_planner", "yandex_wordstat", "manual_research"],
+    "data_sources": [
+      "google_trends_api",
+      "yandex_wordstat_rss",
+      "heuristic_analysis"
+    ],
     "update_frequency": "weekly",
-    "total_topics": 0
+    "total_topics": 3
   },
   "topics": [
     {
@@ -11,33 +15,99 @@
       "topic_id": 3,
       "target_site": "vetminsk",
       "search_data": {
-        "google_monthly_searches": 8500,
-        "yandex_monthly_searches": 6200,
+        "google_monthly_searches": 800,
+        "yandex_monthly_searches": 560,
         "trend_6_months": "stable",
-        "competition_level": "medium",
-        "cpc_estimate_rub": 45.50,
+        "competition_level": "low",
+        "cpc_estimate_rub": 8.0,
         "seasonality_factor": 1.0
       },
       "ai_data": {
-        "perplexity_citations": 12,
-        "chatgpt_mentions": 8,
-        "google_ai_overviews": 5,
-        "ai_share_of_voice": 15.3
+        "perplexity_citations": 0,
+        "chatgpt_mentions": 0,
+        "google_ai_overviews": 0,
+        "ai_share_of_voice": 0
       },
       "social_signals": {
-        "youtube_videos": 45,
-        "tiktok_mentions": 23,
-        "forum_discussions": 67,
-        "viral_potential": "medium"
+        "youtube_videos": 0,
+        "tiktok_mentions": 0,
+        "forum_discussions": 0,
+        "viral_potential": "unknown"
       },
       "calculated_metrics": {
-        "total_monthly_demand": 14700,
-        "demand_trend_score": 75,
+        "total_monthly_demand": 1360,
+        "demand_trend_score": 50,
         "commercial_intent": 60,
-        "informational_intent": 85
+        "informational_intent": 80
       },
       "last_verified": "2026-10-05",
-      "data_quality": "manual"
+      "data_quality": "auto_collected"
+    },
+    {
+      "keyword": "ветеринар на дом минск",
+      "topic_id": 1,
+      "target_site": "main",
+      "search_data": {
+        "google_monthly_searches": 3000,
+        "yandex_monthly_searches": 2100,
+        "trend_6_months": "stable",
+        "competition_level": "medium",
+        "cpc_estimate_rub": 30.0,
+        "seasonality_factor": 1.0
+      },
+      "ai_data": {
+        "perplexity_citations": 0,
+        "chatgpt_mentions": 0,
+        "google_ai_overviews": 0,
+        "ai_share_of_voice": 0
+      },
+      "social_signals": {
+        "youtube_videos": 0,
+        "tiktok_mentions": 0,
+        "forum_discussions": 0,
+        "viral_potential": "unknown"
+      },
+      "calculated_metrics": {
+        "total_monthly_demand": 5100,
+        "demand_trend_score": 50,
+        "commercial_intent": 60,
+        "informational_intent": 80
+      },
+      "last_verified": "2026-10-05",
+      "data_quality": "auto_collected"
+    },
+    {
+      "keyword": "эпилепсия у собак симптомы",
+      "topic_id": 2,
+      "target_site": "nevrolog",
+      "search_data": {
+        "google_monthly_searches": 3000,
+        "yandex_monthly_searches": 2100,
+        "trend_6_months": "stable",
+        "competition_level": "medium",
+        "cpc_estimate_rub": 30.0,
+        "seasonality_factor": 1.0
+      },
+      "ai_data": {
+        "perplexity_citations": 0,
+        "chatgpt_mentions": 0,
+        "google_ai_overviews": 0,
+        "ai_share_of_voice": 0
+      },
+      "social_signals": {
+        "youtube_videos": 0,
+        "tiktok_mentions": 0,
+        "forum_discussions": 0,
+        "viral_potential": "unknown"
+      },
+      "calculated_metrics": {
+        "total_monthly_demand": 5100,
+        "demand_trend_score": 50,
+        "commercial_intent": 60,
+        "informational_intent": 80
+      },
+      "last_verified": "2026-10-05",
+      "data_quality": "auto_collected"
     }
   ],
   "templates": {
