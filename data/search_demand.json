@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "last_updated": "2026-10-05",
+    "data_sources": ["google_keyword_planner", "yandex_wordstat", "manual_research"],
+    "update_frequency": "weekly",
+    "total_topics": 0
+  },
+  "topics": [
+    {
+      "keyword": "хроническая болезнь почек у кошек диета",
+      "topic_id": 3,
+      "target_site": "vetminsk",
+      "search_data": {
+        "google_monthly_searches": 8500,
+        "yandex_monthly_searches": 6200,
+        "trend_6_months": "stable",
+        "competition_level": "medium",
+        "cpc_estimate_rub": 45.50,
+        "seasonality_factor": 1.0
+      },
+      "ai_data": {
+        "perplexity_citations": 12,
+        "chatgpt_mentions": 8,
+        "google_ai_overviews": 5,
+        "ai_share_of_voice": 15.3
+      },
+      "social_signals": {
+        "youtube_videos": 45,
+        "tiktok_mentions": 23,
+        "forum_discussions": 67,
+        "viral_potential": "medium"
+      },
+      "calculated_metrics": {
+        "total_monthly_demand": 14700,
+        "demand_trend_score": 75,
+        "commercial_intent": 60,
+        "informational_intent": 85
+      },
+      "last_verified": "2026-10-05",
+      "data_quality": "manual"
+    }
+  ],
+  "templates": {
+    "new_topic": {
+      "keyword": "",
+      "topic_id": null,
+      "target_site": "",
+      "search_data": {
+        "google_monthly_searches": 0,
+        "yandex_monthly_searches": 0,
+        "trend_6_months": "unknown",
+        "competition_level": "unknown",
+        "cpc_estimate_rub": 0,
+        "seasonality_factor": 1.0
+      },
+      "ai_data": {
+        "perplexity_citations": 0,
+        "chatgpt_mentions": 0,
+        "google_ai_overviews": 0,
+        "ai_share_of_voice": 0
+      },
+      "social_signals": {
+        "youtube_videos": 0,
+        "tiktok_mentions": 0,
+        "forum_discussions": 0,
+        "viral_potential": "unknown"
+      },
+      "calculated_metrics": {
+        "total_monthly_demand": 0,
+        "demand_trend_score": 0,
+        "commercial_intent": 0,
+        "informational_intent": 0
+      },
+      "last_verified": "",
+      "data_quality": "pending"
+    }
+  }
+}
