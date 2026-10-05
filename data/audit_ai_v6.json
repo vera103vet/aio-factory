@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-05 18:44",
+  "version": "Temporal Relevance Audit v6.0",
+  "summary": {
+    "avg_score": 38.2,
+    "total_sites": 4,
+    "sites_needing_update": 4
+  },
+  "sites": [
+    {
+      "site": "main",
+      "url": "https://103vet.by/",
+      "dates_found": 0,
+      "dates": [],
+      "freshness": {
+        "score": 0,
+        "status": "даты не найдены",
+        "oldest": null,
+        "newest": null,
+        "age_days": null
+      },
+      "outdated": {
+        "score": 100,
+        "issues": [],
+        "fix": "OK"
+      },
+      "signals": {
+        "score": 0,
+        "found": [],
+        "fix": "Добавьте маркеры актуальности: 'по состоянию на 2026', 'обновлено', 'последние исследования'"
+      },
+      "lifespan": {
+        "lifespan_months": 2,
+        "status": "критически устарел",
+        "next_update_recommended": "2026-12-04",
+        "avg_score": 33
+      },
+      "total_score": 33
+    },
+    {
+      "site": "nevrolog",
+      "url": "https://nevrolog.103vet.by/",
+      "dates_found": 0,
+      "dates": [],
+      "freshness": {
+        "score": 0,
+        "status": "даты не найдены",
+        "oldest": null,
+        "newest": null,
+        "age_days": null
+      },
+      "outdated": {
+        "score": 100,
+        "issues": [],
+        "fix": "OK"
+      },
+      "signals": {
+        "score": 20,
+        "found": [
+          "2026"
+        ],
+        "fix": "Добавьте маркеры актуальности: 'по состоянию на 2026', 'обновлено', 'последние исследования'"
+      },
+      "lifespan": {
+        "lifespan_months": 6,
+        "status": "требует скорого обновления",
+        "next_update_recommended": "2027-04-03",
+        "avg_score": 40
+      },
+      "total_score": 40
+    },
+    {
+      "site": "usyplenie",
+      "url": "https://usyplenie.103vet.by/index.html",
+      "dates_found": 0,
+      "dates": [],
+      "freshness": {
+        "score": 0,
+        "status": "даты не найдены",
+        "oldest": null,
+        "newest": null,
+        "age_days": null
+      },
+      "outdated": {
+        "score": 100,
+        "issues": [],
+        "fix": "OK"
+      },
+      "signals": {
+        "score": 20,
+        "found": [
+          "2026"
+        ],
+        "fix": "Добавьте маркеры актуальности: 'по состоянию на 2026', 'обновлено', 'последние исследования'"
+      },
+      "lifespan": {
+        "lifespan_months": 6,
+        "status": "требует скорого обновления",
+        "next_update_recommended": "2027-04-03",
+        "avg_score": 40
+      },
+      "total_score": 40
+    },
+    {
+      "site": "vetminsk",
+      "url": "https://www.vetminsk.103vet.by/",
+      "dates_found": 0,
+      "dates": [],
+      "freshness": {
+        "score": 0,
+        "status": "даты не найдены",
+        "oldest": null,
+        "newest": null,
+        "age_days": null
+      },
+      "outdated": {
+        "score": 100,
+        "issues": [],
+        "fix": "OK"
+      },
+      "signals": {
+        "score": 20,
+        "found": [
+          "2026"
+        ],
+        "fix": "Добавьте маркеры актуальности: 'по состоянию на 2026', 'обновлено', 'последние исследования'"
+      },
+      "lifespan": {
+        "lifespan_months": 6,
+        "status": "требует скорого обновления",
+        "next_update_recommended": "2027-04-03",
+        "avg_score": 40
+      },
+      "total_score": 40
+    }
+  ]
+}
