@@ -1,0 +1,128 @@
+{
+  "date": "2026-10-05 17:12",
+  "version": "AI Audit & Predictive v3.0",
+  "summary": {
+    "avg_ai_score": 87.5,
+    "total_potential_upside": 165
+  },
+  "sites": [
+    {
+      "site": "main",
+      "url": "https://103vet.by/",
+      "ai_readiness_score": 80,
+      "bluf": {
+        "has_bluf": false,
+        "score": 0,
+        "fix": "Добавьте чёткий, прямой ответ на главный вопрос в первом абзаце."
+      },
+      "citation": {
+        "score": 0,
+        "found": [],
+        "fix": "Добавьте ссылки на международные протоколы (WSAVA, IRIS) для повышения доверия AI."
+      },
+      "predictive": {
+        "current": 50,
+        "potential": 100,
+        "upside": 50
+      },
+      "issues": [
+        "Используйте <strong> для выделения ключевых терминов",
+        "Добавьте чёткий, прямой ответ на главный вопрос в первом абзаце.",
+        "Добавьте ссылки на международные протоколы (WSAVA, IRIS) для повышения доверия AI."
+      ],
+      "fix_snippet": {
+        "site": "main",
+        "snippet": "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"VeterinaryCare\",\n  \"name\": \"103vet.by - main\",\n  \"url\": \"https://103vet.by/\",\n  \"description\": \"Профессиональная ветеринарная помощь. Пространство спокойствия для людей и безопасности для животных.\"\n}\n</script>"
+      }
+    },
+    {
+      "site": "nevrolog",
+      "url": "https://nevrolog.103vet.by/",
+      "ai_readiness_score": 80,
+      "bluf": {
+        "has_bluf": false,
+        "score": 0,
+        "fix": "Добавьте чёткий, прямой ответ на главный вопрос в первом абзаце."
+      },
+      "citation": {
+        "score": 0,
+        "found": [],
+        "fix": "Добавьте ссылки на международные протоколы (WSAVA, IRIS) для повышения доверия AI."
+      },
+      "predictive": {
+        "current": 50,
+        "potential": 100,
+        "upside": 50
+      },
+      "issues": [
+        "Используйте <strong> для выделения ключевых терминов",
+        "Добавьте чёткий, прямой ответ на главный вопрос в первом абзаце.",
+        "Добавьте ссылки на международные протоколы (WSAVA, IRIS) для повышения доверия AI."
+      ],
+      "fix_snippet": {
+        "site": "nevrolog",
+        "snippet": "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"VeterinaryCare\",\n  \"name\": \"103vet.by - nevrolog\",\n  \"url\": \"https://nevrolog.103vet.by/\",\n  \"description\": \"Профессиональная ветеринарная помощь. Пространство спокойствия для людей и безопасности для животных.\"\n}\n</script>"
+      }
+    },
+    {
+      "site": "usyplenie",
+      "url": "https://usyplenie.103vet.by/index.html",
+      "ai_readiness_score": 80,
+      "bluf": {
+        "has_bluf": false,
+        "score": 0,
+        "fix": "Добавьте чёткий, прямой ответ на главный вопрос в первом абзаце."
+      },
+      "citation": {
+        "score": 0,
+        "found": [],
+        "fix": "Добавьте ссылки на международные протоколы (WSAVA, IRIS) для повышения доверия AI."
+      },
+      "predictive": {
+        "current": 50,
+        "potential": 100,
+        "upside": 50
+      },
+      "issues": [
+        "Используйте <strong> для выделения ключевых терминов",
+        "Добавьте чёткий, прямой ответ на главный вопрос в первом абзаце.",
+        "Добавьте ссылки на международные протоколы (WSAVA, IRIS) для повышения доверия AI."
+      ],
+      "fix_snippet": {
+        "site": "usyplenie",
+        "snippet": "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"VeterinaryCare\",\n  \"name\": \"103vet.by - usyplenie\",\n  \"url\": \"https://usyplenie.103vet.by/index.html\",\n  \"description\": \"Профессиональная ветеринарная помощь. Пространство спокойствия для людей и безопасности для животных.\"\n}\n</script>"
+      }
+    },
+    {
+      "site": "vetminsk",
+      "url": "https://www.vetminsk.103vet.by/",
+      "ai_readiness_score": 110,
+      "bluf": {
+        "has_bluf": false,
+        "score": 0,
+        "fix": "Добавьте чёткий, прямой ответ на главный вопрос в первом абзаце."
+      },
+      "citation": {
+        "score": 30,
+        "found": [
+          "wsava",
+          "iris"
+        ],
+        "fix": "OK"
+      },
+      "predictive": {
+        "current": 50,
+        "potential": 65,
+        "upside": 15
+      },
+      "issues": [
+        "Используйте <strong> для выделения ключевых терминов",
+        "Добавьте чёткий, прямой ответ на главный вопрос в первом абзаце."
+      ],
+      "fix_snippet": {
+        "site": "vetminsk",
+        "snippet": "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"VeterinaryCare\",\n  \"name\": \"103vet.by - vetminsk\",\n  \"url\": \"https://www.vetminsk.103vet.by/\",\n  \"description\": \"Профессиональная ветеринарная помощь. Пространство спокойствия для людей и безопасности для животных.\"\n}\n</script>"
+      }
+    }
+  ]
+}
