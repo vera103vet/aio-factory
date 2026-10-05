@@ -1,0 +1,54 @@
+# ЦЕНТРАЛЬНЫЙ РЕЕСТР САЙТОВ ЭКОСИСТЕМЫ 103vet
+# При добавлении нового сайта просто добавь блок ниже
+
+sites:
+  main:
+    name: "103vet.by"
+    url: "https://103vet.by/"
+    role: "main"
+    description: "Основной продающий сайт. Ветеринар на дом в Минске."
+    content_type: "commercial"
+    priority: 1
+    allowed_keywords_density: 2.0
+    internal_linking_to: ["nevrolog", "usyplenie", "vetminsk"]
+    
+  nevrolog:
+    name: "nevrolog.103vet.by"
+    url: "https://nevrolog.103vet.by/"
+    role: "satellite"
+    description: "Экспертный сайт о ветеринарной неврологии."
+    content_type: "expert"
+    priority: 2
+    allowed_keywords_density: 1.5
+    internal_linking_to: ["main"]
+    
+  usyplenie:
+    name: "usyplenie.103vet.by"
+    url: "https://usyplenie.103vet.by/index.html"
+    role: "satellite"
+    description: "Экспертный сайт о достойном уходе за питомцами."
+    content_type: "expert"
+    priority: 2
+    allowed_keywords_density: 1.5
+    internal_linking_to: ["main"]
+    
+  vetminsk:
+    name: "vetminsk.103vet.by"
+    url: "https://www.vetminsk.103vet.by/"
+    role: "satellite"
+    description: "Экспертный сайт о терапии хронических заболеваний."
+    content_type: "expert"
+    priority: 2
+    allowed_keywords_density: 1.5
+    internal_linking_to: ["main"]
+
+# Шаблон для добавления нового сайта:
+# new_site:
+#   name: "название.103vet.by"
+#   url: "https://название.103vet.by/"
+#   role: "satellite"
+#   description: "Описание сайта."
+#   content_type: "expert"
+#   priority: 2
+#   allowed_keywords_density: 1.5
+#   internal_linking_to: ["main"]
