@@ -1,0 +1,249 @@
+{
+  "date": "2026-10-05 17:25",
+  "version": "Deep AI-Audit v4.0",
+  "summary": {
+    "avg_ai_score": 41.8,
+    "avg_citation_prob": 34.8,
+    "total_sites": 4
+  },
+  "sites": [
+    {
+      "site": "main",
+      "url": "https://103vet.by/",
+      "topic": "ветеринар на дом минск",
+      "scores": {
+        "information_gain": {
+          "score": 20,
+          "unique_elements": [
+            "ссылки на протоколы"
+          ],
+          "fix": "Добавьте уникальные таблицы, чек-листы, статистику или цитаты протоколов"
+        },
+        "entity_cooccurrence": {
+          "score": 60,
+          "found": [
+            "осмотр",
+            "диагноз",
+            "лечени"
+          ],
+          "missing": [
+            "профилактик",
+            "вакцин"
+          ],
+          "expected": [
+            "осмотр",
+            "диагноз",
+            "лечени",
+            "профилактик",
+            "вакцин"
+          ],
+          "fix": "Добавьте упоминания: профилактик, вакцин"
+        },
+        "prompt_match": {
+          "score": 60,
+          "has_definition": false,
+          "has_list": true,
+          "has_structure": true,
+          "generated_intro": "<p><strong>[Тема статьи]</strong> — это [определение]. Основные признаки включают: [список]. Согласно рекомендациям [авторитет], [факт].</p>",
+          "fix": "Переструктурируйте первый абзац по формуле: Определение + Список + Авторитет"
+        },
+        "anti_hallucination": {
+          "score": 30,
+          "authority_links": [],
+          "has_explicit_citations": true,
+          "fix": "Добавьте явные цитирования: 'Согласно рекомендациям WSAVA (2025), [факт] [ссылка]'"
+        },
+        "vision_ai": {
+          "score": 0,
+          "total": 3,
+          "with_good_alt": 0,
+          "examples": [],
+          "fix": "Улучшите alt-тексты: добавьте контекст, породу, действие (например: 'Щенок джек-рассел во время неврологического осмотра')"
+        }
+      },
+      "total_ai_score": 34,
+      "citation_probability": 45
+    },
+    {
+      "site": "nevrolog",
+      "url": "https://nevrolog.103vet.by/",
+      "topic": "эпилепсия у собак симптомы",
+      "scores": {
+        "information_gain": {
+          "score": 20,
+          "unique_elements": [
+            "ссылки на протоколы"
+          ],
+          "fix": "Добавьте уникальные таблицы, чек-листы, статистику или цитаты протоколов"
+        },
+        "entity_cooccurrence": {
+          "score": 33,
+          "found": [
+            "судорог",
+            "невролог"
+          ],
+          "missing": [
+            "припадк",
+            "ЭЭГ",
+            "фенобарбитал",
+            "антиконвульсант"
+          ],
+          "expected": [
+            "судорог",
+            "припадк",
+            "ЭЭГ",
+            "фенобарбитал",
+            "невролог",
+            "антиконвульсант"
+          ],
+          "fix": "Добавьте упоминания: припадк, ЭЭГ, фенобарбитал"
+        },
+        "prompt_match": {
+          "score": 70,
+          "has_definition": true,
+          "has_list": true,
+          "has_structure": false,
+          "generated_intro": null,
+          "fix": "OK"
+        },
+        "anti_hallucination": {
+          "score": 0,
+          "authority_links": [],
+          "has_explicit_citations": false,
+          "fix": "Добавьте явные цитирования: 'Согласно рекомендациям WSAVA (2025), [факт] [ссылка]'"
+        },
+        "vision_ai": {
+          "score": 0,
+          "total": 3,
+          "with_good_alt": 0,
+          "examples": [],
+          "fix": "Улучшите alt-тексты: добавьте контекст, породу, действие (например: 'Щенок джек-рассел во время неврологического осмотра')"
+        }
+      },
+      "total_ai_score": 24,
+      "citation_probability": 16
+    },
+    {
+      "site": "usyplenie",
+      "url": "https://usyplenie.103vet.by/index.html",
+      "topic": "",
+      "scores": {
+        "information_gain": {
+          "score": 20,
+          "unique_elements": [
+            "ссылки на протоколы"
+          ],
+          "fix": "Добавьте уникальные таблицы, чек-листы, статистику или цитаты протоколов"
+        },
+        "entity_cooccurrence": {
+          "score": 40,
+          "found": [
+            "симптомы",
+            "осмотр"
+          ],
+          "missing": [
+            "диагноз",
+            "лечение",
+            "профилактика"
+          ],
+          "expected": [
+            "диагноз",
+            "лечение",
+            "симптомы",
+            "профилактика",
+            "осмотр"
+          ],
+          "fix": "Добавьте упоминания: диагноз, лечение, профилактика"
+        },
+        "prompt_match": {
+          "score": 100,
+          "has_definition": true,
+          "has_list": true,
+          "has_structure": true,
+          "generated_intro": null,
+          "fix": "OK"
+        },
+        "anti_hallucination": {
+          "score": 30,
+          "authority_links": [],
+          "has_explicit_citations": true,
+          "fix": "Добавьте явные цитирования: 'Согласно рекомендациям WSAVA (2025), [факт] [ссылка]'"
+        },
+        "vision_ai": {
+          "score": 100,
+          "total": 1,
+          "with_good_alt": 1,
+          "examples": [
+            "Достойный уход за питомцем - 103vet.by"
+          ],
+          "fix": "OK"
+        }
+      },
+      "total_ai_score": 58,
+      "citation_probability": 35
+    },
+    {
+      "site": "vetminsk",
+      "url": "https://www.vetminsk.103vet.by/",
+      "topic": "хроническая болезнь почек у кошек диета",
+      "scores": {
+        "information_gain": {
+          "score": 20,
+          "unique_elements": [
+            "ссылки на протоколы"
+          ],
+          "fix": "Добавьте уникальные таблицы, чек-листы, статистику или цитаты протоколов"
+        },
+        "entity_cooccurrence": {
+          "score": 57,
+          "found": [
+            "стади",
+            "диет",
+            "фосфор",
+            "нефролог"
+          ],
+          "missing": [
+            "креатинин",
+            "мочевин",
+            "IRIS"
+          ],
+          "expected": [
+            "креатинин",
+            "мочевин",
+            "IRIS",
+            "стади",
+            "диет",
+            "фосфор",
+            "нефролог"
+          ],
+          "fix": "Добавьте упоминания: креатинин, мочевин, IRIS"
+        },
+        "prompt_match": {
+          "score": 100,
+          "has_definition": true,
+          "has_list": true,
+          "has_structure": true,
+          "generated_intro": null,
+          "fix": "OK"
+        },
+        "anti_hallucination": {
+          "score": 30,
+          "authority_links": [],
+          "has_explicit_citations": true,
+          "fix": "Добавьте явные цитирования: 'Согласно рекомендациям WSAVA (2025), [факт] [ссылка]'"
+        },
+        "vision_ai": {
+          "score": 50,
+          "total": 2,
+          "with_good_alt": 1,
+          "examples": [
+            "VETMINSK 103vet.by - Ветеринарный терапевт для собак и кошек в Минске"
+          ],
+          "fix": "OK"
+        }
+      },
+      "total_ai_score": 51,
+      "citation_probability": 43
+    }
+  ]
+}
