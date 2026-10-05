@@ -14,73 +14,146 @@ def load_registry():
     with open(REGISTRY, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def find_natural_anchor_positions(text, keywords):
-    """Находит естественные места для вставки ссылок"""
-    positions = []
+def find_smart_anchors(text, topic, keyword):
+    """Находит умные анкоры: от точных до фрагментарных"""
+    
     text_lower = text.lower()
+    topic_lower = topic.lower()
+    keyword_lower = keyword.lower()
     
-    for keyword in keywords:
-        # Ищем вхождения ключевых слов
-        pattern = r'\b' + re.escape(keyword.lower()) + r'\b'
-        for match in re.finditer(pattern, text_lower):
-            start = match.start()
-            # Проверяем, что это не часть HTML-тега
-            if start > 0 and text[start-1] not in ['<', '/']:
-                positions.append({
-                    "keyword": keyword,
-                    "position": start,
-                    "context": text[max(0, start-20):start+len(keyword)+20]
-                })
+    anchors = []
     
-    return positions
+    # Приоритет 1: Точное вхождение ключевого слова
+    pattern = r'\b' + re.escape(keyword_lower) + r'\b'
+    for match in re.finditer(pattern, text_lower):
+        pos = match.start()
+        if pos > 0 and text[pos-1] not in ['<', '/']:
+            anchors.append({
+                "text": keyword,
+                "position": pos,
+                "length": len(keyword),
+                "type": "exact",
+                "priority": 1
+            })
+    
+    # Приоритет 2: Вхождение темы целиком
+    pattern = r'\b' + re.escape(topic_lower) + r'\b'
+    for match in re.finditer(pattern, text_lower):
+        pos = match.start()
+        if pos > 0 and text[pos-1] not in ['<', '/']:
+            anchors.append({
+                "text": topic,
+                "position": pos,
+                "length": len(topic),
+                "type": "full_topic",
+                "priority": 2
+            })
+    
+    # Приоритет 3: Фрагменты ключа (3 слова подряд из ключа)
+    keyword_words = keyword_lower.split()
+    if len(keyword_words) >= 3:
+        for i in range(len(keyword_words) - 2):
+            fragment = ' '.join(keyword_words[i:i+3])
+            pattern = r'\b' + re.escape(fragment) + r'\b'
+            for match in re.finditer(pattern, text_lower):
+                pos = match.start()
+                if pos > 0 and text[pos-1] not in ['<', '/']:
+                    anchors.append({
+                        "text": fragment,
+                        "position": pos,
+                        "length": len(fragment),
+                        "type": "3_word_fragment",
+                        "priority": 3
+                    })
+    
+    # Приоритет 4: Фрагменты ключа (2 слова подряд из ключа)
+    if len(keyword_words) >= 2:
+        for i in range(len(keyword_words) - 1):
+            fragment = ' '.join(keyword_words[i:i+2])
+            # Пропускаем слишком короткие фрагменты
+            if len(fragment) < 8:
+                continue
+            pattern = r'\b' + re.escape(fragment) + r'\b'
+            for match in re.finditer(pattern, text_lower):
+                pos = match.start()
+                if pos > 0 and text[pos-1] not in ['<', '/']:
+                    anchors.append({
+                        "text": fragment,
+                        "position": pos,
+                        "length": len(fragment),
+                        "type": "2_word_fragment",
+                        "priority": 4
+                    })
+    
+    return anchors
 
-def generate_internal_links(text, source_site, sites, registry):
-    """Генерирует внутренние ссылки по правилам экосистемы"""
+def generate_smart_links(text, source_site, sites, registry):
+    """Генерирует умные внутренние ссылки с естественными анкорами"""
     
     source_config = sites.get(source_site)
     if not source_config:
         return {"error": f"Сайт {source_site} не найден в реестре"}
     
-    # Определяем, на какие сайты можно ссылаться
     allowed_targets = source_config.get("internal_linking_to", [])
     
     if not allowed_targets:
         return {"message": "Нет разрешённых целей для перелинковки", "links": []}
     
-    # Собираем ключевые слова из реестра для целевых сайтов
-    link_candidates = []
+    all_anchors = []
+    
     for topic in registry:
         target = topic["target_site"]
-        if target in allowed_targets:
-            link_candidates.append({
-                "keyword": topic["primary_keyword"],
-                "topic": topic["topic"],
+        
+        if target not in allowed_targets:
+            continue
+        
+        anchors = find_smart_anchors(text, topic["topic"], topic["primary_keyword"])
+        
+        for anchor in anchors:
+            all_anchors.append({
+                "anchor": anchor["text"],
                 "url": topic["url"],
-                "target_site": target
+                "title": topic["topic"],
+                "position": anchor["position"],
+                "length": anchor["length"],
+                "target_site": target,
+                "anchor_type": anchor["type"],
+                "priority": anchor["priority"]
             })
     
-    # Находим естественные позиции для ссылок
-    positions = find_natural_anchor_positions(text, [c["keyword"] for c in link_candidates])
+    # Удаляем перекрывающиеся анкоры (оставляем самый длинный и приоритетный)
+    all_anchors.sort(key=lambda x: (x["priority"], -x["length"], x["position"]))
     
-    # Лимит: не более 5 ссылок на текст
-    max_links = 5
     selected_links = []
+    used_ranges = []
     
-    for pos in positions[:max_links]:
-        for candidate in link_candidates:
-            if candidate["keyword"].lower() in pos["keyword"].lower():
-                selected_links.append({
-                    "anchor": pos["keyword"],
-                    "url": candidate["url"],
-                    "title": candidate["topic"],
-                    "position": pos["position"]
-                })
+    for anchor in all_anchors:
+        pos = anchor["position"]
+        length = anchor["length"]
+        end = pos + length
+        
+        # Проверяем, не перекрывается ли с уже выбранными
+        overlap = False
+        for used_start, used_end in used_ranges:
+            if pos < used_end and end > used_start:
+                overlap = True
                 break
+        
+        if not overlap:
+            selected_links.append(anchor)
+            used_ranges.append((pos, end))
+        
+        if len(selected_links) >= 5:
+            break
+    
+    # Сортируем по позиции для корректной замены
+    selected_links.sort(key=lambda x: x["position"])
     
     # Генерируем HTML со ссылками
     linked_text = text
     offset = 0
-    for link in sorted(selected_links, key=lambda x: x["position"]):
+    
+    for link in selected_links:
         pos = link["position"] + offset
         anchor = link["anchor"]
         url = link["url"]
@@ -100,7 +173,7 @@ def generate_internal_links(text, source_site, sites, registry):
 
 if __name__ == "__main__":
     print("="*70)
-    print("АГЕНТ-ЛИНКЕР: УМНАЯ ПЕРЕЛИНКОВКА ЭКОСИСТЕМЫ")
+    print("АГЕНТ-ЛИНКЕР v4: ПОИСК ФРАГМЕНТОВ КЛЮЧА")
     print("="*70)
     
     sites = load_sites()
@@ -109,7 +182,6 @@ if __name__ == "__main__":
     print(f"\nЗагружено сайтов: {len(sites)}")
     print(f"Загружено тем в реестре: {len(registry)}")
     
-    # Тестовый текст
     test_text = """
     Хроническая болезнь почек у кошек требует особого внимания. 
     Диета при хронической болезни почек у кошек должна быть низкобелковой.
@@ -118,10 +190,10 @@ if __name__ == "__main__":
     """
     
     print("\n" + "="*70)
-    print("ТЕСТ: Генерация ссылок для сайта 'vetminsk'")
+    print("ТЕСТ: Умная перелинковка для сайта 'main'")
     print("="*70)
     
-    result = generate_internal_links(test_text, "vetminsk", sites, registry)
+    result = generate_smart_links(test_text, "main", sites, registry)
     
     print(f"\nИсточник: {result['source_site']}")
     print(f"Разрешённые цели: {result['allowed_targets']}")
@@ -130,7 +202,7 @@ if __name__ == "__main__":
     if result['links']:
         print("\nСгенерированные ссылки:")
         for link in result['links']:
-            print(f"  - Анкор: '{link['anchor']}'")
+            print(f"  - Анкор: '{link['anchor']}' (тип: {link['anchor_type']})")
             print(f"    URL: {link['url']}")
             print(f"    Заголовок: {link['title']}\n")
     
