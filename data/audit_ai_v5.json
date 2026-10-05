@@ -1,0 +1,198 @@
+{
+  "date": "2026-10-05 18:31",
+  "version": "Semantic Graph Audit v5.0",
+  "summary": {
+    "avg_score": 44.8,
+    "total_sites": 4,
+    "reference_graphs_available": 5
+  },
+  "sites": [
+    {
+      "site": "main",
+      "url": "https://103vet.by/",
+      "topic": "ветеринар на дом минск",
+      "topic_key": "ветеринар",
+      "entities_found": 4,
+      "graph_comparison": {
+        "score": 46,
+        "total_expected_links": 13,
+        "total_found_links": 6,
+        "missing_links": [
+          "ветеринар -> профилактика",
+          "ветеринар -> вакцинация",
+          "ветеринар -> лечение",
+          "осмотр -> анамнез",
+          "осмотр -> симптомы",
+          "диагноз -> анализы",
+          "диагноз -> лечение"
+        ],
+        "coverage": "6/13"
+      },
+      "centrality": {
+        "hubs": [
+          "ветеринар",
+          "осмотр",
+          "диагноз"
+        ],
+        "isolated": [],
+        "total_entities": 3,
+        "avg_connections": 2.0,
+        "score": 90
+      },
+      "link_quality": {
+        "score": 66,
+        "natural_links": 4,
+        "forced_links": 2,
+        "total_links": 6,
+        "natural_ratio": "4/6"
+      },
+      "total_score": 67,
+      "built_graph": {
+        "ветеринар": [
+          "диагноз",
+          "осмотр"
+        ],
+        "осмотр": [
+          "диагноз",
+          "ветеринар"
+        ],
+        "диагноз": [
+          "ветеринар",
+          "осмотр"
+        ]
+      }
+    },
+    {
+      "site": "nevrolog",
+      "url": "https://nevrolog.103vet.by/",
+      "topic": "эпилепсия у собак симптомы",
+      "topic_key": "эпилепс",
+      "entities_found": 6,
+      "graph_comparison": {
+        "score": 18,
+        "total_expected_links": 11,
+        "total_found_links": 2,
+        "missing_links": [
+          "эпилепсия -> невролог",
+          "эпилепсия -> диагноз",
+          "эпилепсия -> фенобарбитал",
+          "эпилепсия -> лечение",
+          "эпилепсия -> припадки",
+          "эпилепсия -> ЭЭГ",
+          "судороги -> припадки",
+          "судороги -> потеря сознания",
+          "судороги -> мышцы"
+        ],
+        "coverage": "2/11"
+      },
+      "centrality": {
+        "hubs": [
+          "эпилепсия",
+          "ветеринар",
+          "судороги"
+        ],
+        "isolated": [],
+        "total_entities": 4,
+        "avg_connections": 3.0,
+        "score": 90
+      },
+      "link_quality": {
+        "score": 100,
+        "natural_links": 12,
+        "forced_links": 0,
+        "total_links": 12,
+        "natural_ratio": "12/12"
+      },
+      "total_score": 69,
+      "built_graph": {
+        "эпилепсия": [
+          "ветеринар",
+          "осмотр",
+          "судороги"
+        ],
+        "ветеринар": [
+          "осмотр",
+          "судороги",
+          "эпилепсия"
+        ],
+        "судороги": [
+          "ветеринар",
+          "осмотр",
+          "эпилепсия"
+        ],
+        "осмотр": [
+          "ветеринар",
+          "судороги",
+          "эпилепсия"
+        ]
+      }
+    },
+    {
+      "site": "usyplenie",
+      "url": "https://usyplenie.103vet.by/index.html",
+      "topic": "",
+      "topic_key": null,
+      "entities_found": 2,
+      "graph_comparison": {
+        "score": 0,
+        "missing_links": [],
+        "coverage": "N/A"
+      },
+      "centrality": {
+        "hubs": [],
+        "isolated": [],
+        "score": 0,
+        "total_entities": 0,
+        "avg_connections": 0
+      },
+      "link_quality": {
+        "score": 0,
+        "natural_links": 0,
+        "forced_links": 0,
+        "total_links": 0,
+        "natural_ratio": "0/0"
+      },
+      "total_score": 0,
+      "built_graph": {}
+    },
+    {
+      "site": "vetminsk",
+      "url": "https://www.vetminsk.103vet.by/",
+      "topic": "хроническая болезнь почек у кошек диета",
+      "topic_key": "почек",
+      "entities_found": 4,
+      "graph_comparison": {
+        "score": 0,
+        "total_expected_links": 1,
+        "total_found_links": 0,
+        "missing_links": [
+          "лечение -> диета"
+        ],
+        "coverage": "0/1"
+      },
+      "centrality": {
+        "hubs": [],
+        "isolated": [],
+        "total_entities": 2,
+        "avg_connections": 1.0,
+        "score": 30
+      },
+      "link_quality": {
+        "score": 100,
+        "natural_links": 2,
+        "forced_links": 0,
+        "total_links": 2,
+        "natural_ratio": "2/2"
+      },
+      "total_score": 43,
+      "built_graph": {
+        "ветеринар": [
+          "лечение"
+        ],
+        "лечение": [
+          "ветеринар"
+        ]
+      }
+    }
+  ]
+}
