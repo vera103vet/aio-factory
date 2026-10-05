@@ -1,0 +1,260 @@
+{
+  "audit_date": "2026-10-05 14:47",
+  "version": "3.0 (Phase 1: Niche Expert)",
+  "summary": {
+    "avg_score": 52.5,
+    "total_critical": 6
+  },
+  "sites": [
+    {
+      "site": "main",
+      "url": "https://103vet.by/",
+      "score": 55,
+      "critical_issues": [
+        {
+          "type": "bad_ymyl",
+          "desc": "Отсутствует тег <aside>",
+          "fix": "Добавить <aside> с текстом о консультации с ветеринаром"
+        }
+      ],
+      "important_issues": [
+        {
+          "type": "no_article",
+          "desc": "Нет <article>",
+          "fix": "Обернуть в <article>"
+        },
+        {
+          "type": "few_h2",
+          "desc": "Мало H2-вопросов (1)",
+          "fix": "Добавить вопросы в H2"
+        },
+        {
+          "type": "no_philosophy",
+          "desc": "Нет философии бренда",
+          "fix": "Добавить текст философии"
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "no_authority",
+          "desc": "Нет упоминаний WSAVA, IRIS или протоколов",
+          "fix": "Добавить ссылки на международные протоколы"
+        }
+      ],
+      "checks": {
+        "lang_ru": true,
+        "meta_title": true,
+        "meta_desc": false,
+        "canonical": false,
+        "schema_org": true,
+        "article_tag": false,
+        "h1_tag": true,
+        "h2_questions": 1,
+        "faq_section": true,
+        "ymyl_disclaimer": false,
+        "ymyl_deep_check": false,
+        "brand_philosophy": false,
+        "word_count": 898,
+        "viewport": true,
+        "vet_authority": [],
+        "emergency_readiness": [
+          "103vet",
+          "вызов",
+          "срочно"
+        ],
+        "forbidden_elements": [],
+        "keyword_density": {
+          "ветеринар на дом минск": {
+            "count": 3,
+            "density": 0.33
+          }
+        }
+      }
+    },
+    {
+      "site": "nevrolog",
+      "url": "https://nevrolog.103vet.by/",
+      "score": 35,
+      "critical_issues": [
+        {
+          "type": "no_schema",
+          "desc": "Нет Schema.org",
+          "fix": "Добавить JSON-LD"
+        },
+        {
+          "type": "bad_ymyl",
+          "desc": "Отсутствует тег <aside>",
+          "fix": "Добавить <aside> с текстом о консультации с ветеринаром"
+        },
+        {
+          "type": "forbidden_found",
+          "desc": "Найдены запрещённые элементы: стоимость",
+          "fix": "Удалить упоминания цен и конкретных имён"
+        }
+      ],
+      "important_issues": [
+        {
+          "type": "few_h2",
+          "desc": "Мало H2-вопросов (0)",
+          "fix": "Добавить вопросы в H2"
+        },
+        {
+          "type": "no_philosophy",
+          "desc": "Нет философии бренда",
+          "fix": "Добавить текст философии"
+        }
+      ],
+      "recommendations": [],
+      "checks": {
+        "lang_ru": true,
+        "meta_title": true,
+        "meta_desc": false,
+        "canonical": false,
+        "schema_org": false,
+        "article_tag": true,
+        "h1_tag": true,
+        "h2_questions": 0,
+        "faq_section": true,
+        "ymyl_disclaimer": false,
+        "ymyl_deep_check": false,
+        "brand_philosophy": false,
+        "word_count": 637,
+        "viewport": true,
+        "vet_authority": [
+          "протокол"
+        ],
+        "emergency_readiness": [
+          "103vet",
+          "вызов",
+          "срочно"
+        ],
+        "forbidden_elements": [
+          "стоимость"
+        ],
+        "keyword_density": {
+          "эпилепсия у собак симптомы": {
+            "count": 0,
+            "density": 0.0
+          }
+        }
+      }
+    },
+    {
+      "site": "usyplenie",
+      "url": "https://usyplenie.103vet.by/index.html",
+      "score": 60,
+      "critical_issues": [
+        {
+          "type": "bad_ymyl",
+          "desc": "Тег <aside> есть, но нет ключевых слов о консультации с ветеринаром",
+          "fix": "Добавить <aside> с текстом о консультации с ветеринаром"
+        }
+      ],
+      "important_issues": [
+        {
+          "type": "no_article",
+          "desc": "Нет <article>",
+          "fix": "Обернуть в <article>"
+        },
+        {
+          "type": "few_h2",
+          "desc": "Мало H2-вопросов (1)",
+          "fix": "Добавить вопросы в H2"
+        },
+        {
+          "type": "no_philosophy",
+          "desc": "Нет философии бренда",
+          "fix": "Добавить текст философии"
+        }
+      ],
+      "recommendations": [],
+      "checks": {
+        "lang_ru": true,
+        "meta_title": true,
+        "meta_desc": false,
+        "canonical": false,
+        "schema_org": true,
+        "article_tag": false,
+        "h1_tag": true,
+        "h2_questions": 1,
+        "faq_section": true,
+        "ymyl_disclaimer": false,
+        "ymyl_deep_check": false,
+        "brand_philosophy": false,
+        "word_count": 606,
+        "viewport": true,
+        "vet_authority": [
+          "протокол",
+          "международн"
+        ],
+        "emergency_readiness": [
+          "103vet"
+        ],
+        "forbidden_elements": [],
+        "keyword_density": {}
+      }
+    },
+    {
+      "site": "vetminsk",
+      "url": "https://www.vetminsk.103vet.by/",
+      "score": 60,
+      "critical_issues": [
+        {
+          "type": "bad_ymyl",
+          "desc": "Отсутствует тег <aside>",
+          "fix": "Добавить <aside> с текстом о консультации с ветеринаром"
+        }
+      ],
+      "important_issues": [
+        {
+          "type": "no_article",
+          "desc": "Нет <article>",
+          "fix": "Обернуть в <article>"
+        },
+        {
+          "type": "few_h2",
+          "desc": "Мало H2-вопросов (0)",
+          "fix": "Добавить вопросы в H2"
+        },
+        {
+          "type": "no_philosophy",
+          "desc": "Нет философии бренда",
+          "fix": "Добавить текст философии"
+        }
+      ],
+      "recommendations": [],
+      "checks": {
+        "lang_ru": true,
+        "meta_title": true,
+        "meta_desc": false,
+        "canonical": false,
+        "schema_org": true,
+        "article_tag": false,
+        "h1_tag": true,
+        "h2_questions": 0,
+        "faq_section": true,
+        "ymyl_disclaimer": false,
+        "ymyl_deep_check": false,
+        "brand_philosophy": false,
+        "word_count": 594,
+        "viewport": true,
+        "vet_authority": [
+          "wsava",
+          "iris",
+          "протокол",
+          "международн"
+        ],
+        "emergency_readiness": [
+          "103vet"
+        ],
+        "forbidden_elements": [],
+        "keyword_density": {
+          "хроническая болезнь почек у кошек диета": {
+            "count": 0,
+            "density": 0.0
+          }
+        }
+      }
+    }
+  ]
+}
