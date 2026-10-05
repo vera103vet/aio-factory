@@ -1,0 +1,351 @@
+{
+  "date": "2026-10-05 17:05",
+  "version": "Network Audit v2.0",
+  "strength": {
+    "main": {
+      "outgoing": 0,
+      "incoming": 10,
+      "role": "АКЦЕПТОР",
+      "strength": 60
+    },
+    "nevrolog": {
+      "outgoing": 7,
+      "incoming": 0,
+      "role": "ДОНОР",
+      "strength": 77
+    },
+    "usyplenie": {
+      "outgoing": 0,
+      "incoming": 0,
+      "role": "СИРОТА",
+      "strength": 15
+    },
+    "vetminsk": {
+      "outgoing": 3,
+      "incoming": 0,
+      "role": "ДОНОР",
+      "strength": 73
+    }
+  },
+  "orphans": [
+    {
+      "site": "nevrolog",
+      "url": "https://nevrolog.103vet.by/",
+      "fix": "Добавить ссылки на эту страницу из других сайтов"
+    },
+    {
+      "site": "usyplenie",
+      "url": "https://usyplenie.103vet.by/index.html",
+      "fix": "Добавить ссылки на эту страницу из других сайтов"
+    },
+    {
+      "site": "vetminsk",
+      "url": "https://www.vetminsk.103vet.by/",
+      "fix": "Добавить ссылки на эту страницу из других сайтов"
+    }
+  ],
+  "bridges": {
+    "main": {
+      "count": 0,
+      "bridges": []
+    },
+    "nevrolog": {
+      "count": 7,
+      "bridges": [
+        {
+          "url": "https://103vet.by/",
+          "text": "Записаться — 103vet.by",
+          "to": [
+            "main"
+          ]
+        },
+        {
+          "url": "https://103vet.by/",
+          "text": "Записаться на приём — 103vet.by",
+          "to": [
+            "main"
+          ]
+        },
+        {
+          "url": "https://103vet.by/",
+          "text": "Записаться к неврологу — 103vet.by",
+          "to": [
+            "main"
+          ]
+        },
+        {
+          "url": "https://103vet.by/",
+          "text": "Отправить материалы на проверку",
+          "to": [
+            "main"
+          ]
+        },
+        {
+          "url": "https://103vet.by/",
+          "text": "Записаться на приём",
+          "to": [
+            "main"
+          ]
+        }
+      ]
+    },
+    "usyplenie": {
+      "count": 0,
+      "bridges": []
+    },
+    "vetminsk": {
+      "count": 3,
+      "bridges": [
+        {
+          "url": "https://103vet.by/",
+          "text": "Записаться на приём",
+          "to": [
+            "main"
+          ]
+        },
+        {
+          "url": "https://103vet.by/",
+          "text": "Задать вопрос терапевту",
+          "to": [
+            "main"
+          ]
+        },
+        {
+          "url": "https://103vet.by/",
+          "text": "Получить телемедицинскую консультацию",
+          "to": [
+            "main"
+          ]
+        }
+      ]
+    }
+  },
+  "brand": {
+    "data": {
+      "main": {
+        "phones": [],
+        "emails": [],
+        "addr": "Ветеринар на дом Минск 24/7 | Онлайн-консультация и выезд | 103"
+      },
+      "nevrolog": {
+        "phones": [
+          "+375 (29) 000-00-00"
+        ],
+        "emails": [
+          "info@nevrolog.103vet.by"
+        ],
+        "addr": "сты для предрасположенных пород. 3 Протокол лечения и наблюдения Схема терапии,"
+      },
+      "usyplenie": {
+        "phones": [],
+        "emails": [
+          "care@103vet.by"
+        ],
+        "addr": "ем в Минске | Мирное прощание дома Достойный уход Главная Поддержка собак ▾ симп"
+      },
+      "vetminsk": {
+        "phones": [],
+        "emails": [],
+        "addr": ""
+      }
+    },
+    "issues": []
+  },
+  "clusters": {
+    "main": {
+      "hub": "Вызов ветеринара на дом Минск",
+      "spokes": 0,
+      "status": "нет кластера"
+    },
+    "nevrolog": {
+      "hub": "Эпилепсия у собак: симптомы и первая помощь",
+      "spokes": 0,
+      "status": "нет кластера"
+    },
+    "usyplenie": {
+      "hub": null,
+      "spokes": 0,
+      "status": "пусто"
+    },
+    "vetminsk": {
+      "hub": "Хроническая болезнь почек у кошек: диета и уход",
+      "spokes": 0,
+      "status": "нет кластера"
+    }
+  },
+  "depth": {
+    "main": {
+      "words": 898,
+      "level": "ГЛУБОКИЙ",
+      "score": 100
+    },
+    "nevrolog": {
+      "words": 637,
+      "level": "СРЕДНИЙ",
+      "score": 70
+    },
+    "usyplenie": {
+      "words": 606,
+      "level": "СРЕДНИЙ",
+      "score": 70
+    },
+    "vetminsk": {
+      "words": 594,
+      "level": "СРЕДНИЙ",
+      "score": 70
+    }
+  },
+  "freshness": {
+    "main": {
+      "meta_date": null,
+      "text_dates": [],
+      "status": "даты не найдены"
+    },
+    "nevrolog": {
+      "meta_date": null,
+      "text_dates": [],
+      "status": "даты не найдены"
+    },
+    "usyplenie": {
+      "meta_date": null,
+      "text_dates": [],
+      "status": "даты не найдены"
+    },
+    "vetminsk": {
+      "meta_date": null,
+      "text_dates": [],
+      "status": "даты не найдены"
+    }
+  },
+  "nap": {
+    "data": {
+      "main": {
+        "phones": [],
+        "emails": [],
+        "addr": "Ветеринар на дом Минск 24/7 | Онлайн-консультация и выезд | 103"
+      },
+      "nevrolog": {
+        "phones": [
+          "+375 (29) 000-00-00"
+        ],
+        "emails": [
+          "info@nevrolog.103vet.by"
+        ],
+        "addr": "сты для предрасположенных пород. 3 Протокол лечения и наблюдения Схема терапии,"
+      },
+      "usyplenie": {
+        "phones": [],
+        "emails": [
+          "care@103vet.by"
+        ],
+        "addr": "ем в Минске | Мирное прощание дома Достойный уход Главная Поддержка собак ▾ симп"
+      },
+      "vetminsk": {
+        "phones": [],
+        "emails": [],
+        "addr": ""
+      }
+    },
+    "issues": [
+      {
+        "type": "addr_mismatch",
+        "sites": [
+          "main",
+          "nevrolog"
+        ],
+        "fix": "Унифицировать адрес"
+      },
+      {
+        "type": "addr_mismatch",
+        "sites": [
+          "main",
+          "usyplenie"
+        ],
+        "fix": "Унифицировать адрес"
+      },
+      {
+        "type": "addr_mismatch",
+        "sites": [
+          "nevrolog",
+          "usyplenie"
+        ],
+        "fix": "Унифицировать адрес"
+      }
+    ]
+  },
+  "conversion": {
+    "main": {
+      "cta": true,
+      "form": false,
+      "phone": false,
+      "score": 33
+    },
+    "nevrolog": {
+      "cta": true,
+      "form": true,
+      "phone": true,
+      "score": 99
+    },
+    "usyplenie": {
+      "cta": true,
+      "form": false,
+      "phone": false,
+      "score": 33
+    },
+    "vetminsk": {
+      "cta": true,
+      "form": false,
+      "phone": false,
+      "score": 33
+    }
+  },
+  "schema": {
+    "main": {
+      "found": [
+        "VeterinaryCare"
+      ],
+      "missing": [
+        "Organization",
+        "LocalBusiness",
+        "Article",
+        "FAQPage"
+      ],
+      "score": 20
+    },
+    "nevrolog": {
+      "found": [],
+      "missing": [
+        "Organization",
+        "LocalBusiness",
+        "Article",
+        "FAQPage",
+        "VeterinaryCare"
+      ],
+      "score": 0
+    },
+    "usyplenie": {
+      "found": [
+        "Organization"
+      ],
+      "missing": [
+        "LocalBusiness",
+        "Article",
+        "FAQPage",
+        "VeterinaryCare"
+      ],
+      "score": 20
+    },
+    "vetminsk": {
+      "found": [
+        "VeterinaryCare",
+        "Organization"
+      ],
+      "missing": [
+        "LocalBusiness",
+        "Article",
+        "FAQPage"
+      ],
+      "score": 40
+    }
+  }
+}
