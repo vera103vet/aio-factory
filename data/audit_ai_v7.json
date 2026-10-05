@@ -1,0 +1,219 @@
+{
+  "date": "2026-10-05 18:57",
+  "version": "Cross-Modal Consistency Audit v7.0",
+  "summary": {
+    "avg_score": 34.2,
+    "total_sites": 4,
+    "sites_excellent": 0,
+    "sites_needing_improvement": 4
+  },
+  "sites": [
+    {
+      "site": "main",
+      "url": "https://103vet.by/",
+      "topic": "ветеринар на дом минск",
+      "images": {
+        "score": 0,
+        "total": 3,
+        "good_alts": 0,
+        "bad_alts": 3,
+        "good_examples": [],
+        "bad_examples": [
+          {
+            "alt": "103vet.by",
+            "src": "/img/logo.png"
+          },
+          {
+            "alt": "(пустой)",
+            "src": "https://mc.yandex.ru/watch/109730979"
+          },
+          {
+            "alt": "103vet.by",
+            "src": "/assets/img/logo.png"
+          }
+        ],
+        "fix": "Улучшите alt-тексты: добавьте породу, действие, контекст (например: 'Щенок джек-рассел во время неврологического осмотра у ветеринара')"
+      },
+      "tables": {
+        "score": 0,
+        "total": 0,
+        "with_captions": 0,
+        "referenced_in_text": 0,
+        "fix": "Добавьте таблицы с данными (стадии болезней, сравнения, чек-листы)"
+      },
+      "figures": {
+        "score": 0,
+        "total": 0,
+        "with_captions": 0,
+        "fix": "Оберните изображения в <figure> с <figcaption> для семантической разметки"
+      },
+      "contradictions": {
+        "score": 100,
+        "issues": [],
+        "fix": "OK"
+      },
+      "consistency": {
+        "score": 25,
+        "status": "критические проблемы",
+        "component_scores": {
+          "images": 0,
+          "tables": 0,
+          "figures": 0,
+          "contradictions": 100
+        }
+      },
+      "total_score": 25
+    },
+    {
+      "site": "nevrolog",
+      "url": "https://nevrolog.103vet.by/",
+      "topic": "эпилепсия у собак симптомы",
+      "images": {
+        "score": 0,
+        "total": 3,
+        "good_alts": 0,
+        "bad_alts": 3,
+        "good_examples": [],
+        "bad_examples": [
+          {
+            "alt": "(пустой)",
+            "src": "seal.png"
+          },
+          {
+            "alt": "(пустой)",
+            "src": "seal.png"
+          },
+          {
+            "alt": "(пустой)",
+            "src": "seal.png"
+          }
+        ],
+        "fix": "Улучшите alt-тексты: добавьте породу, действие, контекст (например: 'Щенок джек-рассел во время неврологического осмотра у ветеринара')"
+      },
+      "tables": {
+        "score": 0,
+        "total": 0,
+        "with_captions": 0,
+        "referenced_in_text": 0,
+        "fix": "Добавьте таблицы с данными (стадии болезней, сравнения, чек-листы)"
+      },
+      "figures": {
+        "score": 0,
+        "total": 0,
+        "with_captions": 0,
+        "fix": "Оберните изображения в <figure> с <figcaption> для семантической разметки"
+      },
+      "contradictions": {
+        "score": 100,
+        "issues": [],
+        "fix": "OK"
+      },
+      "consistency": {
+        "score": 25,
+        "status": "критические проблемы",
+        "component_scores": {
+          "images": 0,
+          "tables": 0,
+          "figures": 0,
+          "contradictions": 100
+        }
+      },
+      "total_score": 25
+    },
+    {
+      "site": "usyplenie",
+      "url": "https://usyplenie.103vet.by/index.html",
+      "topic": "",
+      "images": {
+        "score": 100,
+        "total": 1,
+        "good_alts": 1,
+        "bad_alts": 0,
+        "good_examples": [
+          "Достойный уход за питомцем - 103vet.by"
+        ],
+        "bad_examples": [],
+        "fix": "OK"
+      },
+      "tables": {
+        "score": 0,
+        "total": 0,
+        "with_captions": 0,
+        "referenced_in_text": 0,
+        "fix": "Добавьте таблицы с данными (стадии болезней, сравнения, чек-листы)"
+      },
+      "figures": {
+        "score": 0,
+        "total": 0,
+        "with_captions": 0,
+        "fix": "Оберните изображения в <figure> с <figcaption> для семантической разметки"
+      },
+      "contradictions": {
+        "score": 100,
+        "issues": [],
+        "fix": "OK"
+      },
+      "consistency": {
+        "score": 50,
+        "status": "требует улучшения",
+        "component_scores": {
+          "images": 100,
+          "tables": 0,
+          "figures": 0,
+          "contradictions": 100
+        }
+      },
+      "total_score": 50
+    },
+    {
+      "site": "vetminsk",
+      "url": "https://www.vetminsk.103vet.by/",
+      "topic": "хроническая болезнь почек у кошек диета",
+      "images": {
+        "score": 50,
+        "total": 2,
+        "good_alts": 1,
+        "bad_alts": 1,
+        "good_examples": [
+          "VETMINSK 103vet.by - Ветеринарный терапевт для собак и кошек в Минске"
+        ],
+        "bad_examples": [
+          {
+            "alt": "(пустой)",
+            "src": "https://mc.yandex.ru/watch/112350676"
+          }
+        ],
+        "fix": "OK"
+      },
+      "tables": {
+        "score": 0,
+        "total": 0,
+        "with_captions": 0,
+        "referenced_in_text": 0,
+        "fix": "Добавьте таблицы с данными (стадии болезней, сравнения, чек-листы)"
+      },
+      "figures": {
+        "score": 0,
+        "total": 0,
+        "with_captions": 0,
+        "fix": "Оберните изображения в <figure> с <figcaption> для семантической разметки"
+      },
+      "contradictions": {
+        "score": 100,
+        "issues": [],
+        "fix": "OK"
+      },
+      "consistency": {
+        "score": 37,
+        "status": "критические проблемы",
+        "component_scores": {
+          "images": 50,
+          "tables": 0,
+          "figures": 0,
+          "contradictions": 100
+        }
+      },
+      "total_score": 37
+    }
+  ]
+}
