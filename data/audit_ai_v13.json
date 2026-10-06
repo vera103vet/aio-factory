@@ -1,0 +1,209 @@
+{
+  "date": "2026-10-06 07:48",
+  "version": "Emotional Resonance Score v13.0",
+  "summary": {
+    "avg_score": 22.2,
+    "total_sites": 4,
+    "platinum_sites": 0,
+    "gold_sites": 0,
+    "unsuitable_sites": 3
+  },
+  "sites": [
+    {
+      "site": "main",
+      "url": "https://103vet.by/",
+      "scores": {
+        "empathy": {
+          "score": 40,
+          "indicators": [
+            "Тёплый тон (минимум академизма)"
+          ],
+          "fix": "OK"
+        },
+        "storytelling": {
+          "score": 50,
+          "indicators": [
+            "Истории пациентов: 3",
+            "Хронология: 3 маркеров"
+          ],
+          "fix": "OK"
+        },
+        "vocabulary": {
+          "score": 15,
+          "indicators": [
+            "Уникальных эмоциональных слов: 4"
+          ],
+          "found_categories": [],
+          "unique_emotions": 4,
+          "fix": "Обогатите текст эмоциональной лексикой из разных категорий (забота, тревога, надежда)"
+        },
+        "trust": {
+          "score": 10,
+          "indicators": [],
+          "fix": "Добавьте упоминания опыта, отзывы, гарантии и фото специалистов"
+        },
+        "cta_emotion": {
+          "score": 60,
+          "indicators": [
+            "Здоровая срочность: 1",
+            "Позитивное завершение",
+            "Баланс страх/надежда: 2/2"
+          ],
+          "fix": "OK"
+        }
+      },
+      "total_score": 35,
+      "prediction": {
+        "tier": "BRONZE — требует эмоционального усиления",
+        "ai_citation_preference_percent": 30,
+        "sharing_potential": "Низкий",
+        "total_score": 35
+      }
+    },
+    {
+      "site": "nevrolog",
+      "url": "https://nevrolog.103vet.by/",
+      "scores": {
+        "empathy": {
+          "score": 15,
+          "indicators": [
+            "Тёплый тон (минимум академизма)"
+          ],
+          "fix": "Добавьте обращение к владельцу, признание эмоций и утешающие фразы"
+        },
+        "storytelling": {
+          "score": 30,
+          "indicators": [
+            "Истории пациентов: 3"
+          ],
+          "fix": "Добавьте истории пациентов с именами, хронологией и эмоциональными кульминациями"
+        },
+        "vocabulary": {
+          "score": 0,
+          "indicators": [],
+          "found_categories": [],
+          "unique_emotions": 1,
+          "fix": "Обогатите текст эмоциональной лексикой из разных категорий (забота, тревога, надежда)"
+        },
+        "trust": {
+          "score": 10,
+          "indicators": [
+            "Контактная информация"
+          ],
+          "fix": "Добавьте упоминания опыта, отзывы, гарантии и фото специалистов"
+        },
+        "cta_emotion": {
+          "score": 40,
+          "indicators": [
+            "Здоровая срочность: 2",
+            "Баланс страх/надежда: 1/1"
+          ],
+          "fix": "OK"
+        }
+      },
+      "total_score": 19,
+      "prediction": {
+        "tier": "НЕ ВЫЗЫВАЕТ эмоционального отклика",
+        "ai_citation_preference_percent": 10,
+        "sharing_potential": "Нулевой",
+        "total_score": 19
+      }
+    },
+    {
+      "site": "usyplenie",
+      "url": "https://usyplenie.103vet.by/index.html",
+      "scores": {
+        "empathy": {
+          "score": 30,
+          "indicators": [
+            "Тёплый тон (минимум академизма)"
+          ],
+          "fix": "Добавьте обращение к владельцу, признание эмоций и утешающие фразы"
+        },
+        "storytelling": {
+          "score": 25,
+          "indicators": [],
+          "fix": "Добавьте истории пациентов с именами, хронологией и эмоциональными кульминациями"
+        },
+        "vocabulary": {
+          "score": 15,
+          "indicators": [
+            "Уникальных эмоциональных слов: 4"
+          ],
+          "found_categories": [
+            "забота"
+          ],
+          "unique_emotions": 4,
+          "fix": "Обогатите текст эмоциональной лексикой из разных категорий (забота, тревога, надежда)"
+        },
+        "trust": {
+          "score": 20,
+          "indicators": [
+            "Контактная информация"
+          ],
+          "fix": "Добавьте упоминания опыта, отзывы, гарантии и фото специалистов"
+        },
+        "cta_emotion": {
+          "score": 0,
+          "indicators": [],
+          "fix": "Добавьте эмоциональные CTA, баланс страха/надежды и позитивное завершение"
+        }
+      },
+      "total_score": 18,
+      "prediction": {
+        "tier": "НЕ ВЫЗЫВАЕТ эмоционального отклика",
+        "ai_citation_preference_percent": 10,
+        "sharing_potential": "Нулевой",
+        "total_score": 18
+      }
+    },
+    {
+      "site": "vetminsk",
+      "url": "https://www.vetminsk.103vet.by/",
+      "scores": {
+        "empathy": {
+          "score": 15,
+          "indicators": [
+            "Тёплый тон (минимум академизма)"
+          ],
+          "fix": "Добавьте обращение к владельцу, признание эмоций и утешающие фразы"
+        },
+        "storytelling": {
+          "score": 25,
+          "indicators": [],
+          "fix": "Добавьте истории пациентов с именами, хронологией и эмоциональными кульминациями"
+        },
+        "vocabulary": {
+          "score": 0,
+          "indicators": [],
+          "found_categories": [
+            "грусть"
+          ],
+          "unique_emotions": 3,
+          "fix": "Обогатите текст эмоциональной лексикой из разных категорий (забота, тревога, надежда)"
+        },
+        "trust": {
+          "score": 25,
+          "indicators": [
+            "Гарантии: 2"
+          ],
+          "fix": "Добавьте упоминания опыта, отзывы, гарантии и фото специалистов"
+        },
+        "cta_emotion": {
+          "score": 20,
+          "indicators": [
+            "Баланс страх/надежда: 1/1"
+          ],
+          "fix": "Добавьте эмоциональные CTA, баланс страха/надежды и позитивное завершение"
+        }
+      },
+      "total_score": 17,
+      "prediction": {
+        "tier": "НЕ ВЫЗЫВАЕТ эмоционального отклика",
+        "ai_citation_preference_percent": 10,
+        "sharing_potential": "Нулевой",
+        "total_score": 17
+      }
+    }
+  ]
+}
