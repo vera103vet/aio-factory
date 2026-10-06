@@ -1,0 +1,228 @@
+{
+  "generated_at": "2026-10-06 09:20",
+  "topic": "Что делать при первых признаках эпилепсии у собаки?",
+  "summary": {
+    "total_issues": 21,
+    "critical_issues": 14,
+    "warning_issues": 7,
+    "writer_tasks_count": 16
+  },
+  "critical_issues": [
+    {
+      "agent": "v13 (Emotional Resonance)",
+      "site": "main",
+      "issue": "Низкая эмпатия. Добавить: 'Мы понимаем ваше беспокойство', 'ваш любимый питомец', микро-истории пациентов",
+      "priority": "critical"
+    },
+    {
+      "agent": "v13 (Emotional Resonance)",
+      "site": "nevrolog",
+      "issue": "Низкая эмпатия. Добавить: 'Мы понимаем ваше беспокойство', 'ваш любимый питомец', микро-истории пациентов",
+      "priority": "critical"
+    },
+    {
+      "agent": "v13 (Emotional Resonance)",
+      "site": "usyplenie",
+      "issue": "Низкая эмпатия. Добавить: 'Мы понимаем ваше беспокойство', 'ваш любимый питомец', микро-истории пациентов",
+      "priority": "critical"
+    },
+    {
+      "agent": "v13 (Emotional Resonance)",
+      "site": "vetminsk",
+      "issue": "Низкая эмпатия. Добавить: 'Мы понимаем ваше беспокойство', 'ваш любимый питомец', микро-истории пациентов",
+      "priority": "critical"
+    },
+    {
+      "agent": "v14 (Actionability)",
+      "site": "main",
+      "issue": "Нет пошаговых инструкций. Добавить: 'Шаг 1...', 'Шаг 2...', глаголы действия",
+      "priority": "critical"
+    },
+    {
+      "agent": "v14 (Actionability)",
+      "site": "main",
+      "issue": "Нет экстренных протоколов. Добавить: 'Если симптомы тяжёлые → срочно звоните'",
+      "priority": "critical"
+    },
+    {
+      "agent": "v14 (Actionability)",
+      "site": "nevrolog",
+      "issue": "Нет пошаговых инструкций. Добавить: 'Шаг 1...', 'Шаг 2...', глаголы действия",
+      "priority": "critical"
+    },
+    {
+      "agent": "v14 (Actionability)",
+      "site": "nevrolog",
+      "issue": "Нет экстренных протоколов. Добавить: 'Если симптомы тяжёлые → срочно звоните'",
+      "priority": "critical"
+    },
+    {
+      "agent": "v14 (Actionability)",
+      "site": "usyplenie",
+      "issue": "Нет пошаговых инструкций. Добавить: 'Шаг 1...', 'Шаг 2...', глаголы действия",
+      "priority": "critical"
+    },
+    {
+      "agent": "v14 (Actionability)",
+      "site": "usyplenie",
+      "issue": "Нет экстренных протоколов. Добавить: 'Если симптомы тяжёлые → срочно звоните'",
+      "priority": "critical"
+    },
+    {
+      "agent": "v14 (Actionability)",
+      "site": "vetminsk",
+      "issue": "Нет пошаговых инструкций. Добавить: 'Шаг 1...', 'Шаг 2...', глаголы действия",
+      "priority": "critical"
+    },
+    {
+      "agent": "v14 (Actionability)",
+      "site": "vetminsk",
+      "issue": "Нет экстренных протоколов. Добавить: 'Если симптомы тяжёлые → срочно звоните'",
+      "priority": "critical"
+    },
+    {
+      "agent": "Device Analyst (CLS)",
+      "site": "nevrolog",
+      "issue": "Высокий CLS-риск. Добавить width/height ко всем изображениям",
+      "priority": "critical"
+    },
+    {
+      "agent": "Device Analyst (CLS)",
+      "site": "usyplenie",
+      "issue": "Высокий CLS-риск. Добавить width/height ко всем изображениям",
+      "priority": "critical"
+    }
+  ],
+  "warning_issues": [
+    {
+      "agent": "v10 (AI Training Data)",
+      "site": "main",
+      "issue": "Низкий Training Score: 40/100. Требуется: уникальные данные, авторитетные источники, практические инструкции",
+      "priority": "warning"
+    },
+    {
+      "agent": "v10 (AI Training Data)",
+      "site": "nevrolog",
+      "issue": "Низкий Training Score: 35/100. Требуется: уникальные данные, авторитетные источники, практические инструкции",
+      "priority": "warning"
+    },
+    {
+      "agent": "v10 (AI Training Data)",
+      "site": "usyplenie",
+      "issue": "Низкий Training Score: 38/100. Требуется: уникальные данные, авторитетные источники, практические инструкции",
+      "priority": "warning"
+    },
+    {
+      "agent": "v10 (AI Training Data)",
+      "site": "vetminsk",
+      "issue": "Низкий Training Score: 39/100. Требуется: уникальные данные, авторитетные источники, практические инструкции",
+      "priority": "warning"
+    },
+    {
+      "agent": "v13 (Emotional Resonance)",
+      "site": "nevrolog",
+      "issue": "Нет сторителлинга. Добавить истории пациентов с именами и хронологией",
+      "priority": "warning"
+    },
+    {
+      "agent": "v13 (Emotional Resonance)",
+      "site": "usyplenie",
+      "issue": "Нет сторителлинга. Добавить истории пациентов с именами и хронологией",
+      "priority": "warning"
+    },
+    {
+      "agent": "v13 (Emotional Resonance)",
+      "site": "vetminsk",
+      "issue": "Нет сторителлинга. Добавить истории пациентов с именами и хронологией",
+      "priority": "warning"
+    }
+  ],
+  "writer_tasks": [
+    {
+      "module": "empathy",
+      "action": "Добавить модуль эмпатии: 'Мы понимаем ваше беспокойство', 'ваш любимый питомец'",
+      "priority": "critical"
+    },
+    {
+      "module": "empathy",
+      "action": "Добавить модуль эмпатии: 'Мы понимаем ваше беспокойство', 'ваш любимый питомец'",
+      "priority": "critical"
+    },
+    {
+      "module": "empathy",
+      "action": "Добавить модуль эмпатии: 'Мы понимаем ваше беспокойство', 'ваш любимый питомец'",
+      "priority": "critical"
+    },
+    {
+      "module": "empathy",
+      "action": "Добавить модуль эмпатии: 'Мы понимаем ваше беспокойство', 'ваш любимый питомец'",
+      "priority": "critical"
+    },
+    {
+      "module": "action_tree",
+      "action": "Добавить дерево решений 'Если... то...' и чек-лист действий",
+      "priority": "critical"
+    },
+    {
+      "module": "action_tree",
+      "action": "Добавить дерево решений 'Если... то...' и чек-лист действий",
+      "priority": "critical"
+    },
+    {
+      "module": "action_tree",
+      "action": "Добавить дерево решений 'Если... то...' и чек-лист действий",
+      "priority": "critical"
+    },
+    {
+      "module": "action_tree",
+      "action": "Добавить дерево решений 'Если... то...' и чек-лист действий",
+      "priority": "critical"
+    },
+    {
+      "module": "action_tree",
+      "action": "Добавить дерево решений 'Если... то...' и чек-лист действий",
+      "priority": "critical"
+    },
+    {
+      "module": "action_tree",
+      "action": "Добавить дерево решений 'Если... то...' и чек-лист действий",
+      "priority": "critical"
+    },
+    {
+      "module": "action_tree",
+      "action": "Добавить дерево решений 'Если... то...' и чек-лист действий",
+      "priority": "critical"
+    },
+    {
+      "module": "action_tree",
+      "action": "Добавить дерево решений 'Если... то...' и чек-лист действий",
+      "priority": "critical"
+    },
+    {
+      "module": "mobile_ux",
+      "action": "Добавить кликабельный телефон tel: и BLUF-ответ в первые 100 слов",
+      "priority": "critical"
+    },
+    {
+      "module": "technical_seo",
+      "action": "Добавить width/height ко всем изображениям для защиты от CLS",
+      "priority": "critical"
+    },
+    {
+      "module": "mobile_ux",
+      "action": "Добавить кликабельный телефон tel: и BLUF-ответ в первые 100 слов",
+      "priority": "critical"
+    },
+    {
+      "module": "technical_seo",
+      "action": "Добавить width/height ко всем изображениям для защиты от CLS",
+      "priority": "critical"
+    }
+  ],
+  "modules_to_activate": [
+    "action_tree",
+    "technical_seo",
+    "mobile_ux",
+    "empathy"
+  ]
+}
