@@ -1,0 +1,245 @@
+{
+  "date": "2026-10-06 07:41",
+  "version": "Multi-Language AI Readiness v12.0",
+  "summary": {
+    "avg_score": 34.5,
+    "total_sites": 4,
+    "platinum_sites": 0,
+    "gold_sites": 0,
+    "unsuitable_sites": 2
+  },
+  "sites": [
+    {
+      "site": "main",
+      "url": "https://103vet.by/",
+      "scores": {
+        "translation": {
+          "score": 80,
+          "indicators": [
+            "Короткие предложения (средн. 14 слов)",
+            "Минимум идиом",
+            "Минимум двусмысленностей",
+            "Стандартные термины: 4"
+          ],
+          "avg_sentence_length": 14,
+          "fix": "OK"
+        },
+        "localization": {
+          "score": 0,
+          "indicators": [],
+          "found_terms": [],
+          "fix": "Добавьте международные аббревиатуры и расшифровки сложных терминов"
+        },
+        "cultural": {
+          "score": 60,
+          "indicators": [
+            "Культурно нейтральный контент",
+            "Нет регионального сленга",
+            "Уважительный тон: 2 маркеров"
+          ],
+          "fix": "OK"
+        },
+        "schema": {
+          "score": 30,
+          "indicators": [
+            "lang-атрибут: ru",
+            "Schema.org есть, но без inLanguage"
+          ],
+          "has_schema": true,
+          "has_hreflang": false,
+          "fix": "Добавьте hreflang, lang-атрибут и Schema.org с inLanguage"
+        },
+        "cross_language": {
+          "score": 5,
+          "indicators": [
+            "Нет региональных ограничений"
+          ],
+          "fix": "Добавьте международные источники, DOI-ссылки и английские аналоги терминов"
+        }
+      },
+      "total_score": 35,
+      "prediction": {
+        "tier": "BRONZE — требует локализации",
+        "potential_reach": "Только RU",
+        "total_score": 35
+      }
+    },
+    {
+      "site": "nevrolog",
+      "url": "https://nevrolog.103vet.by/",
+      "scores": {
+        "translation": {
+          "score": 80,
+          "indicators": [
+            "Короткие предложения (средн. 13 слов)",
+            "Минимум идиом",
+            "Минимум двусмысленностей",
+            "Стандартные термины: 3"
+          ],
+          "avg_sentence_length": 13,
+          "fix": "OK"
+        },
+        "localization": {
+          "score": 0,
+          "indicators": [],
+          "found_terms": [
+            "эпилепсия",
+            "судороги"
+          ],
+          "fix": "Добавьте международные аббревиатуры и расшифровки сложных терминов"
+        },
+        "cultural": {
+          "score": 45,
+          "indicators": [
+            "Культурно нейтральный контент",
+            "Нет регионального сленга"
+          ],
+          "fix": "OK"
+        },
+        "schema": {
+          "score": 20,
+          "indicators": [
+            "lang-атрибут: ru",
+            "Schema.org отсутствует"
+          ],
+          "has_schema": false,
+          "has_hreflang": false,
+          "fix": "Добавьте hreflang, lang-атрибут и Schema.org с inLanguage"
+        },
+        "cross_language": {
+          "score": 5,
+          "indicators": [
+            "Нет региональных ограничений"
+          ],
+          "fix": "Добавьте международные источники, DOI-ссылки и английские аналоги терминов"
+        }
+      },
+      "total_score": 30,
+      "prediction": {
+        "tier": "НЕ ГОТОВ для мультиязычного поиска",
+        "potential_reach": "Изолированный",
+        "total_score": 30
+      }
+    },
+    {
+      "site": "usyplenie",
+      "url": "https://usyplenie.103vet.by/index.html",
+      "scores": {
+        "translation": {
+          "score": 60,
+          "indicators": [
+            "Короткие предложения (средн. 15 слов)",
+            "Минимум идиом",
+            "Минимум двусмысленностей"
+          ],
+          "avg_sentence_length": 15,
+          "fix": "OK"
+        },
+        "localization": {
+          "score": 0,
+          "indicators": [
+            "Сложные термины без расшифровки: ['ХБП']"
+          ],
+          "found_terms": [
+            "ХБП"
+          ],
+          "fix": "Добавьте международные аббревиатуры и расшифровки сложных терминов"
+        },
+        "cultural": {
+          "score": 45,
+          "indicators": [
+            "Культурно нейтральный контент",
+            "Нет регионального сленга"
+          ],
+          "fix": "OK"
+        },
+        "schema": {
+          "score": 40,
+          "indicators": [
+            "lang-атрибут: ru",
+            "Schema.org есть, но без inLanguage",
+            "og:locale: ru_BY"
+          ],
+          "has_schema": true,
+          "has_hreflang": false,
+          "fix": "OK"
+        },
+        "cross_language": {
+          "score": 5,
+          "indicators": [
+            "Нет региональных ограничений"
+          ],
+          "fix": "Добавьте международные источники, DOI-ссылки и английские аналоги терминов"
+        }
+      },
+      "total_score": 30,
+      "prediction": {
+        "tier": "НЕ ГОТОВ для мультиязычного поиска",
+        "potential_reach": "Изолированный",
+        "total_score": 30
+      }
+    },
+    {
+      "site": "vetminsk",
+      "url": "https://www.vetminsk.103vet.by/",
+      "scores": {
+        "translation": {
+          "score": 80,
+          "indicators": [
+            "Короткие предложения (средн. 15 слов)",
+            "Минимум идиом",
+            "Минимум двусмысленностей",
+            "Стандартные термины: 3"
+          ],
+          "avg_sentence_length": 15,
+          "fix": "OK"
+        },
+        "localization": {
+          "score": 40,
+          "indicators": [
+            "Сложные термины без расшифровки: ['ХБП']",
+            "Международные аббревиатуры: IRIS, WSAVA"
+          ],
+          "found_terms": [
+            "ХБП",
+            "IRIS",
+            "WSAVA"
+          ],
+          "fix": "OK"
+        },
+        "cultural": {
+          "score": 45,
+          "indicators": [
+            "Культурно нейтральный контент",
+            "Нет регионального сленга"
+          ],
+          "fix": "OK"
+        },
+        "schema": {
+          "score": 30,
+          "indicators": [
+            "lang-атрибут: ru",
+            "Schema.org есть, но без inLanguage"
+          ],
+          "has_schema": true,
+          "has_hreflang": false,
+          "fix": "Добавьте hreflang, lang-атрибут и Schema.org с inLanguage"
+        },
+        "cross_language": {
+          "score": 20,
+          "indicators": [
+            "Универсальные факты с единицами: 3",
+            "Нет региональных ограничений"
+          ],
+          "fix": "Добавьте международные источники, DOI-ссылки и английские аналоги терминов"
+        }
+      },
+      "total_score": 43,
+      "prediction": {
+        "tier": "BRONZE — требует локализации",
+        "potential_reach": "Только RU",
+        "total_score": 43
+      }
+    }
+  ]
+}
