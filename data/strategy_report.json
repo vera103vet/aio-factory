@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-06 11:36",
+  "version": "Strategist v2.0",
+  "total_topics": 5,
+  "high_priority": 0,
+  "medium_priority": 4,
+  "low_priority": 1,
+  "strategy": [
+    {
+      "topic": "Симптомы и лечение диабета у кошек",
+      "recommended_site": "main",
+      "total_score": 48.0,
+      "priority": "MEDIUM",
+      "cannibalization_check": true,
+      "cannibalization_message": "Каннибализация не обнаружена",
+      "site_scores": {
+        "main": 48.0,
+        "nevrolog": 48.0,
+        "usyplenie": 48.0,
+        "vetminsk": 48.0
+      },
+      "action": "Создавать в ближайшем спринте"
+    },
+    {
+      "topic": "Первая помощь при переломе лапы у собаки",
+      "recommended_site": "main",
+      "total_score": 46.2,
+      "priority": "MEDIUM",
+      "cannibalization_check": true,
+      "cannibalization_message": "Каннибализация не обнаружена",
+      "site_scores": {
+        "main": 46.2,
+        "nevrolog": 46.2,
+        "usyplenie": 46.2,
+        "vetminsk": 46.2
+      },
+      "action": "Создавать в ближайшем спринте"
+    },
+    {
+      "topic": "Как помочь кошке при отравлении?",
+      "recommended_site": "main",
+      "total_score": 46.0,
+      "priority": "MEDIUM",
+      "cannibalization_check": true,
+      "cannibalization_message": "Каннибализация не обнаружена",
+      "site_scores": {
+        "main": 46.0,
+        "nevrolog": 46.0,
+        "usyplenie": 46.0,
+        "vetminsk": 46.0
+      },
+      "action": "Создавать в ближайшем спринте"
+    },
+    {
+      "topic": "Что делать при первых признаках эпилепсии у собаки?",
+      "recommended_site": "main",
+      "total_score": 40.0,
+      "priority": "MEDIUM",
+      "cannibalization_check": true,
+      "cannibalization_message": "Каннибализация не обнаружена",
+      "site_scores": {
+        "main": 40.0,
+        "nevrolog": 40.0,
+        "usyplenie": 40.0,
+        "vetminsk": 40.0
+      },
+      "action": "Создавать в ближайшем спринте"
+    },
+    {
+      "topic": "Как выбрать корм для щенка?",
+      "recommended_site": "main",
+      "total_score": 30.5,
+      "priority": "LOW",
+      "cannibalization_check": true,
+      "cannibalization_message": "Каннибализация не обнаружена",
+      "site_scores": {
+        "main": 30.5,
+        "nevrolog": 30.5,
+        "usyplenie": 30.5,
+        "vetminsk": 30.5
+      },
+      "action": "Отложить или делегировать"
+    }
+  ]
+}
