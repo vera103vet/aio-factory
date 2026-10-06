@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-06 11:21",
+  "version": "Validator AI v2.0",
+  "total_files": 1,
+  "average_score": 100.0,
+  "platinum_count": 1,
+  "gold_count": 0,
+  "failed_count": 0,
+  "results": [
+    {
+      "file": "data/generated_content/что_делать_при_первых_признаках_эпилепсии_у_собаки.html",
+      "words": 491,
+      "score": 100,
+      "status": "PLATINUM — идеальный контент",
+      "checks": {
+        "keyword_density": {
+          "passed": true,
+          "message": "Плотность ключей в норме"
+        },
+        "ai_readiness": {
+          "passed": true,
+          "message": "AI-Readiness проверки пройдены"
+        },
+        "emotional_resonance": {
+          "passed": true,
+          "message": "Эмоциональный резонанс на уровне"
+        },
+        "actionability": {
+          "passed": true,
+          "message": "Практическая применимость на уровне"
+        },
+        "mobile_ux": {
+          "passed": true,
+          "message": "Mobile UX проверки пройдены"
+        },
+        "ethical_compliance": {
+          "passed": true,
+          "message": "Этическое соответствие на уровне"
+        },
+        "brand_compliance": {
+          "passed": true,
+          "message": "Правила бренда соблюдены"
+        }
+      },
+      "passed": 7,
+      "total": 7
+    }
+  ]
+}
