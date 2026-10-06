@@ -1,0 +1,182 @@
+{
+  "date": "2026-10-06 07:55",
+  "version": "Actionability Index v14.0",
+  "summary": {
+    "avg_score": 14.2,
+    "total_sites": 4,
+    "platinum_sites": 0,
+    "gold_sites": 0,
+    "unsuitable_sites": 4
+  },
+  "sites": [
+    {
+      "site": "main",
+      "url": "https://103vet.by/",
+      "scores": {
+        "step_by_step": {
+          "score": 10,
+          "indicators": [],
+          "fix": "Добавьте нумерованные шаги, глаголы действия и последовательные связки"
+        },
+        "decision_tree": {
+          "score": 10,
+          "indicators": [],
+          "fix": "Добавьте условные конструкции (если... то...), ветвления и классификации"
+        },
+        "checklist": {
+          "score": 35,
+          "indicators": [
+            "Списков: 6"
+          ],
+          "fix": "Добавьте списки, маркеры чек-листов и таблицы с критериями"
+        },
+        "emergency": {
+          "score": 10,
+          "indicators": [],
+          "fix": "Добавьте маркеры экстренности, первую помощь и критерии 'когда срочно к врачу'"
+        },
+        "post_action": {
+          "score": 0,
+          "indicators": [],
+          "fix": "Добавьте рекомендации по наблюдению, сроки и 'когда вернуться к врачу'"
+        }
+      },
+      "total_score": 13,
+      "prediction": {
+        "tier": "НЕ ПРИГОДЕН для практического применения",
+        "ai_citation_preference_percent": 10,
+        "user_retention": "Нулевая",
+        "total_score": 13
+      }
+    },
+    {
+      "site": "nevrolog",
+      "url": "https://nevrolog.103vet.by/",
+      "scores": {
+        "step_by_step": {
+          "score": 0,
+          "indicators": [],
+          "fix": "Добавьте нумерованные шаги, глаголы действия и последовательные связки"
+        },
+        "decision_tree": {
+          "score": 20,
+          "indicators": [
+            "Условные конструкции: 2"
+          ],
+          "fix": "Добавьте условные конструкции (если... то...), ветвления и классификации"
+        },
+        "checklist": {
+          "score": 25,
+          "indicators": [
+            "Списков: 3"
+          ],
+          "fix": "Добавьте списки, маркеры чек-листов и таблицы с критериями"
+        },
+        "emergency": {
+          "score": 40,
+          "indicators": [
+            "Телефон экстренной помощи"
+          ],
+          "fix": "OK"
+        },
+        "post_action": {
+          "score": 0,
+          "indicators": [],
+          "fix": "Добавьте рекомендации по наблюдению, сроки и 'когда вернуться к врачу'"
+        }
+      },
+      "total_score": 17,
+      "prediction": {
+        "tier": "НЕ ПРИГОДЕН для практического применения",
+        "ai_citation_preference_percent": 10,
+        "user_retention": "Нулевая",
+        "total_score": 17
+      }
+    },
+    {
+      "site": "usyplenie",
+      "url": "https://usyplenie.103vet.by/index.html",
+      "scores": {
+        "step_by_step": {
+          "score": 0,
+          "indicators": [],
+          "fix": "Добавьте нумерованные шаги, глаголы действия и последовательные связки"
+        },
+        "decision_tree": {
+          "score": 0,
+          "indicators": [],
+          "fix": "Добавьте условные конструкции (если... то...), ветвления и классификации"
+        },
+        "checklist": {
+          "score": 45,
+          "indicators": [
+            "Списков: 13",
+            "Пункты для проверки: 3"
+          ],
+          "fix": "OK"
+        },
+        "emergency": {
+          "score": 0,
+          "indicators": [],
+          "fix": "Добавьте маркеры экстренности, первую помощь и критерии 'когда срочно к врачу'"
+        },
+        "post_action": {
+          "score": 10,
+          "indicators": [],
+          "fix": "Добавьте рекомендации по наблюдению, сроки и 'когда вернуться к врачу'"
+        }
+      },
+      "total_score": 11,
+      "prediction": {
+        "tier": "НЕ ПРИГОДЕН для практического применения",
+        "ai_citation_preference_percent": 10,
+        "user_retention": "Нулевая",
+        "total_score": 11
+      }
+    },
+    {
+      "site": "vetminsk",
+      "url": "https://www.vetminsk.103vet.by/",
+      "scores": {
+        "step_by_step": {
+          "score": 0,
+          "indicators": [],
+          "fix": "Добавьте нумерованные шаги, глаголы действия и последовательные связки"
+        },
+        "decision_tree": {
+          "score": 30,
+          "indicators": [
+            "Условные конструкции: 5"
+          ],
+          "fix": "Добавьте условные конструкции (если... то...), ветвления и классификации"
+        },
+        "checklist": {
+          "score": 35,
+          "indicators": [
+            "Списков: 6"
+          ],
+          "fix": "Добавьте списки, маркеры чек-листов и таблицы с критериями"
+        },
+        "emergency": {
+          "score": 0,
+          "indicators": [],
+          "fix": "Добавьте маркеры экстренности, первую помощь и критерии 'когда срочно к врачу'"
+        },
+        "post_action": {
+          "score": 15,
+          "indicators": [
+            "Признаки исхода: 2"
+          ],
+          "fix": "Добавьте рекомендации по наблюдению, сроки и 'когда вернуться к врачу'"
+        }
+      },
+      "total_score": 16,
+      "prediction": {
+        "tier": "НЕ ПРИГОДЕН для практического применения",
+        "ai_citation_preference_percent": 10,
+        "user_retention": "Нулевая",
+        "total_score": 16
+      }
+    }
+  ]
+}
