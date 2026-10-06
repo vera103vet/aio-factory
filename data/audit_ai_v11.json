@@ -1,0 +1,220 @@
+{
+  "date": "2026-10-06 07:35",
+  "version": "Voice Search Optimization v11.0",
+  "summary": {
+    "avg_score": 37.5,
+    "total_sites": 4,
+    "platinum_sites": 0,
+    "gold_sites": 0,
+    "unsuitable_sites": 1
+  },
+  "sites": [
+    {
+      "site": "main",
+      "url": "https://103vet.by/",
+      "scores": {
+        "conversational": {
+          "score": 40,
+          "indicators": [
+            "Коротких предложений: 78%",
+            "Минимум сложных терминов"
+          ],
+          "fix": "OK"
+        },
+        "qa_format": {
+          "score": 20,
+          "indicators": [
+            "Есть FAQ-секция"
+          ],
+          "qa_pairs": 0,
+          "fix": "Добавьте вопросы и прямые ответы на них, создайте FAQ-секцию"
+        },
+        "tts_readability": {
+          "score": 60,
+          "indicators": [
+            "Средняя длина предложения: 14 слов (оптимум)",
+            "Минимум аббревиатур",
+            "Числа прописью: 4"
+          ],
+          "avg_sentence_length": 14,
+          "fix": "OK"
+        },
+        "local_voice": {
+          "score": 30,
+          "indicators": [],
+          "fix": "Добавьте упоминания города, фразы 'рядом со мной', телефон и адрес"
+        },
+        "featured_snippet": {
+          "score": 60,
+          "indicators": [
+            "Прямой ответ в начале (BLUF)",
+            "Есть компактное определение (40-60 слов)",
+            "Есть короткий итог в конце"
+          ],
+          "fix": "OK"
+        }
+      },
+      "total_score": 42,
+      "prediction": {
+        "tier": "BRONZE — требует доработки",
+        "citation_chance_percent": 20,
+        "total_score": 42
+      }
+    },
+    {
+      "site": "nevrolog",
+      "url": "https://nevrolog.103vet.by/",
+      "scores": {
+        "conversational": {
+          "score": 25,
+          "indicators": [
+            "Коротких предложений: 73%"
+          ],
+          "fix": "Добавьте разговорные маркеры, короткие предложения и вопросы к читателю"
+        },
+        "qa_format": {
+          "score": 20,
+          "indicators": [
+            "Есть FAQ-секция"
+          ],
+          "qa_pairs": 0,
+          "fix": "Добавьте вопросы и прямые ответы на них, создайте FAQ-секцию"
+        },
+        "tts_readability": {
+          "score": 40,
+          "indicators": [
+            "Средняя длина предложения: 13 слов (оптимум)",
+            "Числа прописью: 2"
+          ],
+          "avg_sentence_length": 13,
+          "fix": "OK"
+        },
+        "local_voice": {
+          "score": 35,
+          "indicators": [
+            "Есть телефон и адрес (NAP)"
+          ],
+          "fix": "Добавьте упоминания города, фразы 'рядом со мной', телефон и адрес"
+        },
+        "featured_snippet": {
+          "score": 60,
+          "indicators": [
+            "Прямой ответ в начале (BLUF)",
+            "Есть компактное определение (40-60 слов)",
+            "Есть короткий итог в конце"
+          ],
+          "fix": "OK"
+        }
+      },
+      "total_score": 36,
+      "prediction": {
+        "tier": "BRONZE — требует доработки",
+        "citation_chance_percent": 20,
+        "total_score": 36
+      }
+    },
+    {
+      "site": "usyplenie",
+      "url": "https://usyplenie.103vet.by/index.html",
+      "scores": {
+        "conversational": {
+          "score": 25,
+          "indicators": [
+            "Коротких предложений: 72%"
+          ],
+          "fix": "Добавьте разговорные маркеры, короткие предложения и вопросы к читателю"
+        },
+        "qa_format": {
+          "score": 0,
+          "indicators": [],
+          "qa_pairs": 0,
+          "fix": "Добавьте вопросы и прямые ответы на них, создайте FAQ-секцию"
+        },
+        "tts_readability": {
+          "score": 60,
+          "indicators": [
+            "Средняя длина предложения: 15 слов (оптимум)",
+            "Минимум аббревиатур",
+            "Числа прописью: 2"
+          ],
+          "avg_sentence_length": 15,
+          "fix": "OK"
+        },
+        "local_voice": {
+          "score": 45,
+          "indicators": [
+            "Есть телефон и адрес (NAP)"
+          ],
+          "fix": "OK"
+        },
+        "featured_snippet": {
+          "score": 60,
+          "indicators": [
+            "Прямой ответ в начале (BLUF)",
+            "Есть компактное определение (40-60 слов)",
+            "Есть короткий итог в конце"
+          ],
+          "fix": "OK"
+        }
+      },
+      "total_score": 38,
+      "prediction": {
+        "tier": "BRONZE — требует доработки",
+        "citation_chance_percent": 20,
+        "total_score": 38
+      }
+    },
+    {
+      "site": "vetminsk",
+      "url": "https://www.vetminsk.103vet.by/",
+      "scores": {
+        "conversational": {
+          "score": 25,
+          "indicators": [
+            "Коротких предложений: 87%"
+          ],
+          "fix": "Добавьте разговорные маркеры, короткие предложения и вопросы к читателю"
+        },
+        "qa_format": {
+          "score": 20,
+          "indicators": [
+            "Есть FAQ-секция"
+          ],
+          "qa_pairs": 0,
+          "fix": "Добавьте вопросы и прямые ответы на них, создайте FAQ-секцию"
+        },
+        "tts_readability": {
+          "score": 40,
+          "indicators": [
+            "Средняя длина предложения: 15 слов (оптимум)",
+            "Числа прописью: 4"
+          ],
+          "avg_sentence_length": 15,
+          "fix": "OK"
+        },
+        "local_voice": {
+          "score": 25,
+          "indicators": [
+            "Локальные маркеры: минск, беларус"
+          ],
+          "fix": "Добавьте упоминания города, фразы 'рядом со мной', телефон и адрес"
+        },
+        "featured_snippet": {
+          "score": 60,
+          "indicators": [
+            "Прямой ответ в начале (BLUF)",
+            "Есть компактное определение (40-60 слов)",
+            "Есть короткий итог в конце"
+          ],
+          "fix": "OK"
+        }
+      },
+      "total_score": 34,
+      "prediction": {
+        "tier": "НЕ ГОТОВ для голосового поиска",
+        "citation_chance_percent": 5,
+        "total_score": 34
+      }
+    }
+  ]
+}
