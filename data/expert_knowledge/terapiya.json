@@ -1,0 +1,14 @@
+{
+  "category": "terapiya",
+  "category_ru": "Терапия и общая практика",
+  "current_protocols": ["WSAVA General Practice 2025", "AAHA Wellness Guidelines"],
+  "verified_facts": [
+    {"claim": "нормальная температура у собак 38-39°C", "is_true": true, "source": "WSAVA", "correction": null},
+    {"claim": "нормальная температура у кошек 38-39.5°C", "is_true": true, "source": "WSAVA", "correction": null}
+  ],
+  "forbidden_outdated_advice": ["самостоятельная постановка диагноза по интернету", "игнорирование хронических симптомов более 2 недель"],
+  "mandatory_expert_nuances": ["важность регулярных осмотров", "необходимость анализов для точной диагностики"],
+  "red_flags": ["советы по самолечению серьёзных симптомов"],
+  "forbidden_claims": ["любой симптом можно вылечить дома"],
+  "common_statistics": {"частота_профилактических_осмотров": "1-2 раза в год"}
+}

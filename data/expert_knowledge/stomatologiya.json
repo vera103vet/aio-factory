@@ -1,0 +1,13 @@
+{
+  "category": "stomatologiya",
+  "category_ru": "Стоматология",
+  "current_protocols": ["AVDC Guidelines 2025", "WSAVA Dentistry"],
+  "verified_facts": [
+    {"claim": "80% собак старше 3 лет имеют проблемы с зубами", "is_true": true, "source": "AVDC", "correction": null}
+  ],
+  "forbidden_outdated_advice": ["чистить зубы человеческой пастой", "игнорировать запах из пасти"],
+  "mandatory_expert_nuances": ["регулярная чистка зубов", "необходимость наркоза для профессиональной чистки"],
+  "red_flags": ["удаление зубов без наркоза"],
+  "forbidden_claims": ["зубной камень безопасен"],
+  "common_statistics": {"распространённость_пародонтита": "80% собак старше 3 лет"}
+}

@@ -1,0 +1,14 @@
+{
+  "category": "geriatriya",
+  "category_ru": "Гериатрия (пожилые животные)",
+  "current_protocols": ["AAHA Senior Care 2025", "WSAVA Geriatrics"],
+  "verified_facts": [
+    {"claim": "собаки старше 7 лет считаются пожилыми", "is_true": true, "source": "AAHA", "correction": null},
+    {"claim": "старость — это болезнь", "is_true": false, "source": null, "correction": "Старость — естественный процесс, но требует особого ухода"}
+  ],
+  "forbidden_outdated_advice": ["списывать всё на возраст без обследования", "игнорировать изменения в поведении"],
+  "mandatory_expert_nuances": ["осмотры 2 раза в год", "анализы крови минимум раз в год", "коррекция питания"],
+  "red_flags": ["эвтаназия только по возрасту без оценки качества жизни"],
+  "forbidden_claims": ["пожилым животным уже ничего не поможет"],
+  "common_statistics": {"частота_осмотров_для_сениоров": "2 раза в год"}
+}

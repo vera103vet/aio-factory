@@ -1,0 +1,13 @@
+{
+  "category": "oftalmologiya",
+  "category_ru": "Офтальмология",
+  "current_protocols": ["ACVO Guidelines 2025", "WSAVA Ophthalmology"],
+  "verified_facts": [
+    {"claim": "глаукома может привести к слепоте за 24-48 часов", "is_true": true, "source": "ACVO", "correction": null}
+  ],
+  "forbidden_outdated_advice": ["применять человеческие глазные капли без назначения", "игнорировать помутнение глаза"],
+  "mandatory_expert_nuances": ["срочность при глаукоме", "необходимость измерения внутриглазного давления"],
+  "red_flags": ["советы по самостоятельному лечению язв роговицы"],
+  "forbidden_claims": ["любое покраснение глаза пройдёт само"],
+  "common_statistics": {"риск_глаукомы_у_предрасположенных_пород": "до 55%"}
+}

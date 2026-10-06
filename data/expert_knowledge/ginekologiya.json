@@ -1,0 +1,13 @@
+{
+  "category": "ginekologiya",
+  "category_ru": "Репродукция и гинекология",
+  "current_protocols": ["WSAVA Reproduction 2025", "Theriogenology Standards"],
+  "verified_facts": [
+    {"claim": "пиометра — угрожающее жизни состояние", "is_true": true, "source": "WSAVA", "correction": null}
+  ],
+  "forbidden_outdated_advice": ["вязать собаку в первую течку", "игнорировать выделения из петли"],
+  "mandatory_expert_nuances": ["важность стерилизации для профилактики пиометры", "оптимальный возраст для вязки"],
+  "red_flags": ["советы по самостоятельному родовспоможению при осложнениях"],
+  "forbidden_claims": ["стерилизация всегда вредна"],
+  "common_statistics": {"риск_пиометры_у_нестерилизованных": "25% к 10 годам"}
+}

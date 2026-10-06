@@ -1,0 +1,13 @@
+{
+  "category": "usyplenie",
+  "category_ru": "Эвтаназия и прощание",
+  "current_protocols": ["AAHA End-of-Life Care 2024", "IAAOPC Guidelines", "WSAVA Palliative"],
+  "verified_facts": [
+    {"claim": "шкала HHHHHMM помогает оценить качество жизни", "is_true": true, "source": "AAHA", "correction": null}
+  ],
+  "forbidden_outdated_advice": ["принимать решение об эвтаназии под давлением", "игнорировать эмоциональное состояние владельца"],
+  "mandatory_expert_nuances": ["оценка качества жизни по шкале", "важность паллиативной помощи", "эмоциональная поддержка владельца"],
+  "red_flags": ["рекомендация эвтаназии при излечимых состояниях", "давление на владельца"],
+  "forbidden_claims": ["эвтаназия — всегда лучшее решение", "животные не страдают"],
+  "common_statistics": {"средний_возраст_принятия_решения": "зависит от качества жизни"}
+}

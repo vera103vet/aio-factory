@@ -1,0 +1,14 @@
+{
+  "category": "parazitologiya",
+  "category_ru": "Паразитология",
+  "current_protocols": ["ESCCP Guidelines 2025", "CAPC Recommendations"],
+  "verified_facts": [
+    {"claim": "обработка от блох и клещей нужна круглый год", "is_true": true, "source": "ESCCP", "correction": null},
+    {"claim": "дегельминтизация нужна раз в год", "is_true": false, "source": null, "correction": "Минимум 2-4 раза в год в зависимости от образа жизни"}
+  ],
+  "forbidden_outdated_advice": ["обрабатывать только летом", "использовать человеческие средства от паразитов"],
+  "mandatory_expert_nuances": ["круглогодичная защита", "разные средства для разных видов паразитов"],
+  "red_flags": ["применение перметрина для кошек (смертельно)"],
+  "forbidden_claims": ["домашние животные не нуждаются в обработке"],
+  "common_statistics": {"частота_дегельминтизации": "2-4 раза в год"}
+}

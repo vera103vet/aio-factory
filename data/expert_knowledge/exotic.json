@@ -1,0 +1,13 @@
+{
+  "category": "exotic",
+  "category_ru": "Экзотические животные",
+  "current_protocols": ["AEV Guidelines 2025", "Exotic Animal Medicine Standards"],
+  "verified_facts": [
+    {"claim": "кролики — не грызуны, а зайцеобразные", "is_true": true, "source": "AEV", "correction": null}
+  ],
+  "forbidden_outdated_advice": ["содержать кроликов в клетках без движения", "кормить попугаев только семенами"],
+  "mandatory_expert_nuances": ["специфические потребности каждого вида", "необходимость специалиста по экзотам"],
+  "red_flags": ["применение препаратов для собак/кошек к экзотам без расчёта дозы"],
+  "forbidden_claims": ["все мелкие животные одинаковы в лечении"],
+  "common_statistics": {}
+}

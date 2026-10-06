@@ -1,0 +1,13 @@
+{
+  "category": "dermatologiya",
+  "category_ru": "Дерматология",
+  "current_protocols": ["ESVD Dermatology 2025", "WSAVA Skin Guidelines"],
+  "verified_facts": [
+    {"claim": "блошиный дерматит — самая частая причина зуда", "is_true": true, "source": "ESVD", "correction": null}
+  ],
+  "forbidden_outdated_advice": ["применять человеческие шампуни без консультации", "игнорировать аллергический компонент"],
+  "mandatory_expert_nuances": ["необходимость исключения паразитов", "важность диеты при подозрении на аллергию"],
+  "red_flags": ["самостоятельное применение гормональных мазей"],
+  "forbidden_claims": ["любой зуд — это аллергия"],
+  "common_statistics": {"доля_аллергий_в_дерматологии": "около 50%"}
+}

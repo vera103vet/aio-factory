@@ -1,0 +1,37 @@
+{
+  "category": "НАЗВАНИЕ_КАТЕГОРИИ",
+  "category_ru": "Русское название",
+  "current_protocols": [
+    "Название актуального протокола 2025",
+    "Название второго протокола"
+  ],
+  "verified_facts": [
+    {
+      "claim": "Конкретное утверждение из текста",
+      "is_true": true,
+      "source": "WSAVA/IRIS/AAHA 2025",
+      "correction": null
+    },
+    {
+      "claim": "Устаревшее утверждение",
+      "is_true": false,
+      "source": null,
+      "correction": "Правильная формулировка"
+    }
+  ],
+  "forbidden_outdated_advice": [
+    "Описание устаревшего совета"
+  ],
+  "mandatory_expert_nuances": [
+    "Описание важного нюанса"
+  ],
+  "red_flags": [
+    "Описание критического красного флага"
+  ],
+  "forbidden_claims": [
+    "Абсолютно запрещённые утверждения"
+  ],
+  "common_statistics": {
+    "пример_статистики": "1-2% собак страдают эпилепсией"
+  }
+}
