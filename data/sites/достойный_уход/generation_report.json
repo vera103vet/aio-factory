@@ -1,0 +1,347 @@
+{
+  "site_name": "Достойный уход",
+  "domain": "usyplenie.103vet.by",
+  "generated_at": "2026-10-06 15:36",
+  "total_pages": 42,
+  "success": 42,
+  "failed": 0,
+  "output_dir": "data/sites/достойный_уход",
+  "pages": [
+    {
+      "name": "Главная",
+      "url": "/",
+      "type": "landing",
+      "priority": 1,
+      "section": "level_1",
+      "status": "completed"
+    },
+    {
+      "name": "Качество жизни",
+      "url": "/guide/kak-oczenit-kachestvo-zhizni/",
+      "type": "guide",
+      "priority": 2,
+      "section": "level_2",
+      "status": "completed"
+    },
+    {
+      "name": "Помощь владельцу",
+      "url": "/guide/psixologicheskaya-pomoshch/",
+      "type": "guide",
+      "priority": 2,
+      "section": "level_2",
+      "status": "completed"
+    },
+    {
+      "name": "Поддержка кошек",
+      "url": "/how-to/podderzhka-koshek/",
+      "type": "hub",
+      "priority": 2,
+      "section": "level_2",
+      "status": "completed"
+    },
+    {
+      "name": "Поддержка собак",
+      "url": "/how-to/podderzhka-sobak/",
+      "type": "hub",
+      "priority": 2,
+      "section": "level_2",
+      "status": "completed"
+    },
+    {
+      "name": "Дневник наблюдений",
+      "url": "/guide/kak-oczenit-kachestvo-zhizni/dnevnik/",
+      "type": "guide",
+      "priority": 3,
+      "section": "level_3_quality",
+      "status": "completed"
+    },
+    {
+      "name": "Когда время пришло",
+      "url": "/guide/kak-oczenit-kachestvo-zhizni/kogda-vremya-prishlo/",
+      "type": "guide",
+      "priority": 3,
+      "section": "level_3_quality",
+      "status": "completed"
+    },
+    {
+      "name": "Протоколы AAHA",
+      "url": "/guide/kak-oczenit-kachestvo-zhizni/protokoly/",
+      "type": "article",
+      "priority": 3,
+      "section": "level_3_quality",
+      "status": "completed"
+    },
+    {
+      "name": "Шкала HHHHHMM",
+      "url": "/guide/kak-oczenit-kachestvo-zhizni/shkala-hhhhhmm/",
+      "type": "guide",
+      "priority": 3,
+      "section": "level_3_quality",
+      "status": "completed"
+    },
+    {
+      "name": "Тест качества жизни",
+      "url": "/guide/kak-oczenit-kachestvo-zhizni/test/",
+      "type": "interactive",
+      "priority": 3,
+      "section": "level_3_quality",
+      "status": "completed"
+    },
+    {
+      "name": "Как объяснить детям",
+      "url": "/guide/psixologicheskaya-pomoshch/deti/",
+      "type": "guide",
+      "priority": 3,
+      "section": "level_3_owner",
+      "status": "completed"
+    },
+    {
+      "name": "Как пережить горе",
+      "url": "/guide/psixologicheskaya-pomoshch/gore/",
+      "type": "guide",
+      "priority": 3,
+      "section": "level_3_owner",
+      "status": "completed"
+    },
+    {
+      "name": "Группы поддержки",
+      "url": "/guide/psixologicheskaya-pomoshch/gruppy-podderzhki/",
+      "type": "guide",
+      "priority": 3,
+      "section": "level_3_owner",
+      "status": "completed"
+    },
+    {
+      "name": "Память и мемориалы",
+      "url": "/guide/psixologicheskaya-pomoshch/pamyat/",
+      "type": "guide",
+      "priority": 3,
+      "section": "level_3_owner",
+      "status": "completed"
+    },
+    {
+      "name": "Организация прощания",
+      "url": "/guide/psixologicheskaya-pomoshch/proshchanie/",
+      "type": "guide",
+      "priority": 3,
+      "section": "level_3_owner",
+      "status": "completed"
+    },
+    {
+      "name": "Артрит у кошек",
+      "url": "/how-to/podderzhka-koshek/artrit/",
+      "type": "how-to",
+      "priority": 3,
+      "section": "level_3_cats",
+      "status": "completed"
+    },
+    {
+      "name": "Деменция у кошек",
+      "url": "/how-to/podderzhka-koshek/demenciya/",
+      "type": "how-to",
+      "priority": 3,
+      "section": "level_3_cats",
+      "status": "completed"
+    },
+    {
+      "name": "Гипертиреоз у кошек",
+      "url": "/how-to/podderzhka-koshek/gipertireoz/",
+      "type": "how-to",
+      "priority": 3,
+      "section": "level_3_cats",
+      "status": "completed"
+    },
+    {
+      "name": "ХБП 4 стадии у кошек",
+      "url": "/how-to/podderzhka-koshek/hbp/",
+      "type": "how-to",
+      "priority": 3,
+      "section": "level_3_cats",
+      "status": "completed"
+    },
+    {
+      "name": "Паллиативный уход за кошкой",
+      "url": "/how-to/podderzhka-koshek/palliativnyj-uhod/",
+      "type": "how-to",
+      "priority": 3,
+      "section": "level_3_cats",
+      "status": "completed"
+    },
+    {
+      "name": "Тревожные симптомы у кошки",
+      "url": "/how-to/podderzhka-koshek/simptomy/",
+      "type": "how-to",
+      "priority": 3,
+      "section": "level_3_cats",
+      "status": "completed"
+    },
+    {
+      "name": "Контроль боли у собак",
+      "url": "/how-to/podderzhka-sobak/kontrol-boli/",
+      "type": "how-to",
+      "priority": 3,
+      "section": "level_3_dogs",
+      "status": "completed"
+    },
+    {
+      "name": "Онкология терминальной стадии у собак",
+      "url": "/how-to/podderzhka-sobak/onkologiya/",
+      "type": "how-to",
+      "priority": 3,
+      "section": "level_3_dogs",
+      "status": "completed"
+    },
+    {
+      "name": "Отказ органов у собак",
+      "url": "/how-to/podderzhka-sobak/otkaz-organov/",
+      "type": "how-to",
+      "priority": 3,
+      "section": "level_3_dogs",
+      "status": "completed"
+    },
+    {
+      "name": "Паллиативный уход за собакой",
+      "url": "/how-to/podderzhka-sobak/palliativnyj-uhod/",
+      "type": "how-to",
+      "priority": 3,
+      "section": "level_3_dogs",
+      "status": "completed"
+    },
+    {
+      "name": "Параличи и обездвиженность",
+      "url": "/how-to/podderzhka-sobak/paralichi/",
+      "type": "how-to",
+      "priority": 3,
+      "section": "level_3_dogs",
+      "status": "completed"
+    },
+    {
+      "name": "Тревожные симптомы у собаки",
+      "url": "/how-to/podderzhka-sobak/simptomy/",
+      "type": "how-to",
+      "priority": 3,
+      "section": "level_3_dogs",
+      "status": "completed"
+    },
+    {
+      "name": "Что делать после эвтаназии",
+      "url": "/blog/chto-delat-posle-eutanazii/",
+      "type": "blog",
+      "priority": 4,
+      "section": "blog",
+      "status": "completed"
+    },
+    {
+      "name": "Эвтаназия: мифы и реальность",
+      "url": "/blog/eutanaziya-mify-i-realnost/",
+      "type": "blog",
+      "priority": 4,
+      "section": "blog",
+      "status": "completed"
+    },
+    {
+      "name": "Истории владельцев: прощание с любимцем",
+      "url": "/blog/istorii-vladelcev/",
+      "type": "blog",
+      "priority": 4,
+      "section": "blog",
+      "status": "completed"
+    },
+    {
+      "name": "Как поддержать друга, потерявшего питомца",
+      "url": "/blog/kak-podderzhat-druga/",
+      "type": "blog",
+      "priority": 4,
+      "section": "blog",
+      "status": "completed"
+    },
+    {
+      "name": "Как понять, что собака страдает",
+      "url": "/blog/kak-ponyat-chto-sobaka-stradaet/",
+      "type": "blog",
+      "priority": 4,
+      "section": "blog",
+      "status": "completed"
+    },
+    {
+      "name": "Как выбрать ветеринара для эвтаназии",
+      "url": "/blog/kak-vybrat-veterinara/",
+      "type": "blog",
+      "priority": 4,
+      "section": "blog",
+      "status": "completed"
+    },
+    {
+      "name": "Когда паллиативный уход не помогает",
+      "url": "/blog/kogda-palliativnyj-uhod-ne-pomogaet/",
+      "type": "blog",
+      "priority": 4,
+      "section": "blog",
+      "status": "completed"
+    },
+    {
+      "name": "Кремация или похороны",
+      "url": "/blog/kremaciya-ili-pohorony/",
+      "type": "blog",
+      "priority": 4,
+      "section": "blog",
+      "status": "completed"
+    },
+    {
+      "name": "Паллиативный уход на дому",
+      "url": "/blog/palliativnyj-uhod-na-domu/",
+      "type": "blog",
+      "priority": 4,
+      "section": "blog",
+      "status": "completed"
+    },
+    {
+      "name": "Признаки боли у животных",
+      "url": "/blog/priznaki-boli-u-zhivotnyh/",
+      "type": "blog",
+      "priority": 4,
+      "section": "blog",
+      "status": "completed"
+    },
+    {
+      "name": "О проекте",
+      "url": "/about/",
+      "type": "service",
+      "priority": 5,
+      "section": "service",
+      "status": "completed"
+    },
+    {
+      "name": "Контакты",
+      "url": "/contacts/",
+      "type": "service",
+      "priority": 5,
+      "section": "service",
+      "status": "completed"
+    },
+    {
+      "name": "Частые вопросы",
+      "url": "/faq/",
+      "type": "service",
+      "priority": 5,
+      "section": "service",
+      "status": "completed"
+    },
+    {
+      "name": "Политика конфиденциальности",
+      "url": "/privacy/",
+      "type": "service",
+      "priority": 5,
+      "section": "service",
+      "status": "completed"
+    },
+    {
+      "name": "Условия использования",
+      "url": "/terms/",
+      "type": "service",
+      "priority": 5,
+      "section": "service",
+      "status": "completed"
+    }
+  ]
+}

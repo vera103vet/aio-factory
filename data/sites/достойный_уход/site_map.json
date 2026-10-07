@@ -1,0 +1,214 @@
+{
+  "pages": [
+    {
+      "name": "Главная",
+      "url": "/",
+      "type": "article"
+    },
+    {
+      "name": "about",
+      "url": "/about/",
+      "type": "article"
+    },
+    {
+      "name": "contacts",
+      "url": "/contacts/",
+      "type": "article"
+    },
+    {
+      "name": "faq",
+      "url": "/faq/",
+      "type": "article"
+    },
+    {
+      "name": "privacy",
+      "url": "/privacy/",
+      "type": "article"
+    },
+    {
+      "name": "terms",
+      "url": "/terms/",
+      "type": "article"
+    },
+    {
+      "name": "chto-delat-posle-eutanazii",
+      "url": "/blog/chto-delat-posle-eutanazii/",
+      "type": "article"
+    },
+    {
+      "name": "eutanaziya-mify-i-realnost",
+      "url": "/blog/eutanaziya-mify-i-realnost/",
+      "type": "article"
+    },
+    {
+      "name": "istorii-vladelcev",
+      "url": "/blog/istorii-vladelcev/",
+      "type": "article"
+    },
+    {
+      "name": "kak-podderzhat-druga",
+      "url": "/blog/kak-podderzhat-druga/",
+      "type": "article"
+    },
+    {
+      "name": "kak-ponyat-chto-sobaka-stradaet",
+      "url": "/blog/kak-ponyat-chto-sobaka-stradaet/",
+      "type": "article"
+    },
+    {
+      "name": "kak-vybrat-veterinara",
+      "url": "/blog/kak-vybrat-veterinara/",
+      "type": "article"
+    },
+    {
+      "name": "kogda-palliativnyj-uhod-ne-pomogaet",
+      "url": "/blog/kogda-palliativnyj-uhod-ne-pomogaet/",
+      "type": "article"
+    },
+    {
+      "name": "kremaciya-ili-pohorony",
+      "url": "/blog/kremaciya-ili-pohorony/",
+      "type": "article"
+    },
+    {
+      "name": "palliativnyj-uhod-na-domu",
+      "url": "/blog/palliativnyj-uhod-na-domu/",
+      "type": "article"
+    },
+    {
+      "name": "priznaki-boli-u-zhivotnyh",
+      "url": "/blog/priznaki-boli-u-zhivotnyh/",
+      "type": "article"
+    },
+    {
+      "name": "podderzhka-koshek",
+      "url": "/how-to/podderzhka-koshek/",
+      "type": "article"
+    },
+    {
+      "name": "podderzhka-sobak",
+      "url": "/how-to/podderzhka-sobak/",
+      "type": "article"
+    },
+    {
+      "name": "kontrol-boli",
+      "url": "/how-to/podderzhka-sobak/kontrol-boli/",
+      "type": "article"
+    },
+    {
+      "name": "onkologiya",
+      "url": "/how-to/podderzhka-sobak/onkologiya/",
+      "type": "article"
+    },
+    {
+      "name": "otkaz-organov",
+      "url": "/how-to/podderzhka-sobak/otkaz-organov/",
+      "type": "article"
+    },
+    {
+      "name": "palliativnyj-uhod",
+      "url": "/how-to/podderzhka-sobak/palliativnyj-uhod/",
+      "type": "article"
+    },
+    {
+      "name": "paralichi",
+      "url": "/how-to/podderzhka-sobak/paralichi/",
+      "type": "article"
+    },
+    {
+      "name": "simptomy",
+      "url": "/how-to/podderzhka-sobak/simptomy/",
+      "type": "article"
+    },
+    {
+      "name": "artrit",
+      "url": "/how-to/podderzhka-koshek/artrit/",
+      "type": "article"
+    },
+    {
+      "name": "demenciya",
+      "url": "/how-to/podderzhka-koshek/demenciya/",
+      "type": "article"
+    },
+    {
+      "name": "gipertireoz",
+      "url": "/how-to/podderzhka-koshek/gipertireoz/",
+      "type": "article"
+    },
+    {
+      "name": "hbp",
+      "url": "/how-to/podderzhka-koshek/hbp/",
+      "type": "article"
+    },
+    {
+      "name": "palliativnyj-uhod",
+      "url": "/how-to/podderzhka-koshek/palliativnyj-uhod/",
+      "type": "article"
+    },
+    {
+      "name": "simptomy",
+      "url": "/how-to/podderzhka-koshek/simptomy/",
+      "type": "article"
+    },
+    {
+      "name": "kak-oczenit-kachestvo-zhizni",
+      "url": "/guide/kak-oczenit-kachestvo-zhizni/",
+      "type": "article"
+    },
+    {
+      "name": "psixologicheskaya-pomoshch",
+      "url": "/guide/psixologicheskaya-pomoshch/",
+      "type": "article"
+    },
+    {
+      "name": "deti",
+      "url": "/guide/psixologicheskaya-pomoshch/deti/",
+      "type": "article"
+    },
+    {
+      "name": "gore",
+      "url": "/guide/psixologicheskaya-pomoshch/gore/",
+      "type": "article"
+    },
+    {
+      "name": "gruppy-podderzhki",
+      "url": "/guide/psixologicheskaya-pomoshch/gruppy-podderzhki/",
+      "type": "article"
+    },
+    {
+      "name": "pamyat",
+      "url": "/guide/psixologicheskaya-pomoshch/pamyat/",
+      "type": "article"
+    },
+    {
+      "name": "proshchanie",
+      "url": "/guide/psixologicheskaya-pomoshch/proshchanie/",
+      "type": "article"
+    },
+    {
+      "name": "dnevnik",
+      "url": "/guide/kak-oczenit-kachestvo-zhizni/dnevnik/",
+      "type": "article"
+    },
+    {
+      "name": "kogda-vremya-prishlo",
+      "url": "/guide/kak-oczenit-kachestvo-zhizni/kogda-vremya-prishlo/",
+      "type": "article"
+    },
+    {
+      "name": "protokoly",
+      "url": "/guide/kak-oczenit-kachestvo-zhizni/protokoly/",
+      "type": "article"
+    },
+    {
+      "name": "shkala-hhhhhmm",
+      "url": "/guide/kak-oczenit-kachestvo-zhizni/shkala-hhhhhmm/",
+      "type": "article"
+    },
+    {
+      "name": "test",
+      "url": "/guide/kak-oczenit-kachestvo-zhizni/test/",
+      "type": "article"
+    }
+  ]
+}

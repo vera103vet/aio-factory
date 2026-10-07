@@ -1,6 +1,17 @@
+# Временные файлы
 __pycache__/
 *.pyc
 *.pyo
-.env
-logs/*.log
-data/*.db
+temp-*/
+temp_*
+
+# Тестовые файлы
+test_*.html
+test_*.json
+
+# Логи
+*.log
+
+# Системные файлы
+.DS_Store
+Thumbs.db

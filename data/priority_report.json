@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "topic": "Вызов ветеринара на дом Минск",
+    "keyword": "ветеринар на дом минск",
+    "target_site": "main",
+    "site_role": "main",
+    "status": "published",
+    "priority_score": 54.6,
+    "breakdown": {
+      "search_demand": 50,
+      "seasonality": 0,
+      "commercial": 50,
+      "urgency": 30,
+      "strategic": 100
+    }
+  },
+  {
+    "id": 2,
+    "topic": "Эпилепсия у собак: симптомы и первая помощь",
+    "keyword": "эпилепсия у собак симптомы",
+    "target_site": "nevrolog",
+    "site_role": "satellite",
+    "status": "published",
+    "priority_score": 37.5,
+    "breakdown": {
+      "search_demand": 50,
+      "seasonality": 0,
+      "commercial": 40,
+      "urgency": 30,
+      "strategic": 60
+    }
+  },
+  {
+    "id": 3,
+    "topic": "Хроническая болезнь почек у кошек: диета и уход",
+    "keyword": "хроническая болезнь почек у кошек диета",
+    "target_site": "vetminsk",
+    "site_role": "satellite",
+    "status": "planned",
+    "priority_score": 74.3,
+    "breakdown": {
+      "search_demand": 29.4,
+      "seasonality": 70,
+      "commercial": 40,
+      "urgency": 70,
+      "strategic": 100
+    }
+  }
+]

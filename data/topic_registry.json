@@ -1,26 +1,470 @@
-[
-  {
-    "id": 1,
-    "topic": "Вызов ветеринара на дом Минск",
-    "primary_keyword": "ветеринар на дом минск",
-    "target_site": "main",
-    "url": "https://103vet.by/",
-    "status": "published"
-  },
-  {
-    "id": 2,
-    "topic": "Эпилепсия у собак: симптомы и первая помощь",
-    "primary_keyword": "эпилепсия у собак симптомы",
-    "target_site": "nevrolog",
-    "url": "https://nevrolog.103vet.by/",
-    "status": "published"
-  },
-  {
-    "id": 3,
-    "topic": "Хроническая болезнь почек у кошек: диета и уход",
-    "primary_keyword": "хроническая болезнь почек у кошек диета",
-    "target_site": "vetminsk",
-    "url": "https://www.vetminsk.103vet.by/",
-    "status": "planned"
-  }
-]
+{
+  "topics": [
+    {
+      "id": "98d3e01a",
+      "name": "Что делать при первых признаках эпилепсии у собаки?",
+      "site": "main",
+      "url": "",
+      "status": "planned",
+      "created_at": "2026-10-06 12:16",
+      "updated_at": "2026-10-06 14:14",
+      "targets": {
+        "emotional": {
+          "target_emotional_tier": "SILVER",
+          "required_empathy_markers": [
+            "питомец"
+          ],
+          "storytelling_required": false,
+          "min_empathy_score": 50
+        },
+        "actionability": {
+          "required_actionability_elements": [
+            "checklist",
+            "decision_tree"
+          ],
+          "min_actionability_score": 50,
+          "emergency_priority": false
+        },
+        "authority": {
+          "authority_sources": [],
+          "min_authority_score": 40,
+          "requires_disclaimer": true
+        },
+        "device": {
+          "device_priority": "BALANCED",
+          "requires_tel_link": true,
+          "requires_bluf": true,
+          "min_mobile_score": 60
+        },
+        "ai_readiness": {
+          "ai_readiness_target": 75,
+          "requires_schema": true,
+          "requires_faq": true,
+          "requires_bluf": true,
+          "min_voice_search_score": 60
+        }
+      },
+      "actual_scores": {
+        "emotional": null,
+        "actionability": null,
+        "authority": null,
+        "device": null,
+        "ai_readiness": null
+      },
+      "quality_gates_passed": false,
+      "published_url": null,
+      "seo_url": "/nevrologiya/epilepsii-pervykh-priznakakh-sobaki.html",
+      "url_validation": {
+        "cyrillic_length_ok": true,
+        "cyrillic_no_extension": true,
+        "cyrillic_trailing_slash": true,
+        "cyrillic_has_category": true,
+        "translit_length_ok": true,
+        "translit_lowercase": true,
+        "translit_no_special_chars": true,
+        "translit_hyphens_not_underscores": true,
+        "canonical_matches_cyrillic": true,
+        "is_valid": true
+      },
+      "url_data": {
+        "cyrillic_url": "/how-to/nevrologiya/эпилепсии-первых-признаках-собаки/",
+        "translit_url": "/how-to/nevrologiya/epilepsii-pervykh-priznakakh-sobaki/",
+        "canonical_url": "/how-to/nevrologiya/эпилепсии-первых-признаках-собаки/",
+        "content_type": "how-to",
+        "category": "nevrologiya",
+        "has_geo": false
+      }
+    },
+    {
+      "id": "1abe3397",
+      "name": "Как помочь кошке при отравлении?",
+      "site": "vetminsk",
+      "url": "",
+      "status": "planned",
+      "created_at": "2026-10-06 12:16",
+      "updated_at": "2026-10-06 14:14",
+      "targets": {
+        "emotional": {
+          "target_emotional_tier": "GOLD",
+          "required_empathy_markers": [
+            "ваш питомец",
+            "понимаем"
+          ],
+          "storytelling_required": true,
+          "min_empathy_score": 65
+        },
+        "actionability": {
+          "required_actionability_elements": [
+            "emergency_protocol",
+            "decision_tree",
+            "tel_link",
+            "checklist",
+            "step_by_step",
+            "decision_tree"
+          ],
+          "min_actionability_score": 70,
+          "emergency_priority": true
+        },
+        "authority": {
+          "authority_sources": [
+            "emergency_protocol",
+            "first_aid_guidelines"
+          ],
+          "min_authority_score": 60,
+          "requires_disclaimer": true
+        },
+        "device": {
+          "device_priority": "MOBILE_FIRST",
+          "requires_tel_link": true,
+          "requires_bluf": true,
+          "min_mobile_score": 75
+        },
+        "ai_readiness": {
+          "ai_readiness_target": 75,
+          "requires_schema": true,
+          "requires_faq": true,
+          "requires_bluf": true,
+          "min_voice_search_score": 60
+        }
+      },
+      "actual_scores": {
+        "emotional": null,
+        "actionability": null,
+        "authority": null,
+        "device": null,
+        "ai_readiness": null
+      },
+      "quality_gates_passed": false,
+      "published_url": null,
+      "seo_url": "/obshchee/koshke-otravlenii.html",
+      "url_validation": {
+        "cyrillic_length_ok": true,
+        "cyrillic_no_extension": true,
+        "cyrillic_trailing_slash": true,
+        "cyrillic_has_category": true,
+        "translit_length_ok": true,
+        "translit_lowercase": true,
+        "translit_no_special_chars": true,
+        "translit_hyphens_not_underscores": true,
+        "canonical_matches_cyrillic": true,
+        "is_valid": true
+      },
+      "url_data": {
+        "cyrillic_url": "/how-to/obshchee/кошке-отравлении/",
+        "translit_url": "/how-to/obshchee/koshke-otravlenii/",
+        "canonical_url": "/how-to/obshchee/кошке-отравлении/",
+        "content_type": "how-to",
+        "category": "obshchee",
+        "has_geo": false
+      }
+    },
+    {
+      "id": "5cb4ccdc",
+      "name": "Первая помощь при переломе лапы у собаки",
+      "site": "vetminsk",
+      "url": "",
+      "status": "planned",
+      "created_at": "2026-10-06 12:16",
+      "updated_at": "2026-10-06 14:14",
+      "targets": {
+        "emotional": {
+          "target_emotional_tier": "GOLD",
+          "required_empathy_markers": [
+            "ваш питомец",
+            "понимаем"
+          ],
+          "storytelling_required": true,
+          "min_empathy_score": 65
+        },
+        "actionability": {
+          "required_actionability_elements": [
+            "emergency_protocol",
+            "decision_tree",
+            "tel_link",
+            "checklist",
+            "decision_tree"
+          ],
+          "min_actionability_score": 70,
+          "emergency_priority": true
+        },
+        "authority": {
+          "authority_sources": [
+            "emergency_protocol",
+            "first_aid_guidelines"
+          ],
+          "min_authority_score": 60,
+          "requires_disclaimer": true
+        },
+        "device": {
+          "device_priority": "MOBILE_FIRST",
+          "requires_tel_link": true,
+          "requires_bluf": true,
+          "min_mobile_score": 75
+        },
+        "ai_readiness": {
+          "ai_readiness_target": 75,
+          "requires_schema": true,
+          "requires_faq": true,
+          "requires_bluf": true,
+          "min_voice_search_score": 60
+        }
+      },
+      "actual_scores": {
+        "emotional": null,
+        "actionability": null,
+        "authority": null,
+        "device": null,
+        "ai_readiness": null
+      },
+      "quality_gates_passed": false,
+      "published_url": null,
+      "seo_url": "/khirurgiya/perelome-pervaya-lapy-sobaki.html",
+      "url_validation": {
+        "cyrillic_length_ok": true,
+        "cyrillic_no_extension": true,
+        "cyrillic_trailing_slash": true,
+        "cyrillic_has_category": true,
+        "translit_length_ok": true,
+        "translit_lowercase": true,
+        "translit_no_special_chars": true,
+        "translit_hyphens_not_underscores": true,
+        "canonical_matches_cyrillic": true,
+        "is_valid": true
+      },
+      "url_data": {
+        "cyrillic_url": "/how-to/khirurgiya/переломе-первая-лапы-собаки/",
+        "translit_url": "/how-to/khirurgiya/perelome-pervaya-lapy-sobaki/",
+        "canonical_url": "/how-to/khirurgiya/переломе-первая-лапы-собаки/",
+        "content_type": "how-to",
+        "category": "khirurgiya",
+        "has_geo": false
+      }
+    },
+    {
+      "id": "beb3d28e",
+      "name": "Симптомы и лечение диабета у кошек",
+      "site": "main",
+      "url": "",
+      "status": "planned",
+      "created_at": "2026-10-06 12:16",
+      "updated_at": "2026-10-06 14:14",
+      "targets": {
+        "emotional": {
+          "target_emotional_tier": "PLATINUM",
+          "required_empathy_markers": [
+            "Мы понимаем ваше беспокойство",
+            "ваш любимый питомец",
+            "вы не одни"
+          ],
+          "storytelling_required": true,
+          "min_empathy_score": 80
+        },
+        "actionability": {
+          "required_actionability_elements": [
+            "checklist",
+            "decision_tree"
+          ],
+          "min_actionability_score": 50,
+          "emergency_priority": false
+        },
+        "authority": {
+          "authority_sources": [
+            "WSAVA",
+            "IRIS",
+            "evidence-based"
+          ],
+          "min_authority_score": 60,
+          "requires_disclaimer": true
+        },
+        "device": {
+          "device_priority": "BALANCED",
+          "requires_tel_link": true,
+          "requires_bluf": true,
+          "min_mobile_score": 60
+        },
+        "ai_readiness": {
+          "ai_readiness_target": 75,
+          "requires_schema": true,
+          "requires_faq": true,
+          "requires_bluf": true,
+          "min_voice_search_score": 60
+        }
+      },
+      "actual_scores": {
+        "emotional": null,
+        "actionability": null,
+        "authority": null,
+        "device": null,
+        "ai_readiness": null
+      },
+      "quality_gates_passed": false,
+      "published_url": null,
+      "seo_url": "/obshchee/simptomy-lechenie-diabeta-koshek.html",
+      "url_validation": {
+        "cyrillic_length_ok": true,
+        "cyrillic_no_extension": true,
+        "cyrillic_trailing_slash": true,
+        "cyrillic_has_category": true,
+        "translit_length_ok": true,
+        "translit_lowercase": true,
+        "translit_no_special_chars": true,
+        "translit_hyphens_not_underscores": true,
+        "canonical_matches_cyrillic": true,
+        "is_valid": true
+      },
+      "url_data": {
+        "cyrillic_url": "/obshchee/симптомы-лечение-диабета-кошек/",
+        "translit_url": "/obshchee/simptomy-lechenie-diabeta-koshek/",
+        "canonical_url": "/obshchee/симптомы-лечение-диабета-кошек/",
+        "content_type": "article",
+        "category": "obshchee",
+        "has_geo": false
+      }
+    },
+    {
+      "id": "afe0bbb9",
+      "name": "Как выбрать корм для щенка?",
+      "site": "main",
+      "url": "",
+      "status": "planned",
+      "created_at": "2026-10-06 12:16",
+      "updated_at": "2026-10-06 14:14",
+      "targets": {
+        "emotional": {
+          "target_emotional_tier": "SILVER",
+          "required_empathy_markers": [
+            "питомец"
+          ],
+          "storytelling_required": false,
+          "min_empathy_score": 50
+        },
+        "actionability": {
+          "required_actionability_elements": [],
+          "min_actionability_score": 50,
+          "emergency_priority": false
+        },
+        "authority": {
+          "authority_sources": [],
+          "min_authority_score": 40,
+          "requires_disclaimer": true
+        },
+        "device": {
+          "device_priority": "DESKTOP_FOCUSED",
+          "requires_tel_link": false,
+          "requires_bluf": false,
+          "min_mobile_score": 50
+        },
+        "ai_readiness": {
+          "ai_readiness_target": 75,
+          "requires_schema": true,
+          "requires_faq": true,
+          "requires_bluf": true,
+          "min_voice_search_score": 60
+        }
+      },
+      "actual_scores": {
+        "emotional": null,
+        "actionability": null,
+        "authority": null,
+        "device": null,
+        "ai_readiness": null
+      },
+      "quality_gates_passed": false,
+      "published_url": null,
+      "seo_url": "/dietologiya/korm-schenka.html",
+      "url_validation": {
+        "cyrillic_length_ok": true,
+        "cyrillic_no_extension": true,
+        "cyrillic_trailing_slash": true,
+        "cyrillic_has_category": true,
+        "translit_length_ok": true,
+        "translit_lowercase": true,
+        "translit_no_special_chars": true,
+        "translit_hyphens_not_underscores": true,
+        "canonical_matches_cyrillic": true,
+        "is_valid": true
+      },
+      "url_data": {
+        "cyrillic_url": "/how-to/dietologiya/корм-щенка/",
+        "translit_url": "/how-to/dietologiya/korm-schenka/",
+        "canonical_url": "/how-to/dietologiya/корм-щенка/",
+        "content_type": "how-to",
+        "category": "dietologiya",
+        "has_geo": false
+      }
+    },
+    {
+      "id": "b7b72549",
+      "name": "Паллиативная помощь при онкологии у пожилой собаки",
+      "site": "usyplenie",
+      "url": "",
+      "status": "planned",
+      "created_at": "2026-10-06 12:16",
+      "updated_at": "2026-10-06 14:14",
+      "targets": {
+        "emotional": {
+          "target_emotional_tier": "GOLD",
+          "required_empathy_markers": [
+            "ваш питомец",
+            "понимаем"
+          ],
+          "storytelling_required": true,
+          "min_empathy_score": 65
+        },
+        "actionability": {
+          "required_actionability_elements": [],
+          "min_actionability_score": 50,
+          "emergency_priority": false
+        },
+        "authority": {
+          "authority_sources": [],
+          "min_authority_score": 40,
+          "requires_disclaimer": true
+        },
+        "device": {
+          "device_priority": "BALANCED",
+          "requires_tel_link": true,
+          "requires_bluf": true,
+          "min_mobile_score": 60
+        },
+        "ai_readiness": {
+          "ai_readiness_target": 75,
+          "requires_schema": true,
+          "requires_faq": true,
+          "requires_bluf": true,
+          "min_voice_search_score": 60
+        }
+      },
+      "actual_scores": {
+        "emotional": null,
+        "actionability": null,
+        "authority": null,
+        "device": null,
+        "ai_readiness": null
+      },
+      "quality_gates_passed": false,
+      "published_url": null,
+      "seo_url": "/onkologiya/onkologii-palliativnaya-pozhiloy-sobaki.html",
+      "url_validation": {
+        "cyrillic_length_ok": true,
+        "cyrillic_no_extension": true,
+        "cyrillic_trailing_slash": true,
+        "cyrillic_has_category": true,
+        "translit_length_ok": true,
+        "translit_lowercase": true,
+        "translit_no_special_chars": true,
+        "translit_hyphens_not_underscores": true,
+        "canonical_matches_cyrillic": true,
+        "is_valid": true
+      },
+      "url_data": {
+        "cyrillic_url": "/onkologiya/онкологии-паллиативная-пожилой-собаки/",
+        "translit_url": "/onkologiya/onkologii-palliativnaya-pozhiloy-sobaki/",
+        "canonical_url": "/onkologiya/онкологии-паллиативная-пожилой-собаки/",
+        "content_type": "article",
+        "category": "onkologiya",
+        "has_geo": false
+      }
+    }
+  ]
+}

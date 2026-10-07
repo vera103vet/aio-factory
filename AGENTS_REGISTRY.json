@@ -1,0 +1,1144 @@
+{
+  "version": "1.0",
+  "project": "aio-factory",
+  "description": "Реестр всех агентов Контент-завода 103vet.by",
+  "agents": [
+    {
+      "id": "orchestrator_v3",
+      "name": "Главный дирижёр",
+      "group": "orchestration",
+      "role": "Управление многопоточными очередями, передача JSON между агентами, контроль таймаутов",
+      "responsibility": [
+        "Запуск конвейера по конфигурации",
+        "Распределение задач по потокам",
+        "Мониторинг статусов агентов",
+        "Обработка ошибок и перезапусков"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "config_path",
+          "project_name"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "status",
+          "log",
+          "report"
+        ]
+      },
+      "success_criteria": "Все агенты завершили работу без критических ошибок",
+      "timeout_seconds": 7200,
+      "depends_on": [],
+      "next_agents": [
+        "site_architect",
+        "strategist_v2"
+      ]
+    },
+    {
+      "id": "site_architect",
+      "name": "Архитектор сайта",
+      "group": "architecture",
+      "role": "Анализ starter.html, извлечение структуры, генерация sitemap.json",
+      "responsibility": [
+        "Парсинг HTML-шаблона",
+        "Извлечение CSS-классов и структуры",
+        "Создание карты сайта (sitemap.json)",
+        "Определение навигации и футера"
+      ],
+      "input": {
+        "format": "HTML",
+        "fields": [
+          "starter_file",
+          "styles_file"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "sitemap",
+          "template_structure",
+          "css_classes"
+        ]
+      },
+      "success_criteria": "sitemap.json содержит все URL и темы страниц",
+      "timeout_seconds": 30,
+      "depends_on": [],
+      "next_agents": [
+        "strategist_v2",
+        "writer_v2_2"
+      ]
+    },
+    {
+      "id": "strategist_v2",
+      "name": "Стратег",
+      "group": "architecture",
+      "role": "Определение приоритетности генерации, распределение ключевых слов по кластерам",
+      "responsibility": [
+        "Анализ тем и ключевых слов",
+        "Группировка по кластерам (защита от каннибализации)",
+        "Определение порядка генерации",
+        "Распределение нагрузки"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "sitemap",
+          "config"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "priority_queue",
+          "keyword_clusters"
+        ]
+      },
+      "success_criteria": "Кластеры не пересекаются, приоритеты расставлены",
+      "timeout_seconds": 20,
+      "depends_on": [
+        "site_architect"
+      ],
+      "next_agents": [
+        "writer_v2_2"
+      ]
+    },
+    {
+      "id": "writer_v2_2",
+      "name": "Семантический писатель",
+      "group": "content",
+      "role": "Генерация чернового HTML-контента с семантической разметкой",
+      "responsibility": [
+        "Раскладка текста по HTML-тегам (h1, h2, p, ul)",
+        "Применение CSS-классов из шаблона",
+        "Соблюдение структуры starter.html",
+        "Отсутствие инлайн-стилей"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "topic",
+          "template_structure",
+          "project_config"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "status",
+          "html_content",
+          "metadata"
+        ]
+      },
+      "success_criteria": "HTML содержит все обязательные теги и классы",
+      "timeout_seconds": 10,
+      "depends_on": [
+        "site_architect",
+        "strategist_v2"
+      ],
+      "next_agents": [
+        "chief_editor_v1_1"
+      ]
+    },
+    {
+      "id": "chief_editor_v1_1",
+      "name": "Главный редактор",
+      "group": "content",
+      "role": "Контроль Tone of Voice, удаление канцелярита и воды",
+      "responsibility": [
+        "Проверка соответствия философии бренда",
+        "Удаление шаблонных фраз",
+        "Обеспечение эмпатичности текста",
+        "Проверка логики повествования"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "status",
+          "html_content",
+          "edit_notes"
+        ]
+      },
+      "success_criteria": "Текст соответствует Tone of Voice, нет канцелярита",
+      "timeout_seconds": 8,
+      "depends_on": [
+        "writer_v2_2"
+      ],
+      "next_agents": [
+        "domain_expert_critic_v2_1"
+      ]
+    },
+    {
+      "id": "domain_expert_critic_v2_1",
+      "name": "Эксперт-критик",
+      "group": "content",
+      "role": "Фактчекинг медицинских утверждений по протоколам WSAVA, IRIS, AAHA",
+      "responsibility": [
+        "Проверка медицинских утверждений",
+        "Добавление YMYL-дисклеймеров",
+        "Сверка с протоколами",
+        "Защита от галлюцинаций"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content",
+          "medical_claims"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "status",
+          "html_content",
+          "disclaimers_added"
+        ]
+      },
+      "success_criteria": "Все медицинские утверждения проверены, дисклеймеры на месте",
+      "timeout_seconds": 10,
+      "depends_on": [
+        "chief_editor_v1_1"
+      ],
+      "next_agents": [
+        "linker_ai_v5",
+        "url_seo_specialist"
+      ]
+    },
+    {
+      "id": "linker",
+      "name": "Базовый линкер",
+      "group": "optimization",
+      "role": "Быстрая замена ключевых слов на ссылки по жесткому словарю",
+      "responsibility": [
+        "Поиск ключевых терминов в тексте",
+        "Замена на ссылки из sitemap.json",
+        "Контроль плотности ссылок"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content",
+          "sitemap",
+          "keyword_dict"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content",
+          "links_added"
+        ]
+      },
+      "success_criteria": "Все ключевые термины из словаря обернуты в ссылки",
+      "timeout_seconds": 5,
+      "depends_on": [
+        "domain_expert_critic_v2_1"
+      ],
+      "next_agents": [
+        "url_seo_specialist"
+      ]
+    },
+    {
+      "id": "linker_ai_v5",
+      "name": "AI-линкер (5-я версия)",
+      "group": "optimization",
+      "role": "Контекстная перелинковка с пониманием семантики",
+      "responsibility": [
+        "Анализ контекста для выбора анкоров",
+        "Поиск релевантных страниц в sitemap",
+        "Оптимизация плотности ссылок (5-7 на страницу)",
+        "Избегание самопересечений"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content",
+          "sitemap",
+          "context"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content",
+          "links_added",
+          "anchor_map"
+        ]
+      },
+      "success_criteria": "Ссылки релевантны контексту, плотность в норме",
+      "timeout_seconds": 8,
+      "depends_on": [
+        "domain_expert_critic_v2_1"
+      ],
+      "next_agents": [
+        "url_seo_specialist"
+      ]
+    },
+    {
+      "id": "url_seo_specialist",
+      "name": "SEO-специалист",
+      "group": "optimization",
+      "role": "Генерация мета-тегов, canonical, контроль плотности ключей",
+      "responsibility": [
+        "Создание уникальных title (50-60 символов)",
+        "Генерация meta description (150-160 символов)",
+        "Добавление canonical URL",
+        "Проверка плотности ключей (2-3%)"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content",
+          "topic",
+          "keywords"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content",
+          "meta_tags",
+          "seo_score"
+        ]
+      },
+      "success_criteria": "Уникальные мета-теги, плотность ключей в норме",
+      "timeout_seconds": 5,
+      "depends_on": [
+        "linker_ai_v5"
+      ],
+      "next_agents": [
+        "serp_device_analyst"
+      ]
+    },
+    {
+      "id": "serp_device_analyst",
+      "name": "Аналитик SERP и устройств",
+      "group": "optimization",
+      "role": "Оптимизация под поисковые сниппеты и мобильные устройства",
+      "responsibility": [
+        "Проверка viewport для мобильных",
+        "Добавление микроразметки FAQPage",
+        "Оптимизация для расширенных сниппетов",
+        "Проверка размеров кликабельных элементов"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content",
+          "has_faq"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content",
+          "mobile_score",
+          "serp_ready"
+        ]
+      },
+      "success_criteria": "Viewport есть, FAQ размечен, touch targets ≥48px",
+      "timeout_seconds": 5,
+      "depends_on": [
+        "url_seo_specialist"
+      ],
+      "next_agents": [
+        "auditor_ymyl",
+        "auditor_ethics",
+        "auditor_accessibility"
+      ]
+    }
+  ],
+  "auditors": [
+    {
+      "id": "auditor_ymyl",
+      "name": "Медицинский/Юридический аудитор",
+      "group": "audit",
+      "role": "Проверка дисклеймеров, лицензии, оферты",
+      "responsibility": [
+        "Наличие YMYL-дисклеймера",
+        "Номер лицензии (№ XXXXX)",
+        "Ссылки на политику конфиденциальности",
+        "Отсутствие опасных медицинских советов"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content",
+          "project_config"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "status",
+          "score",
+          "issues"
+        ]
+      },
+      "success_criteria": "Дисклеймер есть, лицензия указана",
+      "timeout_seconds": 3,
+      "depends_on": [
+        "serp_device_analyst"
+      ],
+      "next_agents": [
+        "auditor_head"
+      ]
+    },
+    {
+      "id": "auditor_ethics",
+      "name": "Этический аудитор",
+      "group": "audit",
+      "role": "Сканирование на триггеры, чувство вины, гарантия эмпатичного тона",
+      "responsibility": [
+        "Отсутствие осуждающих формулировок",
+        "Эмпатичный тон",
+        "Нет манипуляций чувством вины",
+        "Соответствие философии бренда"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "status",
+          "score",
+          "trigger_words"
+        ]
+      },
+      "success_criteria": "Тон эмпатичный, триггеров нет",
+      "timeout_seconds": 3,
+      "depends_on": [
+        "serp_device_analyst"
+      ],
+      "next_agents": [
+        "auditor_head"
+      ]
+    },
+    {
+      "id": "auditor_accessibility",
+      "name": "Аудитор доступности (WCAG)",
+      "group": "audit",
+      "role": "Проверка alt, aria-label, иерархии H1-H3",
+      "responsibility": [
+        "alt у всех изображений",
+        "aria-label у интерактивных элементов",
+        "Правильная иерархия заголовков",
+        "Контрастность цветов"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "status",
+          "score",
+          "wcag_issues"
+        ]
+      },
+      "success_criteria": "Все alt и aria-label на месте, H1-H3 корректны",
+      "timeout_seconds": 3,
+      "depends_on": [
+        "serp_device_analyst"
+      ],
+      "next_agents": [
+        "auditor_head"
+      ]
+    },
+    {
+      "id": "auditor_schema_geo",
+      "name": "Аудитор микроразметки (GEO/Schema)",
+      "group": "audit",
+      "role": "Валидация JSON-LD (VeterinaryCare, FAQPage, BreadcrumbList)",
+      "responsibility": [
+        "Валидность JSON-LD кода",
+        "Наличие VeterinaryCare для локального SEO",
+        "FAQPage разметка для вопросов-ответов",
+        "BreadcrumbList для навигации"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content",
+          "page_type"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "status",
+          "score",
+          "schema_errors"
+        ]
+      },
+      "success_criteria": "JSON-LD валиден, все необходимые схемы присутствуют",
+      "timeout_seconds": 3,
+      "depends_on": [
+        "serp_device_analyst"
+      ],
+      "next_agents": [
+        "auditor_head"
+      ]
+    },
+    {
+      "id": "auditor_links",
+      "name": "Аудитор целостности ссылок",
+      "group": "audit",
+      "role": "Сверка URL с sitemap.json, поиск битых ссылок и сирот",
+      "responsibility": [
+        "Все внутренние ссылки ведут на существующие страницы",
+        "Нет битых ссылок (404)",
+        "Нет страниц-сирот (без входящих ссылок)",
+        "Внешние ссылки имеют rel=noopener"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content",
+          "sitemap"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "status",
+          "score",
+          "broken_links"
+        ]
+      },
+      "success_criteria": "Все ссылки валидны, сирот нет",
+      "timeout_seconds": 3,
+      "depends_on": [
+        "serp_device_analyst"
+      ],
+      "next_agents": [
+        "auditor_head"
+      ]
+    },
+    {
+      "id": "auditor_html_tech",
+      "name": "Технический HTML-аудитор",
+      "group": "audit",
+      "role": "Проверка закрытия тегов, отсутствия инлайн-стилей",
+      "responsibility": [
+        "Все теги закрыты",
+        "Нет запрещенных инлайн-стилей",
+        "Валидная структура HTML5",
+        "Правильная кодировка UTF-8"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "status",
+          "score",
+          "html_errors"
+        ]
+      },
+      "success_criteria": "HTML валиден, инлайн-стилей нет",
+      "timeout_seconds": 3,
+      "depends_on": [
+        "serp_device_analyst"
+      ],
+      "next_agents": [
+        "auditor_head"
+      ]
+    },
+    {
+      "id": "auditor_mobile",
+      "name": "Аудитор мобильной адаптивности",
+      "group": "audit",
+      "role": "Проверка viewport, touch targets, мобильного меню",
+      "responsibility": [
+        "Наличие viewport meta-тега",
+        "Размеры кликабельных элементов ≥48x48px",
+        "Корректная работа мобильного меню",
+        "Адаптивные изображения"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content",
+          "css_classes"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "status",
+          "score",
+          "mobile_issues"
+        ]
+      },
+      "success_criteria": "Viewport есть, touch targets в норме",
+      "timeout_seconds": 3,
+      "depends_on": [
+        "serp_device_analyst"
+      ],
+      "next_agents": [
+        "auditor_head"
+      ]
+    },
+    {
+      "id": "auditor_antifluff",
+      "name": "Аудитор оригинальности (Anti-AI-Fluff)",
+      "group": "audit",
+      "role": "Поиск шаблонных AI-фраз, требование замены на живой язык",
+      "responsibility": [
+        "Отсутствие фраз 'в современном мире', 'является ключевым фактором'",
+        "Живой, человеческий язык",
+        "Уникальность формулировок",
+        "Отсутствие повторов"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "status",
+          "score",
+          "fluff_phrases"
+        ]
+      },
+      "success_criteria": "Шаблонных фраз нет, текст живой",
+      "timeout_seconds": 3,
+      "depends_on": [
+        "serp_device_analyst"
+      ],
+      "next_agents": [
+        "auditor_head"
+      ]
+    },
+    {
+      "id": "auditor_ux_conversion",
+      "name": "Аудитор конверсии (UX)",
+      "group": "audit",
+      "role": "Проверка наличия и видимости CTA-кнопок",
+      "responsibility": [
+        "Наличие призыва к действию (CTA)",
+        "Видимость кнопки на странице",
+        "Релевантность CTA контенту",
+        "Корректные ссылки на CTA"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content",
+          "page_type"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "status",
+          "score",
+          "cta_found"
+        ]
+      },
+      "success_criteria": "CTA присутствует и виден",
+      "timeout_seconds": 3,
+      "depends_on": [
+        "serp_device_analyst"
+      ],
+      "next_agents": [
+        "auditor_head"
+      ]
+    },
+    {
+      "id": "auditor_contacts",
+      "name": "Аудитор контактов",
+      "group": "audit",
+      "role": "Сверка телефона, email, города с эталоном",
+      "responsibility": [
+        "Телефон совпадает с конфигом",
+        "Email корректен",
+        "Город указан верно",
+        "Часы работы актуальны"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content",
+          "project_config"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "status",
+          "score",
+          "contact_mismatches"
+        ]
+      },
+      "success_criteria": "Все контакты совпадают с эталоном",
+      "timeout_seconds": 3,
+      "depends_on": [
+        "serp_device_analyst"
+      ],
+      "next_agents": [
+        "auditor_head"
+      ]
+    },
+    {
+      "id": "auditor_security",
+      "name": "Аудитор безопасности",
+      "group": "audit",
+      "role": "Проверка внешних ссылок, чистоты JS-скриптов",
+      "responsibility": [
+        "Внешние ссылки имеют rel=noopener noreferrer",
+        "Нет подозрительных скриптов",
+        "Нет инлайн-JS с eval()",
+        "HTTPS для внешних ресурсов"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "status",
+          "score",
+          "security_issues"
+        ]
+      },
+      "success_criteria": "Внешние ссылки безопасны, скрипты чисты",
+      "timeout_seconds": 3,
+      "depends_on": [
+        "serp_device_analyst"
+      ],
+      "next_agents": [
+        "auditor_head"
+      ]
+    },
+    {
+      "id": "auditor_brand",
+      "name": "Аудитор бренд-консистентности",
+      "group": "audit",
+      "role": "Контроль использования только разрешенных CSS-классов",
+      "responsibility": [
+        "Используются только классы из styles.css",
+        "Нет самодеятельности в верстке",
+        "Цвета соответствуют брендбуку",
+        "Шрифты корректны"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content",
+          "allowed_classes"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "status",
+          "score",
+          "unauthorized_classes"
+        ]
+      },
+      "success_criteria": "Только разрешенные классы, бренд соблюден",
+      "timeout_seconds": 3,
+      "depends_on": [
+        "serp_device_analyst"
+      ],
+      "next_agents": [
+        "auditor_head"
+      ]
+    },
+    {
+      "id": "auditor_head",
+      "name": "Главный синтезирующий аудитор",
+      "group": "audit",
+      "role": "Сбор отчетов от 14 коллег, принятие финального решения",
+      "responsibility": [
+        "Сбор всех 14 отчетов аудиторов",
+        "Подсчет общего балла",
+        "Принятие решения: APPROVED / NEEDS_FIX / FAILED",
+        "Отправка на auto_fix при необходимости"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "auditor_reports"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "final_status",
+          "total_score",
+          "action"
+        ]
+      },
+      "success_criteria": "Score ≥95 и нет critical issues → APPROVED",
+      "timeout_seconds": 5,
+      "depends_on": [
+        "auditor_ymyl",
+        "auditor_ethics",
+        "auditor_accessibility",
+        "auditor_schema_geo",
+        "auditor_links",
+        "auditor_html_tech",
+        "auditor_mobile",
+        "auditor_antifluff",
+        "auditor_ux_conversion",
+        "auditor_contacts",
+        "auditor_security",
+        "auditor_brand"
+      ],
+      "next_agents": [
+        "validator_ai_v2_1"
+      ]
+    }
+  ],
+  "validation_and_deploy": [
+    {
+      "id": "validator_ai_v2_1",
+      "name": "Финальный технический валидатор",
+      "group": "validation",
+      "role": "Финальная проверка перед деплоем",
+      "responsibility": [
+        "Валидность HTML по W3C",
+        "Размер файла ≤100KB",
+        "Кодировка UTF-8",
+        "Наличие nav, main, footer"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "status",
+          "validation_score"
+        ]
+      },
+      "success_criteria": "HTML валиден, размер в норме",
+      "timeout_seconds": 5,
+      "depends_on": [
+        "auditor_head"
+      ],
+      "next_agents": [
+        "deploy_agent"
+      ]
+    },
+    {
+      "id": "auto_fix_site",
+      "name": "Автоматический корректор",
+      "group": "fix",
+      "role": "Применение патчей для исправления ошибок",
+      "responsibility": [
+        "Анализ типа ошибки из отчета аудитора",
+        "Выбор нужного fix_*.py скрипта",
+        "Применение патча к HTML",
+        "Возврат на повторный аудит"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "html_content",
+          "error_report"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "page_id",
+          "status",
+          "html_content",
+          "fixes_applied"
+        ]
+      },
+      "success_criteria": "Ошибки исправлены, страница готова к повторному аудиту",
+      "timeout_seconds": 10,
+      "depends_on": [
+        "auditor_head"
+      ],
+      "next_agents": [
+        "auditor_head"
+      ]
+    },
+    {
+      "id": "deploy_agent",
+      "name": "Агент деплоя",
+      "group": "deploy",
+      "role": "Создание ZIP, бэкап, git commit и push",
+      "responsibility": [
+        "Создание ZIP-архива",
+        "Создание бэкапа с датой",
+        "Git add, commit, push",
+        "Генерация ссылки на GitHub"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "project_name",
+          "deploy_folder"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "status",
+          "github_url",
+          "archive_path"
+        ]
+      },
+      "success_criteria": "Файлы на GitHub, архив создан",
+      "timeout_seconds": 60,
+      "depends_on": [
+        "validator_ai_v2_1"
+      ],
+      "next_agents": []
+    }
+  ],
+  "utilities": [
+    {
+      "id": "main",
+      "name": "Точка входа",
+      "group": "utility",
+      "role": "Ручной запуск отдельных модулей",
+      "responsibility": [
+        "Запуск агентов по отдельности",
+        "Тестирование"
+      ],
+      "input": {
+        "format": "CLI",
+        "fields": [
+          "--agent",
+          "--input",
+          "--output"
+        ]
+      },
+      "output": {
+        "format": "CLI",
+        "fields": [
+          "stdout",
+          "stderr"
+        ]
+      },
+      "success_criteria": "Агент выполнил задачу",
+      "timeout_seconds": 300,
+      "depends_on": [],
+      "next_agents": []
+    },
+    {
+      "id": "distribute_content",
+      "name": "Распределитель контента",
+      "group": "utility",
+      "role": "Копирование файлов по папкам проекта",
+      "responsibility": [
+        "Распределение HTML по категориям",
+        "Копирование CSS и JS"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "source_folder",
+          "target_structure"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "status",
+          "files_distributed"
+        ]
+      },
+      "success_criteria": "Все файлы на своих местах",
+      "timeout_seconds": 30,
+      "depends_on": [
+        "validator_ai_v2_1"
+      ],
+      "next_agents": [
+        "deploy_agent"
+      ]
+    },
+    {
+      "id": "add_relevant_topics",
+      "name": "Генератор тем",
+      "group": "utility",
+      "role": "Расширение семантического ядра",
+      "responsibility": [
+        "Генерация дополнительных тем",
+        "Анализ смежных запросов"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "current_topics",
+          "niche"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "new_topics",
+          "keyword_clusters"
+        ]
+      },
+      "success_criteria": "Темы релевантны, не пересекаются",
+      "timeout_seconds": 20,
+      "depends_on": [],
+      "next_agents": [
+        "strategist_v2"
+      ]
+    },
+    {
+      "id": "priority",
+      "name": "Менеджер очереди",
+      "group": "utility",
+      "role": "Распределение нагрузки по ядрам процессора",
+      "responsibility": [
+        "Балансировка потоков",
+        "Контроль ресурсов"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "task_queue",
+          "cpu_cores"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "distribution_plan",
+          "estimated_time"
+        ]
+      },
+      "success_criteria": "Нагрузка распределена равномерно",
+      "timeout_seconds": 10,
+      "depends_on": [
+        "strategist_v2"
+      ],
+      "next_agents": [
+        "writer_v2_2"
+      ]
+    },
+    {
+      "id": "test_generated_content",
+      "name": "Песочница для тестов",
+      "group": "utility",
+      "role": "Тестовый прогон 3-5 страниц перед массовым запуском",
+      "responsibility": [
+        "Запуск конвейера на тестовых данных",
+        "Проверка результатов"
+      ],
+      "input": {
+        "format": "JSON",
+        "fields": [
+          "test_pages",
+          "config"
+        ]
+      },
+      "output": {
+        "format": "JSON",
+        "fields": [
+          "test_results",
+          "issues_found"
+        ]
+      },
+      "success_criteria": "Тестовые страницы прошли все проверки",
+      "timeout_seconds": 120,
+      "depends_on": [],
+      "next_agents": [
+        "orchestrator_v3"
+      ]
+    }
+  ],
+  "fix_scripts": [
+    "fix_actionability.py",
+    "fix_chief_editor.py",
+    "fix_chief_editor_2.py",
+    "fix_critic_add_categories.py",
+    "fix_critic_categorization.py",
+    "fix_linker.py",
+    "fix_linker_url.py",
+    "fix_neuro_matching.py",
+    "fix_nuance_search.py",
+    "fix_nuance_substring.py",
+    "fix_registrar_topic_matching.py",
+    "fix_self_linking.py",
+    "fix_strategist_registry.py",
+    "fix_strategist_thresholds.py",
+    "fix_url_seo.py",
+    "fix_validator.py",
+    "fix_validator_regex.py",
+    "fix_writer_add_neuro.py",
+    "fix_writer_checkups.py"
+  ]
+}

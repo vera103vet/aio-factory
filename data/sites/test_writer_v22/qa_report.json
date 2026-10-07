@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-10-06T20:10:34.716484",
+  "site_dir": "data/sites/test_writer_v22",
+  "stats": {
+    "total_pages": 42,
+    "pages_with_css": 42,
+    "pages_with_js": 42,
+    "pages_with_fonts": 42,
+    "pages_with_nav": 42,
+    "pages_with_footer": 42,
+    "errors": 0,
+    "warnings": 0
+  },
+  "issues": []
+}
