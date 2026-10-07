@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
-Адаптер для writer_v2_2.py
-Принимает формат master_factory.py (--input, --project)
-Преобразует в формат writer_v2_2 (--site-map, --css, --output-dir)
+Адаптер для writer_v2_2.py v3
+Ищет только HTML ФАЙЛЫ (не папки!) рекурсивно
 """
 
 import json
@@ -17,14 +16,12 @@ def main():
     parser.add_argument("--project", required=True, help="Project name")
     args = parser.parse_args()
     
-    # Читаем входные данные от master_factory
     with open(args.input, "r", encoding="utf-8") as f:
         input_data = json.load(f)
     
     project_dir = Path(f"data/sites/{args.project}")
     project_dir.mkdir(parents=True, exist_ok=True)
     
-    # Создаём site_map.json для writer_v2_2
     site_map = {
         "pages": [
             {
@@ -39,25 +36,19 @@ def main():
     with open(site_map_file, "w", encoding="utf-8") as f:
         json.dump(site_map, f, ensure_ascii=False, indent=2)
     
-    # CSS файл
     css_file = Path("styles.css")
-    
-    # Output директория
     output_dir = project_dir / "writer_output"
     output_dir.mkdir(parents=True, exist_ok=True)
     
-    # Запускаем writer_v2_2 с правильными аргументами
     cmd = f"python3 agents/writer_v2_2.py --site-map {site_map_file} --css {css_file} --output-dir {output_dir}"
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
     
-    # Проверяем результат
-    output_files = list(output_dir.glob("*.html"))
+    # РЕКУРСИВНЫЙ ПОИСК ТОЛЬКО ФАЙЛОВ .html
+    output_files = [f for f in output_dir.rglob("*.html") if f.is_file()]
     
     if output_files:
-        # Читаем первый созданный файл
         html_content = output_files[0].read_text(encoding="utf-8")
         
-        # Создаём выходной JSON для master_factory
         output_data = {
             "page_id": input_data.get("page_id"),
             "status": "completed",
@@ -72,9 +63,8 @@ def main():
         with open(output_file, "w", encoding="utf-8") as f:
             json.dump(output_data, f, ensure_ascii=False, indent=2)
         
-        print(f"OK: Created {len(output_files)} HTML files")
+        print(f"OK: Found {len(output_files)} HTML files")
     else:
-        # Ошибка
         output_data = {
             "page_id": input_data.get("page_id"),
             "status": "failed",
