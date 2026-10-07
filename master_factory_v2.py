@@ -76,7 +76,7 @@ class MasterFactoryV2:
             return False
         
         # Проверяем, создал ли адаптер файл
-        output_files = list((self.project_dir / "writer_output").rglob("*.html"))
+        output_files = [f for f in (self.project_dir / "writer_output").rglob("*.html") if f.is_file()]
         if not output_files:
             self.log("  Writer не создал HTML файл")
             return False
