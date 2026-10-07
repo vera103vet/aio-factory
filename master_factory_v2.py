@@ -16,7 +16,7 @@ from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 class MasterFactoryV2:
-    def __init__(self, project_name: str, num_pages: int, styles_file: str, starter_file: str, test_mode: bool = False):
+    def __init__(self, project_name: str, num_pages: int, styles_file: str, starter_file: str, test_mode: bool = False, skip_online: bool = False):
         self.project_name = project_name
         self.num_pages = min(num_pages, 5) if test_mode else num_pages
         self.styles_file = Path(styles_file)
@@ -24,6 +24,7 @@ class MasterFactoryV2:
         self.project_dir = Path(f"data/sites/{project_name}")
         self.agents_dir = Path("agents")
         self.log_file = self.project_dir / "factory_v2.log"
+        self.skip_online = skip_online
         
         self.project_dir.mkdir(parents=True, exist_ok=True)
         
@@ -125,10 +126,10 @@ class MasterFactoryV2:
         self.log("=" * 70)
         
         auditor_ids = [
-            "auditor_ymyl", "auditor_ethics", "auditor_accessibility",
-            "auditor_schema_geo", "auditor_links", "auditor_html_tech",
-            "auditor_mobile", "auditor_antifluff", "auditor_ux_conversion",
-            "auditor_contacts", "auditor_security", "auditor_brand"
+            "local_auditor_html_structure", "local_auditor_seo_basics", "local_auditor_content_quality",
+            "local_auditor_links", "local_auditor_images", "local_auditor_mobile",
+            "local_auditor_accessibility", "local_auditor_performance", "local_auditor_security",
+            "local_auditor_schema", "local_auditor_contacts", "local_auditor_brand"
         ]
         
         approved_count = 0
@@ -159,6 +160,28 @@ class MasterFactoryV2:
         self.log(f"\nИтог аудита: {approved_count}/{len(auditor_ids)} одобрено")
         return {"approved": approved_count, "total": len(auditor_ids)}
 
+
+    def run_online_audit(self) -> dict:
+        """Этап 4: Онлайн аудит живых сайтов (auditor_ai_v15)"""
+        self.log("\n" + "=" * 70)
+        self.log("ЭТАП 4: Онлайн аудит живых сайтов")
+        self.log("=" * 70)
+        
+        sites_file = Path("config/sites.yaml")
+        if not sites_file.exists():
+            self.log("  config/sites.yaml не найден — пропускаем онлайн аудит")
+            return {"status": "skipped", "reason": "no sites.yaml"}
+        
+        self.log("  Запуск auditor_ai_v15.py...")
+        cmd = f"python3 {self.agents_dir}/auditor_ai_v15.py"
+        result = self.run_cmd(cmd, timeout=180)
+        
+        output_file = Path("data/audit_ai_v15.json")
+        if output_file.exists():
+            self.log(f"  Отчёт сохранён: {output_file}")
+        
+        return {"status": "completed" if result else "failed"}
+
     def run(self) -> bool:
         """Запуск полного конвейера"""
         start_time = time.time()
@@ -188,6 +211,14 @@ class MasterFactoryV2:
         # ЭТАП 3: Параллельный аудит
         audit_result = self.run_parallel_audit()
         
+
+        # ЭТАП 4: Онлайн аудит (если не пропущен)
+        if not self.skip_online:
+            online_result = self.run_online_audit()
+        else:
+            self.log("\n⏭️  Онлайн аудит пропущен (флаг --skip-online)")
+            online_result = {"status": "skipped"}
+
         elapsed = time.time() - start_time
         
         self.log("\n" + "=" * 70)
@@ -195,6 +226,7 @@ class MasterFactoryV2:
         self.log("=" * 70)
         self.log(f"Создано страниц: {success_pages}")
         self.log(f"Аудит пройден: {audit_result['approved']}/{audit_result['total']}")
+        self.log(f"Онлайн аудит: {online_result.get('status', 'N/A')}")
         self.log(f"Время выполнения: {elapsed:.1f} сек ({elapsed/60:.1f} мин)")
         self.log(f"Папка проекта: {self.project_dir.absolute()}")
         self.log("=" * 70)
@@ -210,11 +242,12 @@ def main():
     parser.add_argument("--styles", required=True, help="Файл styles.css")
     parser.add_argument("--starter", required=True, help="Стартовый HTML-файл")
     parser.add_argument("--test", action="store_true", help="Тестовый режим (макс. 5 страниц)")
+    parser.add_argument("--skip-online", action="store_true", help="Пропустить онлайн аудит")
     
     args = parser.parse_args()
     
     factory = MasterFactoryV2(
-        args.project, args.pages, args.styles, args.starter, test_mode=args.test
+        args.project, args.pages, args.styles, args.starter, test_mode=args.test, skip_online=args.skip_online
     )
     success = factory.run()
     sys.exit(0 if success else 1)
