@@ -1,0 +1,431 @@
+{
+  "audit_date": "2026-10-05 14:33",
+  "auditor_version": "2.0",
+  "summary": {
+    "avg_score": 61.5,
+    "best_site": "usyplenie",
+    "worst_site": "nevrolog",
+    "total_critical": 4,
+    "total_important": 15,
+    "total_recommendations": 13
+  },
+  "sites": [
+    {
+      "site": "main",
+      "url": "https://103vet.by/",
+      "score": 62,
+      "critical_issues": [
+        {
+          "type": "missing_ymyl",
+          "description": "Отсутствует YMYL-дисклеймер",
+          "fix": "Добавить <aside>Важно: консультируйтесь с ветеринаром...</aside>",
+          "impact": "+10"
+        }
+      ],
+      "important_issues": [
+        {
+          "type": "missing_article",
+          "description": "Отсутствует <article>",
+          "fix": "Обернуть контент в <article>...</article>",
+          "impact": "+10"
+        },
+        {
+          "type": "few_h2_questions",
+          "description": "Мало H2-вопросов (1)",
+          "fix": "Добавить 2-3 заголовка H2 в форме вопросов",
+          "impact": "+5"
+        },
+        {
+          "type": "missing_philosophy",
+          "description": "Нет философии бренда",
+          "fix": "Добавить 'Пространство спокойствия для людей и безопасности для животных'",
+          "impact": "+10"
+        },
+        {
+          "type": "missing_alt",
+          "description": "1 изображений без alt",
+          "fix": "Добавить alt='описание' ко всем <img>",
+          "impact": "+3"
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "missing_twitter",
+          "description": "Не хватает Twitter-тегов: twitter:card, twitter:title, twitter:description, twitter:image",
+          "fix": "Добавить Twitter Card мета-теги",
+          "impact": "+3"
+        },
+        {
+          "type": "few_internal_links",
+          "description": "Мало внутренних ссылок (0)",
+          "fix": "Добавить 3-5 внутренних ссылок на связанные темы",
+          "impact": "+5"
+        },
+        {
+          "type": "no_authority_links",
+          "description": "Нет ссылок на авторитеты (WSAVA, IRIS)",
+          "fix": "Добавить ссылки на wsave.org",
+          "impact": "+5 E-E-A-T"
+        }
+      ],
+      "checks": {
+        "lang_ru": true,
+        "meta_title": true,
+        "meta_desc": true,
+        "canonical": true,
+        "schema_org": true,
+        "article_tag": false,
+        "h1_tag": true,
+        "h2_questions": 1,
+        "faq_section": true,
+        "ymyl_disclaimer": false,
+        "brand_philosophy": false,
+        "word_count": 898,
+        "viewport": true,
+        "open_graph": {
+          "og:title": true,
+          "og:description": true,
+          "og:image": true,
+          "og:url": true,
+          "og:type": true
+        },
+        "twitter_card": {
+          "twitter:card": false,
+          "twitter:title": false,
+          "twitter:description": false,
+          "twitter:image": false
+        },
+        "images_alt": {
+          "total": 3,
+          "with_alt": 2,
+          "without_alt": 1,
+          "percentage": 66.7
+        },
+        "internal_links": {
+          "total": 17,
+          "internal": 0,
+          "external": 5
+        },
+        "authority_links": [],
+        "keyword_density": {
+          "ветеринар на дом минск": {
+            "count": 3,
+            "density": 0.45,
+            "status": "ok"
+          }
+        }
+      }
+    },
+    {
+      "site": "nevrolog",
+      "url": "https://nevrolog.103vet.by/",
+      "score": 47,
+      "critical_issues": [
+        {
+          "type": "missing_schema",
+          "description": "Отсутствует Schema.org JSON-LD",
+          "fix": "Добавить <script type='application/ld+json'>{...}</script>",
+          "impact": "+15"
+        },
+        {
+          "type": "missing_ymyl",
+          "description": "Отсутствует YMYL-дисклеймер",
+          "fix": "Добавить <aside>Важно: консультируйтесь с ветеринаром...</aside>",
+          "impact": "+10"
+        }
+      ],
+      "important_issues": [
+        {
+          "type": "missing_canonical",
+          "description": "Отсутствует canonical URL",
+          "fix": "Добавить <link rel='canonical' href='URL'>",
+          "impact": "+5"
+        },
+        {
+          "type": "few_h2_questions",
+          "description": "Мало H2-вопросов (0)",
+          "fix": "Добавить 2-3 заголовка H2 в форме вопросов",
+          "impact": "+5"
+        },
+        {
+          "type": "missing_philosophy",
+          "description": "Нет философии бренда",
+          "fix": "Добавить 'Пространство спокойствия для людей и безопасности для животных'",
+          "impact": "+10"
+        },
+        {
+          "type": "missing_alt",
+          "description": "3 изображений без alt",
+          "fix": "Добавить alt='описание' ко всем <img>",
+          "impact": "+3"
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "missing_og",
+          "description": "Не хватает OG-тегов: og:title, og:description, og:image, og:url, og:type",
+          "fix": "Добавить Open Graph мета-теги",
+          "impact": "+5"
+        },
+        {
+          "type": "missing_twitter",
+          "description": "Не хватает Twitter-тегов: twitter:card, twitter:title, twitter:description, twitter:image",
+          "fix": "Добавить Twitter Card мета-теги",
+          "impact": "+3"
+        },
+        {
+          "type": "few_internal_links",
+          "description": "Мало внутренних ссылок (0)",
+          "fix": "Добавить 3-5 внутренних ссылок на связанные темы",
+          "impact": "+5"
+        },
+        {
+          "type": "no_authority_links",
+          "description": "Нет ссылок на авторитеты (WSAVA, IRIS)",
+          "fix": "Добавить ссылки на wsave.org",
+          "impact": "+5 E-E-A-T"
+        }
+      ],
+      "checks": {
+        "lang_ru": true,
+        "meta_title": true,
+        "meta_desc": true,
+        "canonical": false,
+        "schema_org": false,
+        "article_tag": true,
+        "h1_tag": true,
+        "h2_questions": 0,
+        "faq_section": true,
+        "ymyl_disclaimer": false,
+        "brand_philosophy": false,
+        "word_count": 637,
+        "viewport": true,
+        "open_graph": {
+          "og:title": false,
+          "og:description": false,
+          "og:image": false,
+          "og:url": false,
+          "og:type": false
+        },
+        "twitter_card": {
+          "twitter:card": false,
+          "twitter:title": false,
+          "twitter:description": false,
+          "twitter:image": false
+        },
+        "images_alt": {
+          "total": 3,
+          "with_alt": 0,
+          "without_alt": 3,
+          "percentage": 0.0
+        },
+        "internal_links": {
+          "total": 26,
+          "internal": 0,
+          "external": 7
+        },
+        "authority_links": [],
+        "keyword_density": {
+          "эпилепсия у собак симптомы": {
+            "count": 0,
+            "density": 0.0,
+            "status": "ok"
+          }
+        }
+      }
+    },
+    {
+      "site": "usyplenie",
+      "url": "https://usyplenie.103vet.by/index.html",
+      "score": 75,
+      "critical_issues": [],
+      "important_issues": [
+        {
+          "type": "missing_article",
+          "description": "Отсутствует <article>",
+          "fix": "Обернуть контент в <article>...</article>",
+          "impact": "+10"
+        },
+        {
+          "type": "few_h2_questions",
+          "description": "Мало H2-вопросов (1)",
+          "fix": "Добавить 2-3 заголовка H2 в форме вопросов",
+          "impact": "+5"
+        },
+        {
+          "type": "missing_philosophy",
+          "description": "Нет философии бренда",
+          "fix": "Добавить 'Пространство спокойствия для людей и безопасности для животных'",
+          "impact": "+10"
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "missing_twitter",
+          "description": "Не хватает Twitter-тегов: twitter:card, twitter:title, twitter:description, twitter:image",
+          "fix": "Добавить Twitter Card мета-теги",
+          "impact": "+3"
+        },
+        {
+          "type": "few_internal_links",
+          "description": "Мало внутренних ссылок (0)",
+          "fix": "Добавить 3-5 внутренних ссылок на связанные темы",
+          "impact": "+5"
+        },
+        {
+          "type": "no_authority_links",
+          "description": "Нет ссылок на авторитеты (WSAVA, IRIS)",
+          "fix": "Добавить ссылки на wsave.org",
+          "impact": "+5 E-E-A-T"
+        }
+      ],
+      "checks": {
+        "lang_ru": true,
+        "meta_title": true,
+        "meta_desc": true,
+        "canonical": true,
+        "schema_org": true,
+        "article_tag": false,
+        "h1_tag": true,
+        "h2_questions": 1,
+        "faq_section": true,
+        "ymyl_disclaimer": true,
+        "brand_philosophy": false,
+        "word_count": 606,
+        "viewport": true,
+        "open_graph": {
+          "og:title": true,
+          "og:description": true,
+          "og:image": false,
+          "og:url": false,
+          "og:type": true
+        },
+        "twitter_card": {
+          "twitter:card": false,
+          "twitter:title": false,
+          "twitter:description": false,
+          "twitter:image": false
+        },
+        "images_alt": {
+          "total": 1,
+          "with_alt": 1,
+          "without_alt": 0,
+          "percentage": 100.0
+        },
+        "internal_links": {
+          "total": 56,
+          "internal": 0,
+          "external": 2
+        },
+        "authority_links": [],
+        "keyword_density": {}
+      }
+    },
+    {
+      "site": "vetminsk",
+      "url": "https://www.vetminsk.103vet.by/",
+      "score": 62,
+      "critical_issues": [
+        {
+          "type": "missing_ymyl",
+          "description": "Отсутствует YMYL-дисклеймер",
+          "fix": "Добавить <aside>Важно: консультируйтесь с ветеринаром...</aside>",
+          "impact": "+10"
+        }
+      ],
+      "important_issues": [
+        {
+          "type": "missing_article",
+          "description": "Отсутствует <article>",
+          "fix": "Обернуть контент в <article>...</article>",
+          "impact": "+10"
+        },
+        {
+          "type": "few_h2_questions",
+          "description": "Мало H2-вопросов (0)",
+          "fix": "Добавить 2-3 заголовка H2 в форме вопросов",
+          "impact": "+5"
+        },
+        {
+          "type": "missing_philosophy",
+          "description": "Нет философии бренда",
+          "fix": "Добавить 'Пространство спокойствия для людей и безопасности для животных'",
+          "impact": "+10"
+        },
+        {
+          "type": "missing_alt",
+          "description": "1 изображений без alt",
+          "fix": "Добавить alt='описание' ко всем <img>",
+          "impact": "+3"
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "missing_twitter",
+          "description": "Не хватает Twitter-тегов: twitter:card, twitter:title, twitter:description, twitter:image",
+          "fix": "Добавить Twitter Card мета-теги",
+          "impact": "+3"
+        },
+        {
+          "type": "few_internal_links",
+          "description": "Мало внутренних ссылок (0)",
+          "fix": "Добавить 3-5 внутренних ссылок на связанные темы",
+          "impact": "+5"
+        },
+        {
+          "type": "no_authority_links",
+          "description": "Нет ссылок на авторитеты (WSAVA, IRIS)",
+          "fix": "Добавить ссылки на wsave.org",
+          "impact": "+5 E-E-A-T"
+        }
+      ],
+      "checks": {
+        "lang_ru": true,
+        "meta_title": true,
+        "meta_desc": true,
+        "canonical": true,
+        "schema_org": true,
+        "article_tag": false,
+        "h1_tag": true,
+        "h2_questions": 0,
+        "faq_section": true,
+        "ymyl_disclaimer": false,
+        "brand_philosophy": false,
+        "word_count": 594,
+        "viewport": true,
+        "open_graph": {
+          "og:title": true,
+          "og:description": true,
+          "og:image": true,
+          "og:url": true,
+          "og:type": true
+        },
+        "twitter_card": {
+          "twitter:card": false,
+          "twitter:title": false,
+          "twitter:description": false,
+          "twitter:image": false
+        },
+        "images_alt": {
+          "total": 2,
+          "with_alt": 1,
+          "without_alt": 1,
+          "percentage": 50.0
+        },
+        "internal_links": {
+          "total": 46,
+          "internal": 0,
+          "external": 3
+        },
+        "authority_links": [],
+        "keyword_density": {
+          "хроническая болезнь почек у кошек диета": {
+            "count": 0,
+            "density": 0.0,
+            "status": "ok"
+          }
+        }
+      }
+    }
+  ]
+}
