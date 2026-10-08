@@ -205,6 +205,7 @@ def run_chief_editor(filepath: Path = None):
     
     print("\nОтчёт сохранён: " + str(report_file))
     print("="*70)
+    return report
 
 if __name__ == "__main__":
     run_chief_editor()
