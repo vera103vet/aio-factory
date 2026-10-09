@@ -8,7 +8,7 @@
     {"claim": "шоколад токсичен для собак", "is_true": true, "source": "ASPCA", "correction": null},
     {"claim": "виноград и изюм токсичны для собак", "is_true": true, "source": "ASPCA", "correction": null},
     {"claim": "ксилит смертельно опасен для собак", "is_true": true, "source": "ASPCA", "correction": null},
-    {"claim": "кошки — облигатные хищники", "is_true": true, "source": "WSAVA Nutrition", "correction": null}
+    {"claim": "кошки – облигатные хищники", "is_true": true, "source": "WSAVA Nutrition", "correction": null}
   ],
   "forbidden_outdated_advice": [
     "рекомендовать кормление исключительно натуральной едой без добавления витаминов",
@@ -18,7 +18,7 @@
   ],
   "mandatory_expert_nuances": [
     "упоминание о проверке корма на соответствие стандартам WSAVA",
-    "важность оценки кондиции тела (BCS — Body Condition Score)",
+    "регулярная оценка кондиции тела помогает контролировать вес питомца",
     "предупреждение о токсичных продуктах (лук, виноград, ксилит, шоколад)",
     "необходимость перехода на новый корм в течение 7-10 дней"
   ],

@@ -2,6 +2,14 @@ import json
 import re
 from pathlib import Path
 from typing import Dict, List, Tuple
+
+def extract_h1(html_content: str) -> str:
+    """Извлекает H1 из HTML контента"""
+    match = re.search(r'<h1[^>]*>([^<]+)</h1>', html_content, re.IGNORECASE)
+    if match:
+        return match.group(1).strip()
+    return ""
+
 from datetime import datetime
 
 KNOWLEDGE_BASE_DIR = Path("data/expert_knowledge")
@@ -154,7 +162,8 @@ def test_critic_on_latest_file():
         content = f.read()
         text = re.sub(r'<[^>]+>', ' ', content)
     
-    topic_name = filepath.stem.replace("_", " ").replace("?", "").strip()
+    h1 = extract_h1(content)
+    topic_name = h1 if h1 else filepath.stem.replace("_", " ").replace("?", "").strip()
     
     print("="*70)
     print("DOMAIN EXPERT CRITIC v2.0: ПРОВЕРКА ВЕТЕРИНАРНОЙ ЭКСПЕРТИЗЫ")
@@ -201,5 +210,59 @@ def test_critic_on_latest_file():
     print("\nОтчёт сохранён: " + str(report_file))
     print("="*70)
 
+
+
+import argparse
+
+def main():
+    parser = argparse.ArgumentParser(description='Domain Expert Critic')
+    parser.add_argument('--file', type=str, help='Проверить конкретный файл')
+    args = parser.parse_args()
+    
+    if args.file:
+        from pathlib import Path
+        filepath = Path(args.file)
+        if not filepath.exists():
+            print(f"Файл не найден: {args.file}")
+            return
+        with open(filepath, "r", encoding="utf-8") as f:
+            content = f.read()
+        text = re.sub(r'<[^>]+>', ' ', content)
+        h1 = extract_h1(content)
+        topic_name = h1 if h1 else filepath.stem.replace("_", " ").replace("?", "").strip()
+        
+        print("="*70)
+        print("DOMAIN EXPERT CRITIC v2.0: ПРОВЕРКА ВЕТЕРИНАРНОЙ ЭКСПЕРТИЗЫ")
+        print("="*70)
+        print("Файл: " + filepath.name)
+        print("Тема: " + topic_name)
+        
+        result = run_expert_critique(topic_name, text)
+        
+        print("\nКатегория: " + result['category_ru'].upper() + " (" + result['category'] + ")")
+        print("Протоколы: " + ", ".join(result['protocols_checked']))
+        print("-" * 70)
+        print("РЕЗУЛЬТАТЫ ПРОВЕРКИ:")
+        print("-" * 70)
+        
+        all_passed = True
+        for check_name, (passed, issues) in result['checks'].items():
+            status = "[OK]" if passed else "[FAIL]"
+            print(f"  {status} {check_name}")
+            if issues:
+                for issue in issues:
+                    print(f"    - {issue}")
+            if not passed:
+                all_passed = False
+        
+        print()
+        if all_passed:
+            print("ВЕРДИКТ: ОДОБРЕНО ЭКСПЕРТОМ")
+        else:
+            print("ВЕРДИКТ: ТРЕБУЕТСЯ ДОРАБОТКА")
+        print("="*70)
+    else:
+        test_critic_on_latest_file()
+
 if __name__ == "__main__":
-    test_critic_on_latest_file()
+    main()
