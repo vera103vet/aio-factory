@@ -1,13 +1,37 @@
-# Временные файлы
+# Python кэш
 __pycache__/
+agents/__pycache__/
 *.pyc
 *.pyo
-temp-*/
-temp_*
 
-# Тестовые файлы
-test_*.html
-test_*.json
+# Сгенерированный контент
+data/generated_content/
+data/sites/
+data/chief_editor_report.json
+data/domain_expert_report.json
+
+# Рабочие файлы генерации
+all_60_pages_content.txt
+archive_all_60_pages.html
+part_*.txt
+full_issues.txt
+full_map.txt
+critic_*.txt
+critic_work_texts.txt
+
+# Устаревшие версии генераторов
+generate_unique_content_v*.py
+generate_custom_pages.py
+generate_pages_from_map.py
+create_archive.py
+
+# Тестовые скрипты
+test_generate_1_page.py
+patch_critic.py
+
+# Локальные папки проектов и деплоя
+projects/
+temp-deploy/
 
 # Логи
 *.log
@@ -15,3 +39,6 @@ test_*.json
 # Системные файлы
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
+*~
