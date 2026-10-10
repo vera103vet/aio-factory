@@ -149,4 +149,227 @@ prompt = architect.resolve_prompt()
 
 ---
 
-*Продолжение следует... Изучены 1 из 61 агентов*
+
+---
+
+### ✍️ Стратег контента (SEO-архитектор)
+
+---
+
+### 📄 `seo_architect.py`
+
+#### 🏷️ Мета-информация
+| Поле | Значение |
+|------|----------|
+| **Роль в системе** | Стратег контента / Первый страж SEO |
+| **Версия** | 1.0 |
+| **Приоритет** | Высокий (критически важный для защиты от каннибализации) |
+| **Размер** | ~16.8 КБ |
+| **Класс** | `SEOArchitect` |
+| **Зависимости** | `json`, `re`, `pathlib.Path`, `bs4.BeautifulSoup`, `collections.defaultdict`, `argparse` |
+
+#### 🎯 Роль в системе
+Агент предварительного контроля SEO. **Гарантирует уникальность ключевых слов и защиту от каннибализации** до начала генерации контента. Содержит встроенную базу знаний с 48 темами по 4 разделам (собаки, кошки, качество жизни, владельцу) и соответствующими синонимичными ключевыми словами.
+
+**Ключевая особенность:** это **стратег контента**, а не технический архитектор. Отвечает на вопрос "ЧТО писать" (темы, ключи, структура), в то время как `aio_geo_seo_architect.py` отвечает на вопрос "КАК структурировать" (HTML, Schema.org, BLUF).
+
+#### 🔄 Взаимодействие с другими агентами
+```text
+seo_architect.py (стратег контента)
+    ↓ генерирует content_map_enriched.json
+aio_geo_seo_architect.py (технический архитектор)
+    ↓ добавляет HTML-шаблоны и Schema.org
+writer.py / chief_editor.py
+    ↓ генерируют контент по карте
+seo_quality_auditor.py (второй страж)
+    ↓ финальная проверка на каннибализацию
+```
+
+#### 📥 Входные данные
+1. **`starter_file: str`** — путь к `starter.html` (обязательно).
+2. **`target_pages: int = 60`** — целевое количество страниц для генерации.
+3. **`output_file: str = 'content_map_enriched.json'`** — путь к выходному файлу.
+
+#### 📤 Выходные данные
+1. **`content_map_enriched.json`** — полная карта контента со структурой:
+   ```json
+   {
+     "project_name": "Название из title",
+     "total_pages": 60,
+     "sections": [{"name": "...", "slug": "...", "href": "..."}],
+     "pages": [
+       {
+         "page_id": 1, "section": "собак", "section_slug": "dogs",
+         "slug": "dogs/onkologiya-u-sobak",
+         "h1": "Паллиативный уход при онкологии у собак",
+         "meta_description": "...профессиональная информация от клиники 103vet.by...",
+         "seo": {"primary_keyword": "онкология у собак",
+                 "secondary_keywords": ["химиотерапия", "обезболивание"],
+                 "max_frequency": 2, "synonyms": ["рак у собак"]},
+         "link_to": ["cats", "quality-of-life"]
+       }
+     ],
+     "seo_summary": {
+       "total_unique_keywords": 60,
+       "cannibalization_risk": "low",
+       "spam_protection": "enabled"
+     }
+   }
+   ```
+
+#### 🏗️ Структура класса `SEOArchitect`
+**`__init__(self, starter_file: str, target_pages: int = 60)`**
+- Инициализирует атрибуты: `starter_file`, `target_pages`, `sections=[]`, `pages=[]`.
+- Создаёт встроенную `topic_database` с 4 разделами × 12 тем = 48 темами.
+
+**`parse_starter(self) -> dict`**
+- Парсит `starter.html` через BeautifulSoup.
+- Извлекает `<nav>` → список ссылок (`name`, `slug`, `href`).
+- Извлекает `<title>`.
+- Возвращает `{'nav_links': [...], 'title': '...'}`.
+
+**`determine_section(self, topic: str) -> str`**
+- Определяет раздел по ключевым словам в теме.
+- Возвращает: `'собак'` / `'кошек'` / `'качество жизни'` / `'владельцу'`.
+- По умолчанию → `'собак'`.
+
+**`generate_unique_keywords(self, topic: str, section: str) -> dict`**
+- Берёт keywords из `topic_database[section]`.
+- Ищет `primary_keyword` по совпадению ключа в названии темы.
+- Берёт первые 3 синонима как `secondary_keywords`.
+- Если точного совпадения нет — генерирует из темы (слова >4 символов).
+- Возвращает: `{'primary_keyword', 'secondary_keywords', 'max_frequency': 2, 'synonyms'}`.
+
+**`build_content_map(self) -> dict`** (главный метод, пошаговая логика):
+1. Парсит `starter.html` через `parse_starter()`.
+2. Определяет `sections` из `nav_links`.
+3. Распределяет страницы: `pages_per_section = target_pages // len(sections)`, остаток (`remaining`) добавляется первым секциям.
+4. Инициализирует счётчики: `page_id = 1`, `used_keywords = set()` (для отслеживания уникальности).
+5. Для каждой секции находит `section_key` в `topic_database` по совпадению имени.
+6. Для каждой темы в секции:
+   - Генерирует уникальные ключи: `seo_data = self.generate_unique_keywords(topic, section_key)`.
+   - **Проверяет уникальность:** если `seo_data['primary_keyword']` уже в `used_keywords`, добавляет уточнение: `f"{keyword} {page_id}"`.
+   - Добавляет ключ в set: `used_keywords.add(seo_data['primary_keyword'])`.
+   - Создаёт `slug` через `_slugify(topic)`.
+   - Добавляет страницу в `self.pages` с полями: `page_id`, `section`, `section_slug`, `slug`, `h1`, `meta_description`, `seo`, `link_to`.
+   - Увеличивает `page_id += 1`.
+7. Возвращает `content_map` с `seo_summary` (`total_unique_keywords`, `cannibalization_risk='low'`, `spam_protection='enabled'`).
+
+**`_slugify(self, text: str) -> str`**
+- Преобразует текст в URL-friendly формат: `lower()` → удаляет не-word символы → заменяет пробелы/подчёркивания на `'-'` → `strip('-')[:50]`.
+
+**`save_content_map(self, output_file: str)`**
+- Вызывает `build_content_map()`.
+- Сохраняет в JSON (`ensure_ascii=False`, `indent=2`).
+- Печатает статистику в консоль и возвращает `content_map`.
+
+#### 🧠 База знаний `topic_database` (4 раздела × 12 тем)
+| Раздел | Темы (примеры) | Ключевые слова (примеры) |
+|--------|----------------|--------------------------|
+| **`'собак'`** | Онкология, артрит, деменция, питание, ухудшение состояния, гигиена... | онкология, артрит, деменция, питание |
+| **`'кошек'`** | ХБП, гипертиреоз, деменция, аппетит, гидратация, боль, организация пространства... | ХБП, гипертиреоз, деменция, аппетит |
+| **`'качество жизни'`** | Шкала HHHHHMM, дневник наблюдения, объективная оценка, когда прощаться, эвтаназия... | HHHHHMM, дневник, решение, ветеринар |
+| **`'владельцу'`** | Anticipatory grief, чувство вины, разговор с детьми, ритуалы прощания, группы поддержки... | горе, дети, прощание, поддержка |
+
+#### 🎬 Примеры использования
+**Пример 1: Запуск из командной строки**
+```bash
+python3 agents/seo_architect.py --starter projects/dostoinyi-uhod/starter.html --pages 60 --output content_map_enriched.json
+```
+
+**Пример 2: Использование в коде (с подробным анализом)**
+```python
+from agents.seo_architect import SEOArchitect
+
+# 1. Инициализация архитектора
+architect = SEOArchitect(
+    starter_file='projects/dostoinyi-uhod/starter.html',  # Шаблон с навигацией
+    target_pages=60  # Желаемое количество страниц
+)
+
+# 2. Генерация карты контента (в памяти)
+content_map = architect.build_content_map()
+
+# 3. Анализ результата
+print(f"Всего страниц: {content_map['total_pages']}")
+# Вывод: Всего страниц: 60
+
+print(f"Уникальных ключей: {content_map['seo_summary']['total_unique_keywords']}")
+# Вывод: Уникальных ключей: 60 (каждый ключ гарантированно уникален)
+
+print(f"Риск каннибализации: {content_map['seo_summary']['cannibalization_risk']}")
+# Вывод: Риск каннибализации: low (защита от дубликатов включена)
+
+# 4. Доступ к данным первой страницы
+first_page = content_map['pages'][0]
+print(f"Заголовок H1: {first_page['h1']}")
+print(f"Основной ключ: {first_page['seo']['primary_keyword']}")
+print(f"Синонимы: {first_page['seo']['synonyms']}")
+print(f"Внутренние ссылки: {first_page['link_to']}")
+```
+
+**Пример 3: Сохранение в файл**
+```python
+architect.save_content_map('content_map_enriched.json')
+# Вывод в консоль:
+# ✅ Content map создан: content_map_enriched.json
+#    Всего страниц: 60
+#    Разделов: 4
+#    Уникальных ключей: 60
+#    Риск каннибализации: low
+```
+
+#### 🧪 Тестирование
+```bash
+python3 agents/seo_architect.py --help
+```
+**Ожидаемый вывод:**
+```text
+usage: seo_architect.py [-h] --starter STARTER [--pages PAGES] [--output OUTPUT]
+
+SEO Architect: генерация уникальной карты контента
+
+options:
+  -h, --help         show this help message and exit
+  --starter STARTER  Путь к starter.html (обязательно)
+  --pages PAGES      Количество страниц (по умолчанию 60)
+  --output OUTPUT    Выходной файл (по умолчанию content_map_enriched.json)
+```
+
+#### ️ Типичные ошибки и Troubleshooting
+| Ошибка | Причина | Решение |
+|--------|---------|---------
+| `FileNotFoundError` для `starter.html` | Неверный путь к файлу | Проверить путь: `ls projects/{slug}/starter.html` |
+| Пустой `nav_links` | В `starter.html` нет тега `<nav>` или он пустой | Добавить корректную навигацию в `starter.html` |
+| Все темы попадают в раздел `'собак'` | Имена секций в HTML не совпадают с ключами `topic_database` | Переименовать секции в `starter.html` или расширить логику `determine_section()` |
+| Дубликаты ключевых слов с суффиксами | Больше страниц (`target_pages`), чем уникальных тем в базе | Увеличить `target_pages` до разумного предела или расширить `topic_database` |
+
+**Диагностика проблемы с разделами:**
+```python
+architect = SEOArchitect('starter.html', 10)
+print(architect.determine_section("Уход за старой кошкой"))
+# Должно вернуть: 'кошек'
+```
+
+#### ❗ Критически важно (Важные примечания)
+- Метод `build_content_map()` **не сохраняет файл на диск** — он только возвращает словарь `dict`. Для физического сохранения обязательно используйте `save_content_map(output_file)`.
+- Поле `meta_description` **жёстко содержит строку "103vet.by"**. Для других проектов этот текст нужно изменить в коде или доработать агент для чтения `project_config.json`.
+- Метод `generate_unique_keywords()` **берёт ровно первые 3 синонима** (`synonyms[:3]`). Если требуется больше, необходимо изменить срез в коде.
+- **Проверка уникальности** работает строго по `primary_keyword`. Если темы разные, но ключ совпадает, агент автоматически добавит к ключу `page_id` (например, "онкология 5"), чтобы избежать каннибализации.
+
+#### 📝 Текущие ограничения
+1. **Жёстко закодированная база знаний** — `topic_database` содержит только паллиативную тематику. Для других проектов нужно расширять базу или выносить её в отдельный JSON.
+2. **Нет динамической загрузки тем** — темы не подгружаются из внешних источников (API, файлы).
+3. **Простая проверка уникальности** — используется только `set` для `primary_keyword`, без глубокого семантического анализа (NLP).
+4. **Фиксированное упоминание бренда** — см. пункт "Критически важно".
+
+#### 💡 Рекомендации по развитию
+1. Вынести `topic_database` в отдельный `topics_database.json` для гибкости и легкого редактирования.
+2. Добавить поддержку загрузки тем из внешних источников (например, парсинг конкурентов или загрузка из CMS).
+3. Интегрировать с `project_config.json` для динамической подстановки бренда в `meta_description`.
+4. Добавить семантическую проверку уникальности (например, через косинусное сходство векторов), а не только по точному совпадению строки ключа.
+5. Расширить `determine_section()` с использованием нечёткого поиска (fuzzy matching) для более надёжного определения раздела.
+
+---
+
+*Продолжение следует... Изучены 2 из 61 агентов*
